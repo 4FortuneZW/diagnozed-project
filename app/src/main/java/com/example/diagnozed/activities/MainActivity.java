@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             binding.riwayat.setVisibility(View.INVISIBLE);
         }
         loadUserDetails();
-        getToken();
+//        getToken();
         setListeners();
     }
 
@@ -67,20 +67,20 @@ public class MainActivity extends AppCompatActivity {
         binding.imageProfile.setImageBitmap(bitmap);
     }
 
-    private void getToken() {
-        FirebaseMessaging.getInstance().getToken().addOnSuccessListener(this::updateToken);
-    }
+//    private void getToken() {
+//        FirebaseMessaging.getInstance().getToken().addOnSuccessListener(this::updateToken);
+//    }
 
-    private void updateToken(String token){
-        FirebaseFirestore database = FirebaseFirestore.getInstance();
-        DocumentReference documentReference =
-                database.collection(Constants.KEY_COLLECTION_USERS)
-                        .document(preferenceManager.getString(Constants.KEY_USER_ID));
-        documentReference.update(Constants.KEY_FCM_TOKEN, token)
-                .addOnSuccessListener(unused -> showToast("Token update successfully"))
-                .addOnFailureListener(e -> showToast("Unable to update token"));
-
-    }
+//    private void updateToken(String token){
+//        FirebaseFirestore database = FirebaseFirestore.getInstance();
+//        DocumentReference documentReference =
+//                database.collection(Constants.KEY_COLLECTION_USERS)
+//                        .document(preferenceManager.getString(Constants.KEY_USER_ID));
+//        documentReference.update(Constants.KEY_FCM_TOKEN, token)
+//                .addOnSuccessListener(unused -> showToast("Token update successfully"))
+//                .addOnFailureListener(e -> showToast("Unable to update token"));
+//
+//    }
 
     private void signOut() {
         showToast("Signing Out");

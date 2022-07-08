@@ -3,11 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/naufa/AndroidStudioProjects/Diagnozed/app/src/main/res/drawable/background_chat_input.xml" value="0.183" />
+        <entry key="..\:/Users/naufa/AndroidStudioProjects/Diagnozed/app/src/main/res/drawable/background_content_bottom.xml" value="0.184" />
+        <entry key="..\:/Users/naufa/AndroidStudioProjects/Diagnozed/app/src/main/res/drawable/background_content_top.xml" value="0.183" />
         <entry key="..\:/Users/naufa/AndroidStudioProjects/Diagnozed/app/src/main/res/drawable/background_icon.xml" value="0.184" />
         <entry key="..\:/Users/naufa/AndroidStudioProjects/Diagnozed/app/src/main/res/drawable/background_image.xml" value="0.1" />
         <entry key="..\:/Users/naufa/AndroidStudioProjects/Diagnozed/app/src/main/res/drawable/background_input.xml" value="0.1" />
+        <entry key="..\:/Users/naufa/AndroidStudioProjects/Diagnozed/app/src/main/res/drawable/background_received_message.xml" value="0.183" />
+        <entry key="..\:/Users/naufa/AndroidStudioProjects/Diagnozed/app/src/main/res/drawable/background_sent_message.xml" value="0.183" />
         <entry key="..\:/Users/naufa/AndroidStudioProjects/Diagnozed/app/src/main/res/layout/activity_assessment.xml" value="0.26746031746031745" />
         <entry key="..\:/Users/naufa/AndroidStudioProjects/Diagnozed/app/src/main/res/layout/activity_assessment_result.xml" value="0.264" />
+        <entry key="..\:/Users/naufa/AndroidStudioProjects/Diagnozed/app/src/main/res/layout/activity_chat.xml" value="0.264" />
         <entry key="..\:/Users/naufa/AndroidStudioProjects/Diagnozed/app/src/main/res/layout/activity_chat_main.xml" value="0.4" />
         <entry key="..\:/Users/naufa/AndroidStudioProjects/Diagnozed/app/src/main/res/layout/activity_indonesia_ke_isyarat.xml" value="0.4" />
         <entry key="..\:/Users/naufa/AndroidStudioProjects/Diagnozed/app/src/main/res/layout/activity_login.xml" value="0.25" />
@@ -15,6 +21,10 @@
         <entry key="..\:/Users/naufa/AndroidStudioProjects/Diagnozed/app/src/main/res/layout/activity_search_result.xml" value="0.4" />
         <entry key="..\:/Users/naufa/AndroidStudioProjects/Diagnozed/app/src/main/res/layout/activity_sign_in.xml" value="0.264" />
         <entry key="..\:/Users/naufa/AndroidStudioProjects/Diagnozed/app/src/main/res/layout/activity_sign_up.xml" value="0.264" />
+        <entry key="..\:/Users/naufa/AndroidStudioProjects/Diagnozed/app/src/main/res/layout/activity_users.xml" value="0.264" />
+        <entry key="..\:/Users/naufa/AndroidStudioProjects/Diagnozed/app/src/main/res/layout/item_container_received_message.xml" value="0.4" />
+        <entry key="..\:/Users/naufa/AndroidStudioProjects/Diagnozed/app/src/main/res/layout/item_container_sent_message.xml" value="0.4" />
+        <entry key="..\:/Users/naufa/AndroidStudioProjects/Diagnozed/app/src/main/res/layout/item_container_user.xml" value="0.264" />
         <entry key="..\:/Users/naufa/AndroidStudioProjects/Diagnozed/app/src/main/res/menu/menu_bottom_navigation_bar.xml" value="0.17552083333333332" />
       </map>
     </option>
