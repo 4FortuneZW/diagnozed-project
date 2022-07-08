@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/result_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:scrollbars="none"
+    android:overScrollMode="never"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:visibility="invisible"
+    tools:context=".activities.AssessmentResultActivity">
+
+    <TextView
+        android:id="@+id/assessment_result_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/assessment_result_title"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/_24ssp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/assement_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/_16ssp"
+        android:text="Id :"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_24sdp"/>
+
+    <TextView
+        android:id="@+id/assessment_result_speech_delay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/primary_text"
+        android:textSize="@dimen/_16ssp"
+        android:text="Speech delay : "
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_24sdp"/>
+
+    <TextView
+        android:id="@+id/assessment_result_autism"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/primary_text"
+        android:text="Autisme : "
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/_24sdp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_result_to_consult_page"
+        android:layout_width="@dimen/_160sdp"
+        android:layout_height="wrap_content"
+        android:text="@string/result_to_consult_page"
+        android:textSize="@dimen/_16ssp"
+        android:layout_marginTop="@dimen/_24sdp" />
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "200395463564",
+    "project_id": "diagnozed2",
+    "storage_bucket": "diagnozed2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:200395463564:android:75b096504d319415ee94a9",
+        "android_client_info": {
+          "package_name": "com.example.diagnozed"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "200395463564-5cqg5nadet51ccanprhoiki0588a0net.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBI_wcbsGRLgtp7-f4ODKIN7xwftdtgbL8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "200395463564-5cqg5nadet51ccanprhoiki0588a0net.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

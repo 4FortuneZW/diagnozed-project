@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/profil"
+        android:title="@string/profil"
+        android:icon="@drawable/ic_person"/>
+
+    <item
+        android:id="@+id/riwayat"
+        android:title="@string/tentang"
+        android:icon="@drawable/ic_info"/>
+
+</menu>

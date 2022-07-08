@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="none"
+    android:clipToPadding="false"
+    android:overScrollMode="never"
+    tools:context=".activities.AssessmentActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_24sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/assessment_title"
+            android:textSize="@dimen/_32ssp"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold"
+            android:layout_margin="@dimen/_20sdp"/>
+
+        <EditText
+            android:id="@+id/input_nama_anak"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:inputType="textPersonName"
+            android:hint="masukkan nama anak"
+            android:importantForAutofill="no"
+            android:background="@drawable/background_input"
+            android:padding="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_12sdp"/>
+
+        <EditText
+            android:id="@+id/input_usia_anak"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_32sdp"
+            android:inputType="number"
+            android:hint="masukkan usia anak"
+            android:importantForAutofill="no"
+            android:background="@drawable/background_input"
+            android:padding="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_12sdp"/>
+
+        <TextView
+            android:id="@+id/state_no_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/state_no_1"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/_16ssp"/>
+
+        <RadioGroup
+            android:id="@+id/answers_no_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/answer_ya_no_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/answer_ya_no_1"
+                android:textSize="@dimen/_16ssp"/>
+
+            <RadioButton
+                android:id="@+id/answer_tidak_no_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/answer_tidak_no_1"
+                android:textSize="@dimen/_16ssp"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/state_no_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/_16ssp"
+            android:textColor="@color/primary_text"
+            android:text="@string/state_no_2"/>
+
+        <RadioGroup
+            android:id="@+id/answers_no_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/answer_ya_no_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ya"
+                android:textSize="@dimen/_16ssp"/>
+
+            <RadioButton
+                android:id="@+id/answer_tidak_no_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tidak"
+                android:textSize="@dimen/_16ssp"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/state_no_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/state_no_3"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/_16ssp" />
+
+        <RadioGroup
+            android:id="@+id/answers_no_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/answer_ya_no_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/answer_ya_no_3"
+                android:textSize="@dimen/_16ssp"/>
+
+            <RadioButton
+                android:id="@+id/answer_tidak_no_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/answer_tidak_no_3"
+                android:textSize="@dimen/_16ssp"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/state_no_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/state_no_4"
+            android:textSize="@dimen/_16ssp"
+            android:textColor="@color/primary_text"/>
+
+        <RadioGroup
+            android:id="@+id/answers_no_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/answer_ya_no_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/answer_ya_no_4"
+                android:textSize="@dimen/_16ssp"/>
+
+            <RadioButton
+                android:id="@+id/answer_tidak_no_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/answer_tidak_no_4"
+                android:textSize="@dimen/_16ssp"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/state_no_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/state_no_5"
+            android:textSize="@dimen/_16ssp"
+            android:textColor="@color/primary_text"/>
+
+        <RadioGroup
+            android:id="@+id/answers_no_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/answer_ya_no_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/answer_ya_no_5"
+                android:textSize="@dimen/_16ssp"/>
+
+            <RadioButton
+                android:id="@+id/answer_tidak_no_5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/answer_tidak_nomor_5"
+                android:textSize="@dimen/_16ssp"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/state_no_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/state_no_6"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/_16ssp" />
+
+        <RadioGroup
+            android:id="@+id/answers_no_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/answer_ya_no_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/answer_ya_no_6"
+                android:textSize="@dimen/_16ssp"/>
+
+            <RadioButton
+                android:id="@+id/answer_tidak_no_6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/answer_tidak_no_6"
+                android:textSize="@dimen/_16ssp"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/state_no_7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/state_no_7"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/_16ssp"/>
+
+        <RadioGroup
+            android:id="@+id/answers_no_7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/answer_ya_no_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/answer_ya_no_7"
+                android:textSize="@dimen/_16ssp"/>
+
+            <RadioButton
+                android:id="@+id/answer_tidak_no_7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/answer_tidak_no_7"
+                android:textSize="@dimen/_16ssp"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/state_no_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/state_no_8"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/_16ssp"/>
+
+        <RadioGroup
+            android:id="@+id/answers_no_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/answer_ya_no_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/answer_ya_no_8"
+                android:textSize="@dimen/_16ssp"/>
+
+            <RadioButton
+                android:id="@+id/answer_tidak_no_8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/answer_tidak_no_8"
+                android:textSize="@dimen/_16ssp"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/state_no_9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/_16ssp"
+            android:textColor="@color/primary_text"
+            android:text="@string/state_no_9"/>
+
+        <RadioGroup
+            android:id="@+id/answers_no_9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/answer_ya_no_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/answer_ya_no_9"
+                android:textSize="@dimen/_16ssp"/>
+
+            <RadioButton
+                android:id="@+id/answer_tidak_no_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/answer_tidak_no_9"
+                android:textSize="@dimen/_16ssp"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/state_no_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/_16ssp"
+            android:text="@string/state_no_10"/>
+
+        <RadioGroup
+            android:id="@+id/answers_no_10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/answer_ya_no_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/answer_ya_no_10"
+                android:textSize="@dimen/_16ssp"/>
+
+            <RadioButton
+                android:id="@+id/answer_tidak_no_10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/answer_tidak_no_10"
+                android:textSize="@dimen/_16ssp"/>
+        </RadioGroup>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/assessment_submit_button"
+                android:layout_width="@dimen/_160sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_8sdp"
+                android:textSize="@dimen/_12ssp"
+                android:textColor="@color/white"
+                android:text="@string/assessment_submit_button"/>
+            
+            <ProgressBar
+                android:id="@+id/submit_progress_bar"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_margin="@dimen/_8sdp"
+                android:layout_gravity="center"
+                android:visibility="invisible"/>
+            
+        </FrameLayout>
+        
+    </LinearLayout>
+
+</ScrollView>
