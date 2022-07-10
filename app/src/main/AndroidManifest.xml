@@ -3,6 +3,8 @@
     package="com.example.diagnozed">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera.any"/>
 
     <application
         android:allowBackup="true"
@@ -12,17 +14,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Diagnozed">
         <activity
-            android:name=".ChatActivity"
+            android:name=".activities.IsyaratKeIndoActivity"
             android:exported="false" />
         <activity
-            android:name=".UsersActivity"
+            android:name=".activities.ChatActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.UsersActivity"
             android:exported="false" />
         <activity
             android:name=".activities.IndonesiaKeIsyaratActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".activities.SearchResultActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".activities.SignUpActivity"
             android:windowSoftInputMode="adjustResize" />
