@@ -1,163 +1,239 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     tools:context=".activities.SearchResultActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_80sdp">
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="@dimen/_80sdp">-->
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/search_vector"
-            android:layout_width="@dimen/_32sdp"
-            android:layout_height="@dimen/_32sdp"
-            android:src="@drawable/ic_baseline_search_24"
-            android:tint="@color/primary"
-            app:layout_constraintStart_toEndOf="@id/search_result"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/search_vector"-->
+<!--            android:layout_width="@dimen/_32sdp"-->
+<!--            android:layout_height="@dimen/_32sdp"-->
+<!--            android:src="@drawable/ic_baseline_search_24"-->
+<!--            android:tint="@color/primary"-->
+<!--            app:layout_constraintStart_toEndOf="@id/search_result"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
 
-        <EditText
-            android:id="@+id/search_result"
-            android:layout_width="@dimen/_240sdp"
-            android:layout_height="@dimen/_32sdp"
-            android:inputType="text"
-            android:hint="@string/search_result_hint"
-            android:importantForAutofill="no"
-            android:background="@drawable/background_input"
-            android:padding="@dimen/_8sdp"
-            android:layout_marginStart="@dimen/_20sdp"
-            android:imeOptions="actionSearch"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="@id/search_vector"/>
+<!--        <EditText-->
+<!--            android:id="@+id/search_result"-->
+<!--            android:layout_width="@dimen/_240sdp"-->
+<!--            android:layout_height="@dimen/_32sdp"-->
+<!--            android:inputType="text"-->
+<!--            android:hint="@string/search_result_hint"-->
+<!--            android:importantForAutofill="no"-->
+<!--            android:background="@drawable/background_input"-->
+<!--            android:padding="@dimen/_8sdp"-->
+<!--            android:layout_marginStart="@dimen/_20sdp"-->
+<!--            android:imeOptions="actionSearch"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/search_vector"/>-->
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:gravity="center_horizontal"
-        android:padding="@dimen/_20sdp">
+        android:gravity="center">
 
-        <TextView
-            android:id="@+id/nama_anak"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_60sdp">
+
+            <EditText
+                android:id="@+id/input_email"
+                android:layout_width="@dimen/_240sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:inputType="textEmailAddress"
+                android:hint="masukkan email pengguna"
+                android:importantForAutofill="no"
+                android:background="@drawable/background_input"
+                android:padding="@dimen/_8sdp"
+                android:imeOptions="actionNext" />
+
+            <EditText
+                android:id="@+id/input_nama_anak"
+                android:layout_width="@dimen/_240sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:inputType="text"
+                android:hint="masukkan nama anak"
+                android:importantForAutofill="no"
+                android:background="@drawable/background_input"
+                android:padding="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:imeOptions="actionNext"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/search_vector"/>
+
+            <EditText
+                android:id="@+id/input_usia_anak"
+                android:layout_width="@dimen/_240sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:inputType="number"
+                android:hint="masukkan usia anak"
+                android:importantForAutofill="no"
+                android:background="@drawable/background_input"
+                android:padding="@dimen/_8sdp"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:imeOptions="actionDone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/search_vector"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/search_vector"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text="Cari"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/results"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:textSize="@dimen/_16ssp"
-            android:textColor="@color/primary"/>
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginStart="@dimen/_32sdp"
+            android:layout_marginEnd="@dimen/_32sdp"
+            android:layout_marginBottom="@dimen/_32sdp"
+            android:background="@drawable/results_background"
+            android:visibility="gone">
 
-        <TextView
-            android:id="@+id/usia_anak"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:textSize="@dimen/_16ssp"
-            android:textColor="@color/primary"/>
+            <TextView
+                android:id="@+id/nama_anak"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_16ssp"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_8sdp" />
 
-        <TextView
-            android:id="@+id/autism_result_info"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:textSize="@dimen/_16ssp"
-            android:textColor="@color/primary"/>
+            <TextView
+                android:id="@+id/usia_anak"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_16ssp"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_8sdp" />
 
-        <TextView
-            android:id="@+id/speech_delay_result_info"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:textSize="@dimen/_16ssp"
-            android:textColor="@color/primary"/>
+            <TextView
+                android:id="@+id/autism_result_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_16ssp"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_8sdp" />
 
-        <TextView
-            android:id="@+id/q1_info"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:textSize="@dimen/_16ssp"
-            android:textColor="@color/primary"/>
+            <TextView
+                android:id="@+id/speech_delay_result_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_16ssp"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_8sdp" />
 
-        <TextView
-            android:id="@+id/q2_info"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:textSize="@dimen/_16ssp"
-            android:textColor="@color/primary"/>
+            <TextView
+                android:id="@+id/q1_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_16ssp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:textColor="@color/white" />
 
-        <TextView
-            android:id="@+id/q3_info"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:textSize="@dimen/_16ssp"
-            android:textColor="@color/primary"/>
+            <TextView
+                android:id="@+id/q5_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16ssp" />
 
-        <TextView
-            android:id="@+id/q4_info"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:textSize="@dimen/_16ssp"
-            android:textColor="@color/primary"/>
+            <TextView
+                android:id="@+id/q2_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_16ssp"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_8sdp" />
 
-        <TextView
-            android:id="@+id/q5_info"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:textSize="@dimen/_16ssp"
-            android:textColor="@color/primary"/>
+            <TextView
+                android:id="@+id/q3_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_16ssp"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_8sdp" />
 
-        <TextView
-            android:id="@+id/q6_info"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:textSize="@dimen/_16ssp"
-            android:textColor="@color/primary"/>
+            <TextView
+                android:id="@+id/q4_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_16ssp"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_8sdp" />
 
-        <TextView
-            android:id="@+id/q7_info"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:textSize="@dimen/_16ssp"
-            android:textColor="@color/primary"/>
+            <TextView
+                android:id="@+id/q6_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_16ssp"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_8sdp" />
 
-        <TextView
-            android:id="@+id/q8_info"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:textSize="@dimen/_16ssp"
-            android:textColor="@color/primary"/>
+            <TextView
+                android:id="@+id/q7_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_16ssp"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_8sdp" />
 
-        <TextView
-            android:id="@+id/q9_info"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:textSize="@dimen/_16ssp"
-            android:textColor="@color/primary"/>
+            <TextView
+                android:id="@+id/q8_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_16ssp"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_8sdp" />
 
-        <TextView
-            android:id="@+id/q10_info"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:visibility="gone"
-            android:textSize="@dimen/_16ssp"
-            android:textColor="@color/primary"/>
+            <TextView
+                android:id="@+id/q9_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_16ssp"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+            <TextView
+                android:id="@+id/q10_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_16ssp"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/_8sdp" />
+
+        </LinearLayout>
+
 
     </LinearLayout>
 
 
-</LinearLayout>
+
+
+</ScrollView>

@@ -1,8 +1,12 @@
 package com.example.diagnozed.activities;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -25,6 +29,8 @@ import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static final int CAMERA_PERMISSION_CODE = 112;
+    public static final int STORAGE_PERMISSION_CODE = 113;
     private ActivityMainBinding binding;
     private PreferenceManager preferenceManager;
 
@@ -34,12 +40,16 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         preferenceManager = new PreferenceManager(getApplicationContext());
+
+        checkPermission(Manifest.permission.CAMERA, CAMERA_PERMISSION_CODE);
+
         if (preferenceManager.getString(Constants.KEY_ROLE).equals("doctor")) {
             binding.buttonCariPasien.setVisibility(View.VISIBLE);
             binding.riwayat.setVisibility(View.INVISIBLE);
         }
         loadUserDetails();
 //        getToken();
+
         setListeners();
     }
 
@@ -57,7 +67,8 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
         });
         binding.signOutButton.setOnClickListener(v -> signOut());
-        binding.translateButton.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), IndonesiaKeIsyaratActivity.class)));
+        binding.translateButton.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), TerjemahActivity.class)));
+        binding.riwayat.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), SearchResultActivity.class)));
     }
 
     private void loadUserDetails() {
@@ -102,5 +113,32 @@ public class MainActivity extends AppCompatActivity {
 
     private void showToast(String message) {
         Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+    }
+
+    public void checkPermission(String permission, int requestCode) {
+        if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CAMERA) == PackageManager.PERMISSION_DENIED) {
+            ActivityCompat.requestPermissions(this, new String[] {permission}, requestCode);
+        } else {
+            showToast("Permission is already granted");
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        if (requestCode == CAMERA_PERMISSION_CODE) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                showToast("Camera permission is granted");
+            } else {
+                showToast("Camera permission is denied");
+            }
+        } else if (requestCode == STORAGE_PERMISSION_CODE) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                showToast("Storage permission is granted");
+            } else {
+                showToast("Storage permission is denied");
+            }
+        }
     }
 }

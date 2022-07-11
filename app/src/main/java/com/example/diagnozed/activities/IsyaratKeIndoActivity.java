@@ -7,14 +7,21 @@ import androidx.camera.core.Preview;
 import androidx.camera.core.ExperimentalGetImage;
 import androidx.camera.core.impl.ImageOutputConfig;
 import androidx.camera.lifecycle.ProcessCameraProvider;
+import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.core.content.PackageManagerCompat;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.graphics.Rect;
 import android.media.Image;
 import android.os.Bundle;
 import android.util.Size;
+import android.view.View;
+import android.widget.Toast;
 
 import com.example.diagnozed.databinding.ActivityIsyaratKeIndoBinding;
+import com.example.diagnozed.utilities.Draw;
 import com.google.common.util.concurrent.ExecutionError;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.mlkit.common.model.LocalModel;
@@ -49,6 +56,7 @@ public class IsyaratKeIndoActivity extends AppCompatActivity {
 //    ObjectDetector objectDetector =
 //            ObjectDetection.getClient(customObjectDetectorOptions);
 
+
     @Override
     @ExperimentalGetImage
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +65,7 @@ public class IsyaratKeIndoActivity extends AppCompatActivity {
         binding = ActivityIsyaratKeIndoBinding.inflate(getLayoutInflater());
 
         setContentView(binding.getRoot());
+
 
         cameraProviderFuture = ProcessCameraProvider.getInstance(getApplicationContext());
 
@@ -72,7 +81,7 @@ public class IsyaratKeIndoActivity extends AppCompatActivity {
         );
 
         localModel = new LocalModel.Builder()
-                .setAbsoluteFilePath("firstModel.tflite")
+                .setAssetFilePath("tfHubModel.tflite")
                 .build();
 
         CustomObjectDetectorOptions customObjectDetectorOptions =
@@ -110,23 +119,32 @@ public class IsyaratKeIndoActivity extends AppCompatActivity {
                     Image img = image.getImage();
 
                     if (img != null) {
-                        @ExperimentalGetImage
                         InputImage processImage = InputImage.fromMediaImage(img, rotationDegrees);
 
                         objectDetector
                                 .process(processImage)
-                                .addOnSuccessListener(detectedObjects -> {
+                                .addOnSuccessListener(results -> {
 
-                                    for(DetectedObject object : detectedObjects) {
-                                        Rect rect = object.getBoundingBox();
+                                    if (binding.iskinLayout.getChildCount() > 1) {
+                                        binding.iskinLayout.removeViewAt(1);
+                                    }
+
+                                    for(DetectedObject detectedObject : results) {
+                                        Rect rect = detectedObject.getBoundingBox();
+                                        Draw element = new Draw(
+                                                getApplicationContext(),
+                                                rect,
+                                                detectedObject.getLabels().toString());
+                                        binding.iskinLayout.addView(element,1);
                                     }
 
                                     image.close();
-                                }).addOnFailureListener(exception -> image.close());
+                                }).addOnFailureListener(e -> image.close());
                     }
                 }
         );
 
         cameraProvider.bindToLifecycle(this, cameraSelector, imageAnalysis, preview);
+//        Toast.makeText(getApplicationContext(), "Here", Toast.LENGTH_SHORT).show();
     }
 }

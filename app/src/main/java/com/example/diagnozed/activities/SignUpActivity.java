@@ -2,9 +2,13 @@ package com.example.diagnozed.activities;
 
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -28,6 +32,7 @@ import java.util.HashMap;
 
 public class SignUpActivity extends AppCompatActivity {
 
+    public static final int STORAGE_PERMISSION_CODE = 113;
     private ActivitySignUpBinding binding;
     private PreferenceManager preferenceManager;
     private String encodedImage;
@@ -36,6 +41,9 @@ public class SignUpActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivitySignUpBinding.inflate(getLayoutInflater());
+
+        checkPermission(Manifest.permission.READ_EXTERNAL_STORAGE, STORAGE_PERMISSION_CODE);
+
         setContentView(binding.getRoot());
         preferenceManager = new PreferenceManager(getApplicationContext());
         setListeners();
@@ -188,6 +196,27 @@ public class SignUpActivity extends AppCompatActivity {
             binding.progressBarUser.setVisibility(View.INVISIBLE);
             binding.buttonSignUpDoctor.setVisibility(View.VISIBLE);
             binding.progressBarDoctor.setVisibility(View.INVISIBLE);
+        }
+    }
+
+    public void checkPermission(String permission, int requestCode) {
+        if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CAMERA) == PackageManager.PERMISSION_DENIED) {
+            ActivityCompat.requestPermissions(this, new String[] {permission}, requestCode);
+        } else {
+            showToast("Permission is already granted");
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        if (requestCode == STORAGE_PERMISSION_CODE) {
+            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                showToast("Storage permission is granted");
+            } else {
+                showToast("Storage permission is denied");
+            }
         }
     }
 }
