@@ -51,10 +51,174 @@
 
 <!--    </FrameLayout>-->
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/hand_sign"
-        android:layout_width="@dimen/_120sdp"
-        android:layout_height="@dimen/_120sdp" />
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp">
+
+        <LinearLayout
+            android:id="@+id/sixWords"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/firstWord40"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/secondWord40"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/thirdWord40"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/fourthWord40"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/fifthWord40"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/sixthWord40"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fiveWords"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/firstWord48"
+                android:layout_width="@dimen/_48sdp"
+                android:layout_height="@dimen/_48sdp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/secondWord48"
+                android:layout_width="@dimen/_48sdp"
+                android:layout_height="@dimen/_48sdp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/thirdWord48"
+                android:layout_width="@dimen/_48sdp"
+                android:layout_height="@dimen/_48sdp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/fourthWord48"
+                android:layout_width="@dimen/_48sdp"
+                android:layout_height="@dimen/_48sdp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/fifthWord48"
+                android:layout_width="@dimen/_48sdp"
+                android:layout_height="@dimen/_48sdp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/fourWords"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/firstWord60"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/secondWord60"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/thirdWord60"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/fourthWord60"
+                android:layout_width="@dimen/_60sdp"
+                android:layout_height="@dimen/_60sdp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/threeWords"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/firstWord80"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/secondWord80"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/thirdWord80"
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_80sdp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/twoWords"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/firstWord120"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_120sdp" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/secondWord120"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_120sdp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/oneWord"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/firstWord240"
+                android:layout_width="@dimen/_240sdp"
+                android:layout_height="@dimen/_240sdp"
+                android:src="@drawable/ic_hand_picture_for_testing"/>
+
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+
+<!--    <androidx.appcompat.widget.AppCompatImageView-->
+<!--        android:id="@+id/hand_sign"-->
+<!--        android:layout_width="@dimen/_120sdp"-->
+<!--        android:layout_height="@dimen/_120sdp" />-->
 
 
 </LinearLayout>

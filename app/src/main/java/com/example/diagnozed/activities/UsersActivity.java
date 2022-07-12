@@ -43,7 +43,7 @@ public class    UsersActivity extends BaseActivity implements UserListener {
                        List<User> users = new ArrayList<>();
                        for(QueryDocumentSnapshot queryDocumentSnapshot : task.getResult()) {
                            if(currentUserId.equals(queryDocumentSnapshot.getId())
-                                   && currentUserRole.equals(queryDocumentSnapshot.getString(Constants.KEY_ROLE))) {
+                                   || currentUserRole.equals(queryDocumentSnapshot.getString(Constants.KEY_ROLE))) {
                                continue;
                            }
                            User user = new User();

@@ -5,12 +5,15 @@ import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -19,6 +22,7 @@ import android.util.Patterns;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.diagnozed.R;
 import com.example.diagnozed.databinding.ActivitySignUpBinding;
 import com.example.diagnozed.utilities.Constants;
 import com.example.diagnozed.utilities.PreferenceManager;
@@ -160,10 +164,21 @@ public class SignUpActivity extends AppCompatActivity {
     );
 
     private Boolean isValidSignUpDetails() {
+//        if (encodedImage == null) {
+//            showToast("Pilih foto profil Anda");
+//            return false;
+//        }
+
         if (encodedImage == null) {
-            showToast("Pilih foto profil Anda");
-            return false;
-        } else if (binding.inputName.getText().toString().trim().isEmpty()) {
+            Drawable drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_default_profile_picture);
+            Bitmap bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
+            Canvas canvas = new Canvas(bitmap);
+            drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());
+            drawable.draw(canvas);
+            encodedImage = encodeImage(bitmap);
+        }
+
+        if (binding.inputName.getText().toString().trim().isEmpty()) {
             showToast("Masukkan nama Anda");
             return false;
         } else if (binding.inputEmail.getText().toString().trim().isEmpty()) {
