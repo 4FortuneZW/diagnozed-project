@@ -63,7 +63,7 @@
     <string name="result_to_consult_page">konsultasi sekarang</string>
     <string name="search_patient_result">Mencari hasil diagnosa</string>
     <string name="search_result_hint">masukkan id asesmen</string>
-    <string name="hint_translate_input">contoh masukan : A atau a</string>
+    <string name="hint_translate_input">contoh masukan : Baca atau baca</string>
     <string name="profil">Profil</string>
     <string name="riwayat">Riwayat</string>
     <string name="tentang">Tentang</string>

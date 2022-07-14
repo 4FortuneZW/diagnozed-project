@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
         });
         binding.signOutButton.setOnClickListener(v -> signOut());
         binding.translateButton.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), TerjemahActivity.class)));
-        binding.riwayat.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), SearchResultActivity.class)));
+        binding.riwayat.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), HistoryActivity.class)));
     }
 
     private void loadUserDetails() {

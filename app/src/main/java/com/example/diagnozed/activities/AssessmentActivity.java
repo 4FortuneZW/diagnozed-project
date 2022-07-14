@@ -97,7 +97,7 @@ public class AssessmentActivity extends AppCompatActivity {
                         .whereEqualTo(Constants.KEY_NAMA_ANAK, namaAnak)
                         .get()
                         .addOnCompleteListener(task -> {
-                            if (task.isSuccessful()) {
+                            if (task.isSuccessful() && task.getResult().getDocuments().size() > 0) {
                                 assessmentResult.put("timestamp", FieldValue.serverTimestamp());
                                 updateResult(true, assessmentResult, task.getResult().getDocuments().get(0).getId());
 //                                showToast("success");
@@ -109,9 +109,9 @@ public class AssessmentActivity extends AppCompatActivity {
                             }
                         });
 
-                loading(false);
-                Intent intent = new Intent(getApplicationContext(), AssessmentResultActivity.class);
-                startActivity(intent);
+//                loading(false);
+//                Intent intent = new Intent(getApplicationContext(), AssessmentResultActivity.class);
+//                startActivity(intent);
 //                showToast("WOY BANGUN WOY");
             }
         });
@@ -125,11 +125,20 @@ public class AssessmentActivity extends AppCompatActivity {
             database.collection(Constants.KEY_COLLECTION_ASSESSMENTS)
                     .document(id)
                     .update(assessmentResult)
-                    .addOnSuccessListener(unused -> preferenceManager.putString(Constants.KEY_ASSESSMENT_ID, id));
+                    .addOnSuccessListener(unused -> {
+                        loading(false);
+                        Intent intent = new Intent(getApplicationContext(),AssessmentResultActivity.class);
+                        intent.putExtra("id",id);
+                        startActivity(intent);
+                    });
         } else {
             database.collection(Constants.KEY_COLLECTION_ASSESSMENTS)
                     .add(assessmentResult)
-                    .addOnSuccessListener(documentReference -> preferenceManager.putString(Constants.KEY_ASSESSMENT_ID, documentReference.getId()));
+                    .addOnSuccessListener(documentReference -> {
+                        Intent intent = new Intent(getApplicationContext(),AssessmentResultActivity.class);
+                        intent.putExtra("id",documentReference.getId());
+                        startActivity(intent);
+                    });
         }
     }
 
