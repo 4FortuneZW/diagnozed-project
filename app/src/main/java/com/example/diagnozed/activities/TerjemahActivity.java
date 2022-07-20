@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.diagnozed.DetectorActivity;
 import com.example.diagnozed.databinding.ActivityTerjemahBinding;
 
 public class TerjemahActivity extends AppCompatActivity {
@@ -23,7 +22,16 @@ public class TerjemahActivity extends AppCompatActivity {
 
     private void setListeners() {
         binding.isyaratKeIndo.setOnClickListener(v -> {
-            startActivity(new Intent(getApplicationContext(), DetectorActivity.class));
+//            startActivity(new Intent(getApplicationContext(), org.tensorflow.lite.examples.detection.DetectorActivity.class));
+
+            Intent intent = null;
+            try {
+                intent = new Intent(this,
+                        Class.forName("org.tensorflow.lite.examples.detection.DetectorActivity"));
+                startActivity(intent);
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
         });
 
         binding.indoKeIsyarat.setOnClickListener(v -> {
