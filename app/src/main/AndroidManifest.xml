@@ -22,6 +22,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Diagnozed">
 
+        <activity android:name="com.example.imagepro.CombineLettersActivity"
+            android:exported="false"/>
         <activity android:name="org.tensorflow.lite.examples.detection.DetectorActivity"
             android:exported="false"/>
         <activity

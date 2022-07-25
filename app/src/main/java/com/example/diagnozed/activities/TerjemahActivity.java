@@ -24,10 +24,19 @@ public class TerjemahActivity extends AppCompatActivity {
         binding.isyaratKeIndo.setOnClickListener(v -> {
 //            startActivity(new Intent(getApplicationContext(), org.tensorflow.lite.examples.detection.DetectorActivity.class));
 
+//            Intent intent = null;
+//            try {
+//                intent = new Intent(this,
+//                        Class.forName("org.tensorflow.lite.examples.detection.DetectorActivity"));
+//                startActivity(intent);
+//            } catch (ClassNotFoundException e) {
+//                e.printStackTrace();
+//            }
+
             Intent intent = null;
             try {
                 intent = new Intent(this,
-                        Class.forName("org.tensorflow.lite.examples.detection.DetectorActivity"));
+                        Class.forName("com.example.imagepro.CombineLettersActivity"));
                 startActivity(intent);
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
