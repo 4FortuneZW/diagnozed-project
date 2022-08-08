@@ -70,21 +70,51 @@
             android:layout_width="@dimen/_24sdp"
             android:layout_height="@dimen/_24sdp"
             android:layout_gravity="center"/>
-        
+
     </FrameLayout>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <LinearLayout
         android:id="@+id/fab_new_chat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/_24sdp"
-        android:layout_marginBottom="@dimen/_24sdp"
-        android:contentDescription="Diagnozed"
-        android:src="@drawable/ic_add"
-        android:backgroundTint="@color/primary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:tint="@color/white"/>
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/_60sdp"
+            android:layout_height="@dimen/_60sdp"
+            android:src="@drawable/pilih_dokter"
+            android:layout_marginBottom="@dimen/_4sdp"/>
+
+        <TextView
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:text="Pilih dokter"
+            android:textAlignment="center"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold"
+            android:background="@color/primary"
+            android:textColor="@color/white"
+            android:padding="@dimen/_4sdp"/>
+
+    </LinearLayout>
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/fab_new_chat"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginEnd="@dimen/_24sdp"-->
+<!--        android:layout_marginBottom="@dimen/_24sdp"-->
+<!--        android:contentDescription="Diagnozed"-->
+<!--        android:src="@drawable/pilih_dokter"-->
+<!--        android:backgroundTint="@color/primary"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:tint="@color/white"/>-->
 
 
 <!--    <com.makeramen.roundedimageview.RoundedImageView-->

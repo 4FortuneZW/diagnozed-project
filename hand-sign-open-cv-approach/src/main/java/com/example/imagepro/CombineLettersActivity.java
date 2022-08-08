@@ -13,6 +13,7 @@ import android.view.SurfaceView;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.opencv.android.BaseLoaderCallback;
@@ -33,8 +34,11 @@ public class CombineLettersActivity extends Activity implements CameraBridgeView
     private CameraBridgeViewBase mOpenCvCameraView;
     private signLanguageClass signLanguageClass;
 
-    private Button clear_button;
-    private Button add_button;
+//    private Button clear_button;
+//    private Button add_button;
+
+    private ImageView clear_button;
+    private ImageView add_button;
 
     private TextView change_text;
 

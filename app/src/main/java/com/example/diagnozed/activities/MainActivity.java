@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loadUserDetails() {
-        binding.nameText.setText(preferenceManager.getString(Constants.KEY_NAME));
+        binding.nameText.setText("Selamat datang,\n" + preferenceManager.getString(Constants.KEY_NAME));
         byte[] bytes = Base64.decode(preferenceManager.getString(Constants.KEY_IMAGE), Base64.DEFAULT);
         Bitmap bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
         binding.imageProfile.setImageBitmap(bitmap);
