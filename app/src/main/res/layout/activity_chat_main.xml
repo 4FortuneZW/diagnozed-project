@@ -82,7 +82,8 @@
         android:layout_marginEnd="@dimen/_16sdp"
         android:layout_marginBottom="@dimen/_16sdp"
         android:gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:visibility="gone">
 
         <ImageView
             android:layout_width="@dimen/_60sdp"
@@ -97,9 +98,10 @@
             android:textAlignment="center"
             android:textSize="@dimen/_16ssp"
             android:textStyle="bold"
-            android:background="@color/primary"
+            android:background="@drawable/background_input"
             android:textColor="@color/white"
-            android:padding="@dimen/_4sdp"/>
+            android:padding="@dimen/_4sdp"
+            android:backgroundTint="@color/primary"/>
 
     </LinearLayout>
 

@@ -29,6 +29,7 @@ public class IndonesiaKeIsyaratActivity extends AppCompatActivity {
     }
 
     private void setListeners() {
+        binding.backButton.setOnClickListener(v -> onBackPressed());
         binding.translateButton.setOnClickListener(v -> {
             loading(true);
 

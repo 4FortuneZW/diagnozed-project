@@ -35,6 +35,9 @@ public class AssessmentActivity extends AppCompatActivity {
     }
 
     private void setListeners() {
+
+        binding.backButton.setOnClickListener(v -> onBackPressed());
+
         binding.assessmentSubmitButton.setOnClickListener(v -> {
             if (isValidAnswers()) {
                 loading(true);

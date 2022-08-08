@@ -43,9 +43,6 @@ public class SearchResultActivity extends AppCompatActivity {
                         getResources().getString(R.string.state_no_7), getResources().getString(R.string.state_no_8),
                         getResources().getString(R.string.state_no_9), getResources().getString(R.string.state_no_10)};
 
-        if (preferenceManager.getString(Constants.KEY_ROLE).equals("user")) {
-            binding.inputs.setVisibility(View.GONE);
-        }
 
         binding.searchVector.setOnClickListener(v -> {
             searchResult();

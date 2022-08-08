@@ -31,6 +31,8 @@ public class AssessmentResultActivity extends AppCompatActivity {
     }
 
     private void setListeners() {
+
+        binding.backButton.setOnClickListener(v -> onBackPressed());
 //        FirebaseFirestore database = FirebaseFirestore.getInstance();
         String id = String.valueOf(getIntent().getStringExtra("id"));
 //        database.collection(Constants.KEY_COLLECTION_ASSESSMENTS)
