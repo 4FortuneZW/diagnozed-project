@@ -1,0 +1,102 @@
+[33mcommit 201a67bd223d9a88b69c530113b27f89eb6e1498[m[33m ([m[1;36mHEAD -> [m[1;32mhand-sign-detector-activity[m[33m, [m[1;31morigin/hand-sign-detector-activity[m[33m)[m
+Author: Hawari <naufalhawarden@gmail.com>
+Date:   Tue Aug 9 06:50:14 2022 +0700
+
+    updating layouts
+
+[33mcommit e0e1602c12fdd6345330df86ccdcf90cf28b049d[m
+Author: Hawari <naufalhawarden@gmail.com>
+Date:   Mon Aug 8 17:49:48 2022 +0700
+
+    updating layouts
+
+[33mcommit cd58abf609bacfd01ff286bec5f0f38ccc7de599[m
+Merge: ffedb68 13403c6
+Author: Hawari <naufalhawarden@gmail.com>
+Date:   Sat Jul 30 07:59:49 2022 +0700
+
+    updating files
+
+[33mcommit ffedb68944136ec4dc92c7fa988d0ae47fe65d4a[m
+Author: Hawari <naufalhawarden@gmail.com>
+Date:   Sat Jul 30 07:57:41 2022 +0700
+
+    updating files
+
+[33mcommit 13403c6a1f03f46d2ee3d0e74f9073e32ad877d9[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Hawari <naufalhawarden@gmail.com>
+Date:   Tue Jul 26 09:58:58 2022 +0700
+
+    updating repo
+
+[33mcommit 496f0251e9d64c25595b5f46083cdc5627ec0d2d[m
+Merge: a1eed9d 75cc304
+Author: naufalhawari <58157528+naufalhawari@users.noreply.github.com>
+Date:   Mon Jul 25 20:53:28 2022 +0700
+
+    Merge pull request #2 from naufalhawari/hand-sign-detector-activity
+    
+    adding second version of hand sign detector activity
+
+[33mcommit 75cc304522e145749db5e2f63b0181a61f225fbc[m
+Author: Hawari <naufalhawarden@gmail.com>
+Date:   Mon Jul 25 20:49:13 2022 +0700
+
+    adding second version of hand sign detector activity
+
+[33mcommit a1eed9d683358b1e7a8062885554f003bef02b91[m
+Merge: 02e5b9d 6917c38
+Author: naufalhawari <58157528+naufalhawari@users.noreply.github.com>
+Date:   Wed Jul 20 09:08:46 2022 +0700
+
+    Merge pull request #1 from naufalhawari/hand-sign-detector-activity
+    
+    Hand sign detector activity
+
+[33mcommit 6917c388e072fc966491c7397e128b7855fdedd6[m
+Author: Hawari <naufalhawarden@gmail.com>
+Date:   Wed Jul 20 09:06:58 2022 +0700
+
+    adding hand-sign detector
+
+[33mcommit c0d42247fc33e864964072b32db80e4aa7e2a0b5[m
+Author: Hawari <naufalhawarden@gmail.com>
+Date:   Tue Jul 19 15:48:36 2022 +0700
+
+    updating for hand sign detector activity
+
+[33mcommit 02e5b9d6ae2772fddaa06975db3f05a322488075[m[33m ([m[1;32mmain[m[33m)[m
+Author: Hawari <naufalhawarden@gmail.com>
+Date:   Fri Jul 15 05:49:27 2022 +0700
+
+    updating and adding files
+
+[33mcommit 3a6cd41243701e1699a3d474b9e584e9257d3abf[m
+Author: Hawari <naufalhawarden@gmail.com>
+Date:   Tue Jul 12 09:48:59 2022 +0700
+
+    updating files
+
+[33mcommit 8149ca2ea3b48f229caa62e2b8632f39563101c0[m
+Author: Hawari <naufalhawarden@gmail.com>
+Date:   Mon Jul 11 14:07:55 2022 +0700
+
+    adding files
+
+[33mcommit 8e57268c88e4512c64790cbaccc005fe5b893a25[m
+Author: Hawari <naufalhawarden@gmail.com>
+Date:   Sun Jul 10 19:04:04 2022 +0700
+
+    add new files
+
+[33mcommit 8fcd318920c5476c3299a170d46daa62b24e5541[m
+Author: Hawari <naufalhawarden@gmail.com>
+Date:   Fri Jul 8 15:13:37 2022 +0700
+
+    Adding modified files
+
+[33mcommit e486b2de8b35c7ad2abbc11a8d9984ad5b7697a1[m
+Author: Hawari <naufalhawarden@gmail.com>
+Date:   Fri Jul 8 08:30:59 2022 +0700
+
+    Adding all files
