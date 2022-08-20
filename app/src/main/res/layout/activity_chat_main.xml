@@ -31,12 +31,12 @@
         android:textSize="@dimen/_16ssp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/image_profile"
-        app:layout_constraintEnd_toStartOf="@id/empty"
+        app:layout_constraintEnd_toStartOf="@id/home"
         app:layout_constraintStart_toEndOf="@id/image_profile"
         app:layout_constraintTop_toTopOf="@id/image_profile"/>
 
-    <com.makeramen.roundedimageview.RoundedImageView
-        android:id="@+id/empty"
+    <ImageView
+        android:id="@+id/home"
         android:layout_width="@dimen/_32sdp"
         android:layout_height="@dimen/_32sdp"
         app:layout_constraintTop_toTopOf="parent"
@@ -44,7 +44,9 @@
         android:layout_marginTop="@dimen/_16sdp"
         android:layout_marginEnd="@dimen/_16sdp"
         android:scaleType="centerCrop"
-        app:riv_corner_radius="@dimen/_8sdp"/>
+        app:riv_corner_radius="@dimen/_8sdp"
+        android:src="@drawable/ic_baseline_home_24"
+        android:tint="@color/white"/>
 
     <FrameLayout
         android:layout_width="match_parent"

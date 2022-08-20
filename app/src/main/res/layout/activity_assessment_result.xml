@@ -32,6 +32,7 @@
             android:layout_marginStart="@dimen/_16sdp"/>
 
         <TextView
+            android:id="@+id/pandas_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Pandas"
@@ -44,6 +45,17 @@
             app:layout_constraintStart_toEndOf="@id/back_button"
             app:layout_constraintTop_toTopOf="@id/back_button"
             app:layout_constraintVertical_bias="0.428" />
+
+        <ImageView
+            android:id="@+id/home_button"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:src="@drawable/ic_baseline_home_24"
+            android:tint="@color/white"
+            app:layout_constraintTop_toTopOf="@id/back_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/back_button"
+            android:layout_marginEnd="@dimen/_16sdp"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

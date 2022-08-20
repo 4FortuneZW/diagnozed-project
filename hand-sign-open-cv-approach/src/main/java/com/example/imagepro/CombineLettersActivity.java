@@ -1,18 +1,17 @@
 package com.example.imagepro;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.app.Activity;
 import android.content.pm.PackageManager;
+import android.graphics.Camera;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.SurfaceView;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,7 +21,6 @@ import org.opencv.android.LoaderCallbackInterface;
 import org.opencv.android.OpenCVLoader;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
-import org.opencv.imgproc.Imgproc;
 
 import java.io.IOException;
 
@@ -39,8 +37,10 @@ public class CombineLettersActivity extends Activity implements CameraBridgeView
 
     private ImageView clear_button;
     private ImageView add_button;
+    private ImageView switch_button;
 
     private TextView change_text;
+    private int cameraId = 0;
 
     private BaseLoaderCallback mLoaderCallback =new BaseLoaderCallback(this) {
         @Override
@@ -80,13 +80,27 @@ public class CombineLettersActivity extends Activity implements CameraBridgeView
 
         setContentView(R.layout.activity_combine_letters);
 
+
+
         mOpenCvCameraView=(CameraBridgeViewBase) findViewById(R.id.frame_Surface);
+        mOpenCvCameraView.setCameraIndex(cameraId);
         mOpenCvCameraView.setVisibility(SurfaceView.VISIBLE);
         mOpenCvCameraView.setCvCameraViewListener(this);
+
 
         clear_button=findViewById(R.id.clear_button);
         add_button=findViewById(R.id.add_button);
         change_text=findViewById(R.id.change_text);
+        switch_button=findViewById(R.id.switch_button);
+
+        switch_button.setOnClickListener(v -> {
+            cameraId++;
+            mOpenCvCameraView.disableView();
+            mOpenCvCameraView.setCameraIndex(cameraId % 2);
+            mOpenCvCameraView.enableView();
+        });
+
+
 
         try{
             // now first change model name and input size
@@ -100,8 +114,8 @@ public class CombineLettersActivity extends Activity implements CameraBridgeView
             // Next tutorial series I will make sign language detection
             // bye
             signLanguageClass =new signLanguageClass(clear_button,add_button,change_text,
-                    getAssets(),"hand_model.tflite","custom_label.txt"
-                    ,300, "Sign_language_model.tflite", 96);
+                    getAssets(), "hand_model.tflite","custom_label.txt"
+                    ,300, "Sign_language_model_old.tflite", 96);
             Log.d("MainActivity","Model is successfully loaded");
         }
         catch (IOException e){

@@ -118,8 +118,6 @@ public class MainActivity extends AppCompatActivity {
     public void checkPermission(String permission, int requestCode) {
         if (ActivityCompat.checkSelfPermission(getApplicationContext(), Manifest.permission.CAMERA) == PackageManager.PERMISSION_DENIED) {
             ActivityCompat.requestPermissions(this, new String[] {permission}, requestCode);
-        } else {
-            showToast("Permission is already granted");
         }
     }
 

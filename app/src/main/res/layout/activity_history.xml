@@ -44,7 +44,7 @@
                 <LinearLayout
                     android:id="@+id/no_history"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_200sdp"
+                    android:layout_height="@dimen/_320sdp"
                     android:orientation="vertical"
                     android:gravity="center"
                     android:visibility="gone">
@@ -60,13 +60,14 @@
                         android:textSize="@dimen/_12ssp"
                         android:text="Maaf, Anda belum melakukan asesmen"/>
 
-                    <Button
+                    <com.google.android.material.button.MaterialButton
                         android:id="@+id/button_asesmen"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Mulai Asesmen"
                         android:textStyle="bold"
-                        android:textAllCaps="true"/>
+                        android:textAllCaps="true"
+                        app:cornerRadius="@dimen/_8sdp"/>
 
                 </LinearLayout>
 

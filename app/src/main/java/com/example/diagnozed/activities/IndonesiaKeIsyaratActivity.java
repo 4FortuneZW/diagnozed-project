@@ -75,19 +75,82 @@ public class IndonesiaKeIsyaratActivity extends AppCompatActivity {
 
                 switch (masukan.charAt(i)) {
                     case 'a' :
-                        imageView.setImageResource(R.drawable.ic_hand_picture_for_testing);
+                        imageView.setImageResource(R.drawable.a);
                         break;
                     case 'b' :
-                        imageView.setImageResource(R.drawable.ic_person);
+                        imageView.setImageResource(R.drawable.b);
                         break;
                     case 'c' :
-                        imageView.setImageResource(R.drawable.ic_add);
+                        imageView.setImageResource(R.drawable.c);
                         break;
                     case 'd' :
-                        imageView.setImageResource(R.drawable.ic_back);
+                        imageView.setImageResource(R.drawable.d);
                         break;
                     case 'e' :
-                        imageView.setImageResource(R.drawable.ic_history);
+                        imageView.setImageResource(R.drawable.e);
+                        break;
+                    case 'f' :
+                        imageView.setImageResource(R.drawable.f);
+                        break;
+                    case 'g' :
+                        imageView.setImageResource(R.drawable.g);
+                        break;
+                    case 'h' :
+                        imageView.setImageResource(R.drawable.h);
+                        break;
+                    case 'i' :
+                        imageView.setImageResource(R.drawable.i);
+                        break;
+                    case 'j' :
+                        imageView.setImageResource(R.drawable.j);
+                        break;
+                    case 'k' :
+                        imageView.setImageResource(R.drawable.k);
+                        break;
+                    case 'l' :
+                        imageView.setImageResource(R.drawable.l);
+                        break;
+                    case 'm' :
+                        imageView.setImageResource(R.drawable.m);
+                        break;
+                    case 'n' :
+                        imageView.setImageResource(R.drawable.n);
+                        break;
+                    case 'o' :
+                        imageView.setImageResource(R.drawable.o);
+                        break;
+                    case 'p' :
+                        imageView.setImageResource(R.drawable.p);
+                        break;
+                    case 'q' :
+                        imageView.setImageResource(R.drawable.q);
+                        break;
+                    case 'r' :
+                        imageView.setImageResource(R.drawable.r);
+                        break;
+                    case 's' :
+                        imageView.setImageResource(R.drawable.s);
+                        break;
+                    case 't' :
+                        imageView.setImageResource(R.drawable.t);
+                        break;
+                    case 'u' :
+                        imageView.setImageResource(R.drawable.u);
+                        break;
+                    case 'v' :
+                        imageView.setImageResource(R.drawable.v);
+                        break;
+                    case 'w' :
+                        imageView.setImageResource(R.drawable.w);
+                        break;
+                    case 'x' :
+                        imageView.setImageResource(R.drawable.x);
+                        break;
+                    case 'y' :
+                        imageView.setImageResource(R.drawable.y);
+                        break;
+                    case 'z' :
+                        imageView.setImageResource(R.drawable.z);
                         break;
                     default:
                         imageView.setImageResource(R.drawable.ic_baseline_clear_24);

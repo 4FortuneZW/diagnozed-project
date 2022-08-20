@@ -62,6 +62,8 @@ public class ChatMainActivity extends BaseActivity implements ConversationListen
     private void setListeners() {
         binding.fabNewChat.setOnClickListener(v ->
                 startActivity(new Intent(getApplicationContext(), UsersActivity.class)));
+        binding.home.setOnClickListener(v ->
+                startActivity(new Intent(getApplicationContext(), MainActivity.class)));
     }
 
     private void listenConversations() {

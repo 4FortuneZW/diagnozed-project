@@ -12,7 +12,7 @@
 
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
-    <uses-feature android:name="android.hardware.camera.front" />
+    <uses-feature android:name="android.hardware.camera.any" />
 
     <application
         android:allowBackup="true"
@@ -23,8 +23,6 @@
         android:theme="@style/Theme.Diagnozed">
 
         <activity android:name="com.example.imagepro.CombineLettersActivity"
-            android:exported="false"/>
-        <activity android:name="org.tensorflow.lite.examples.detection.DetectorActivity"
             android:exported="false"/>
         <activity
             android:name=".activities.HistoryActivity"

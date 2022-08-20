@@ -2,8 +2,10 @@ package com.example.diagnozed.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -118,6 +120,7 @@ public class HistoryActivity extends AppCompatActivity {
         });
     }
 
+
     private void setHistory() {
         database.collection(Constants.KEY_COLLECTION_ASSESSMENTS)
                 .whereEqualTo(Constants.KEY_EMAIL, preferenceManager.getString(Constants.KEY_EMAIL))
@@ -137,11 +140,18 @@ public class HistoryActivity extends AppCompatActivity {
                             history.setVisibility(View.VISIBLE);
                         }
 
-                        binding.allHistory.setVisibility(View.VISIBLE);
+                        if (task.getResult().getDocuments().size() > 0) {
+                            binding.allHistory.setVisibility(View.VISIBLE);
+                        } else {
+                            binding.noHistory.setVisibility(View.VISIBLE);
+                        }
 
-                    } else {
-                        binding.noHistory.setVisibility(View.VISIBLE);
+
                     }
+//                    else {
+//                        Toast.makeText(getApplicationContext(),"In",Toast.LENGTH_SHORT).show();
+//                        binding.noHistory.setVisibility(View.VISIBLE);
+//                    }
                 });
     }
 }
