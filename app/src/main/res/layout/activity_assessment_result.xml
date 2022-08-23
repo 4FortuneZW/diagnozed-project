@@ -1,63 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/result_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipToPadding="false"
     android:scrollbars="none"
     android:overScrollMode="never"
-    android:gravity="center"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:visibility="invisible"
+    android:visibility="visible"
     tools:context=".activities.AssessmentResultActivity">
 
-    <TextView
-        android:id="@+id/assessment_result_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/assessment_result_title"
-        android:textColor="@color/primary_text"
-        android:textSize="@dimen/_24ssp"
-        android:textStyle="bold" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_92sdp"
+        android:orientation="horizontal"
+        android:background="@drawable/background_content_top"
+        android:backgroundTint="@color/primary"
+        android:gravity="center">
 
-    <TextView
-        android:id="@+id/assement_id"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/primary_text"
-        android:textSize="@dimen/_16ssp"
-        android:text="Id :"
-        android:textStyle="bold"
-        android:layout_marginTop="@dimen/_24sdp"/>
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:src="@drawable/ic_back"
+            android:tint="@color/white"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginStart="@dimen/_16sdp"/>
 
-    <TextView
-        android:id="@+id/assessment_result_speech_delay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/primary_text"
-        android:textSize="@dimen/_16ssp"
-        android:text="Speech delay : "
-        android:textStyle="bold"
-        android:layout_marginTop="@dimen/_24sdp"/>
+        <TextView
+            android:id="@+id/pandas_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pandas"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_28sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/back_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.358"
+            app:layout_constraintStart_toEndOf="@id/back_button"
+            app:layout_constraintTop_toTopOf="@id/back_button"
+            app:layout_constraintVertical_bias="0.428" />
 
-    <TextView
-        android:id="@+id/assessment_result_autism"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/primary_text"
-        android:text="Autisme : "
-        android:textSize="@dimen/_16ssp"
-        android:textStyle="bold"
-        android:layout_marginTop="@dimen/_24sdp"/>
+        <ImageView
+            android:id="@+id/home_button"
+            android:layout_width="@dimen/_32sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:src="@drawable/ic_baseline_home_24"
+            android:tint="@color/white"
+            app:layout_constraintTop_toTopOf="@id/back_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/back_button"
+            android:layout_marginEnd="@dimen/_16sdp"/>
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/button_result_to_consult_page"
-        android:layout_width="@dimen/_160sdp"
-        android:layout_height="wrap_content"
-        android:text="@string/result_to_consult_page"
-        android:textSize="@dimen/_16ssp"
-        android:layout_marginTop="@dimen/_24sdp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/result_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:visibility="invisible">
+
+        <TextView
+            android:id="@+id/assessment_result_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/assessment_result_title"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/_24ssp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/assement_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/_16ssp"
+            android:text="Id :"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_24sdp"/>
+
+        <TextView
+            android:id="@+id/assessment_result_speech_delay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/_16ssp"
+            android:text="Speech delay : "
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_24sdp"/>
+
+        <TextView
+            android:id="@+id/assessment_result_autism"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primary_text"
+            android:text="Autisme : "
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_24sdp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_result_to_consult_page"
+            android:layout_width="@dimen/_160sdp"
+            android:layout_height="wrap_content"
+            android:text="@string/result_to_consult_page"
+            android:textSize="@dimen/_16ssp"
+            android:layout_marginTop="@dimen/_24sdp"
+            app:cornerRadius="@dimen/_8sdp"/>
+
+
+
+    </LinearLayout>
+
 
 
 

@@ -4,6 +4,7 @@ import android.content.res.AssetFileDescriptor;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.checkerframework.checker.units.qual.A;
@@ -50,7 +51,7 @@ public class  signLanguageClass {
     private String current_text = "";
 
 
-    signLanguageClass(Button clear_button, Button add_button, TextView change_text
+    signLanguageClass(ImageView clear_button, ImageView add_button, TextView change_text
             , AssetManager assetManager, String modelPath, String labelPath, int inputSize
             , String classificationModelParam, int classificationInputSizeParam) throws IOException{
         INPUT_SIZE=inputSize;

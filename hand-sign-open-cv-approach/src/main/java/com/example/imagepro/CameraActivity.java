@@ -1,6 +1,5 @@
 package com.example.imagepro;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
@@ -19,7 +18,6 @@ import org.opencv.android.LoaderCallbackInterface;
 import org.opencv.android.OpenCVLoader;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
-import org.opencv.imgproc.Imgproc;
 
 import java.io.IOException;
 
@@ -82,8 +80,8 @@ public class CameraActivity extends Activity implements CameraBridgeViewBase.CvC
             // Everything is working
             // Next tutorial series I will make sign language detection
             // bye
-            objectDetectorClass=new objectDetectorClass(getAssets(),"hand_model.tflite","custom_label.txt"
-                    ,300, "Sign_language_model.tflite", 96);
+            objectDetectorClass=new objectDetectorClass(getAssets(), "hand_model.tflite","custom_label.txt"
+                    ,300, "Sign_language_model_old.tflite", 96);
             Log.d("MainActivity","Model is successfully loaded");
         }
         catch (IOException e){

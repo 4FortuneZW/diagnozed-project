@@ -46,5 +46,7 @@ public class TerjemahActivity extends AppCompatActivity {
         binding.indoKeIsyarat.setOnClickListener(v -> {
             startActivity(new Intent(getApplicationContext(), IndonesiaKeIsyaratActivity.class));
         });
+
+        binding.backButton.setOnClickListener(v -> onBackPressed());
     }
 }

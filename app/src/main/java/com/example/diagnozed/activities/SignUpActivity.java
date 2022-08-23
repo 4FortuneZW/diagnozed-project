@@ -40,6 +40,7 @@ public class SignUpActivity extends AppCompatActivity {
     private ActivitySignUpBinding binding;
     private PreferenceManager preferenceManager;
     private String encodedImage;
+    private String role;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,11 +58,13 @@ public class SignUpActivity extends AppCompatActivity {
         binding.backToLogin.setOnClickListener(v ->
                 onBackPressed());
         binding.buttonSignUpUser.setOnClickListener(v -> {
+            role = "user";
             if (isValidSignUpDetails()) {
                 signUp(false);
             }
         });
         binding.buttonSignUpDoctor.setOnClickListener(v -> {
+            role = "doctor";
             if (isValidSignUpDetails()) {
                 signUp(true);
             }
@@ -118,6 +121,7 @@ public class SignUpActivity extends AppCompatActivity {
                     .addOnSuccessListener(documentReference -> {
                         loading(false, isDoctor);
                         preferenceManager.putBoolean(Constants.KEY_IS_SIGNED_IN, true);
+                        preferenceManager.putString(Constants.KEY_EMAIL, binding.inputEmail.getText().toString());
                         preferenceManager.putString(Constants.KEY_USER_ID, documentReference.getId());
                         preferenceManager.putString(Constants.KEY_NAME, binding.inputName.getText().toString());
                         preferenceManager.putString(Constants.KEY_IMAGE, encodedImage);
@@ -170,7 +174,14 @@ public class SignUpActivity extends AppCompatActivity {
 //        }
 
         if (encodedImage == null) {
-            Drawable drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.ic_default_profile_picture);
+            Drawable drawable;
+
+            if (role == "doctor") {
+                drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.default_profile_doctor);
+            } else {
+                drawable = ContextCompat.getDrawable(getApplicationContext(), R.drawable.default_profile_user);
+            }
+
             Bitmap bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight(), Bitmap.Config.ARGB_8888);
             Canvas canvas = new Canvas(bitmap);
             drawable.setBounds(0, 0, canvas.getWidth(), canvas.getHeight());

@@ -14,7 +14,6 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Diagnozed"
 include ':app'
-include ':hand-sign'
 include ':lib_task_api'
 include ':lib_interpreter'
 include ':hand-sign-open-cv-approach'
