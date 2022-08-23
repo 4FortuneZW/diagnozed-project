@@ -1,0 +1,15 @@
+com/example/imagepro/signLanguageClass.java
+ com.example.imagepro.signLanguageClass
+com/example/imagepro/MainActivity.java
+ com.example.imagepro.MainActivity
+ com.example.imagepro.MainActivity$1
+com/example/imagepro/CameraActivity.java
+ com.example.imagepro.CameraActivity
+ com.example.imagepro.CameraActivity$1
+com/example/imagepro/CombineLettersActivity.java
+ com.example.imagepro.CombineLettersActivity
+ com.example.imagepro.CombineLettersActivity$1
+com/example/imagepro/objectDetectorClass.java
+ com.example.imagepro.objectDetectorClass
+com/example/imagepro/BuildConfig.java
+ com.example.imagepro.BuildConfig
