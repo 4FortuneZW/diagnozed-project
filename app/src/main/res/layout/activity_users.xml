@@ -12,7 +12,7 @@
         android:id="@+id/select_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select User"
+        android:text="Dokter yang tersedia"
         android:textColor="@color/white"
         android:textSize="@dimen/_16ssp"
         android:textStyle="bold"

@@ -50,6 +50,9 @@ public class ChatMainActivity extends BaseActivity implements ConversationListen
     }
 
     private void init() {
+        if (preferenceManager.getString(Constants.KEY_ROLE).equals("user")) {
+            binding.fabNewChat.setVisibility(View.VISIBLE);
+        }
         conversations = new ArrayList<>();
         conversationsAdapter = new RecentConversationsAdapter(conversations, this);
         binding.conversationRecyclerView.setAdapter(conversationsAdapter);
@@ -59,6 +62,8 @@ public class ChatMainActivity extends BaseActivity implements ConversationListen
     private void setListeners() {
         binding.fabNewChat.setOnClickListener(v ->
                 startActivity(new Intent(getApplicationContext(), UsersActivity.class)));
+        binding.home.setOnClickListener(v ->
+                startActivity(new Intent(getApplicationContext(), MainActivity.class)));
     }
 
     private void listenConversations() {

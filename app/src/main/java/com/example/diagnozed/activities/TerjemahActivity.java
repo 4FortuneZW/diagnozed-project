@@ -22,11 +22,31 @@ public class TerjemahActivity extends AppCompatActivity {
 
     private void setListeners() {
         binding.isyaratKeIndo.setOnClickListener(v -> {
-            startActivity(new Intent(getApplicationContext(), IsyaratKeIndoActivity.class));
+//            startActivity(new Intent(getApplicationContext(), org.tensorflow.lite.examples.detection.DetectorActivity.class));
+
+//            Intent intent = null;
+//            try {
+//                intent = new Intent(this,
+//                        Class.forName("org.tensorflow.lite.examples.detection.DetectorActivity"));
+//                startActivity(intent);
+//            } catch (ClassNotFoundException e) {
+//                e.printStackTrace();
+//            }
+
+            Intent intent = null;
+            try {
+                intent = new Intent(this,
+                        Class.forName("com.example.imagepro.CombineLettersActivity"));
+                startActivity(intent);
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
         });
 
         binding.indoKeIsyarat.setOnClickListener(v -> {
             startActivity(new Intent(getApplicationContext(), IndonesiaKeIsyaratActivity.class));
         });
+
+        binding.backButton.setOnClickListener(v -> onBackPressed());
     }
 }

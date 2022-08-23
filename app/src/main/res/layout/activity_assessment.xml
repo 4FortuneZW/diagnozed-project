@@ -3,26 +3,53 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:scrollbars="none"
     android:clipToPadding="false"
     android:overScrollMode="never"
     tools:context=".activities.AssessmentActivity">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/_24sdp"
         android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:text="@string/assessment_title"
-            android:textSize="@dimen/_32ssp"
-            android:textColor="@color/primary_text"
-            android:textStyle="bold"
-            android:layout_margin="@dimen/_20sdp"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_92sdp"
+            android:orientation="horizontal"
+            android:background="@drawable/background_content_top"
+            android:backgroundTint="@color/primary"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/back_button"
+                android:layout_width="@dimen/_32sdp"
+                android:layout_height="@dimen/_32sdp"
+                android:src="@drawable/ic_back"
+                android:tint="@color/white"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="@dimen/_16sdp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Asesmen"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_28ssp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/back_button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.358"
+                app:layout_constraintStart_toEndOf="@id/back_button"
+                app:layout_constraintTop_toTopOf="@id/back_button"
+                app:layout_constraintVertical_bias="0.428" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
 
         <EditText
             android:id="@+id/input_nama_anak"
@@ -33,6 +60,9 @@
             android:importantForAutofill="no"
             android:background="@drawable/background_input"
             android:padding="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_16sdp"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:layout_marginEnd="@dimen/_24sdp"
             android:layout_marginBottom="@dimen/_12sdp"/>
 
         <EditText
@@ -44,6 +74,8 @@
             android:importantForAutofill="no"
             android:background="@drawable/background_input"
             android:padding="@dimen/_8sdp"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:layout_marginEnd="@dimen/_24sdp"
             android:layout_marginBottom="@dimen/_12sdp"/>
 
         <LinearLayout
@@ -51,7 +83,9 @@
             android:layout_height="wrap_content"
             android:padding="@dimen/_24sdp"
             android:orientation="vertical"
-            android:background="@drawable/results_background">
+            android:background="@drawable/results_background"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:layout_marginEnd="@dimen/_24sdp">
 
             <TextView
                 android:id="@+id/state_no_1"
@@ -60,6 +94,7 @@
                 android:layout_gravity="center_horizontal"
                 android:text="@string/state_no_1"
                 android:textColor="@color/white"
+                android:textStyle="bold"
                 android:textSize="@dimen/_16ssp"/>
 
             <RadioGroup
@@ -74,6 +109,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/answer_ya_no_1"
                     android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold"
                     android:textColor="@color/white"/>
 
                 <RadioButton
@@ -82,6 +118,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/answer_tidak_no_1"
                     android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold"
                     android:textColor="@color/white"/>
             </RadioGroup>
 
@@ -91,6 +128,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:textSize="@dimen/_16ssp"
+                android:textStyle="bold"
                 android:textColor="@color/white"
                 android:text="@string/state_no_2"/>
 
@@ -106,6 +144,7 @@
                     android:layout_height="wrap_content"
                     android:text="Ya"
                     android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold"
                     android:textColor="@color/white"/>
 
                 <RadioButton
@@ -114,6 +153,7 @@
                     android:layout_height="wrap_content"
                     android:text="Tidak"
                     android:textColor="@color/white"
+                    android:textStyle="bold"
                     android:textSize="@dimen/_16ssp"/>
             </RadioGroup>
 
@@ -123,6 +163,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text="@string/state_no_3"
+                android:textStyle="bold"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_16ssp" />
 
@@ -137,6 +178,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/answer_ya_no_3"
+                    android:textStyle="bold"
                     android:textSize="@dimen/_16ssp"
                     android:textColor="@color/white"/>
 
@@ -145,6 +187,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/answer_tidak_no_3"
+                    android:textStyle="bold"
                     android:textSize="@dimen/_16ssp"
                     android:textColor="@color/white"/>
             </RadioGroup>
@@ -156,6 +199,7 @@
                 android:layout_gravity="center_horizontal"
                 android:text="@string/state_no_4"
                 android:textSize="@dimen/_16ssp"
+                android:textStyle="bold"
                 android:textColor="@color/white"/>
 
             <RadioGroup
@@ -170,6 +214,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/answer_ya_no_4"
                     android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold"
                     android:textColor="@color/white"/>
 
                 <RadioButton
@@ -178,6 +223,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/answer_tidak_no_4"
                     android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold"
                     android:textColor="@color/white"/>
             </RadioGroup>
 
@@ -188,6 +234,7 @@
                 android:layout_gravity="center_horizontal"
                 android:text="@string/state_no_5"
                 android:textSize="@dimen/_16ssp"
+                android:textStyle="bold"
                 android:textColor="@color/white"/>
 
             <RadioGroup
@@ -202,6 +249,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/answer_ya_no_5"
                     android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold"
                     android:textColor="@color/white"/>
 
                 <RadioButton
@@ -210,6 +258,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/answer_tidak_nomor_5"
                     android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold"
                     android:textColor="@color/white"/>
             </RadioGroup>
 
@@ -220,6 +269,7 @@
                 android:layout_gravity="center_horizontal"
                 android:text="@string/state_no_6"
                 android:textColor="@color/white"
+                android:textStyle="bold"
                 android:textSize="@dimen/_16ssp" />
 
             <RadioGroup
@@ -234,6 +284,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/answer_ya_no_6"
                     android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold"
                     android:textColor="@color/white"/>
 
                 <RadioButton
@@ -242,6 +293,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/answer_tidak_no_6"
                     android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold"
                     android:textColor="@color/white"/>
             </RadioGroup>
 
@@ -252,6 +304,7 @@
                 android:layout_gravity="center_horizontal"
                 android:text="@string/state_no_7"
                 android:textColor="@color/white"
+                android:textStyle="bold"
                 android:textSize="@dimen/_16ssp"/>
 
             <RadioGroup
@@ -265,6 +318,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/answer_ya_no_7"
+                    android:textStyle="bold"
                     android:textSize="@dimen/_16ssp"
                     android:textColor="@color/white"/>
 
@@ -273,6 +327,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/answer_tidak_no_7"
+                    android:textStyle="bold"
                     android:textSize="@dimen/_16ssp"
                     android:textColor="@color/white"/>
             </RadioGroup>
@@ -284,6 +339,7 @@
                 android:layout_gravity="center_horizontal"
                 android:text="@string/state_no_8"
                 android:textColor="@color/white"
+                android:textStyle="bold"
                 android:textSize="@dimen/_16ssp"/>
 
             <RadioGroup
@@ -297,6 +353,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/answer_ya_no_8"
+                    android:textStyle="bold"
                     android:textSize="@dimen/_16ssp"
                     android:textColor="@color/white"/>
 
@@ -305,6 +362,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/answer_tidak_no_8"
+                    android:textStyle="bold"
                     android:textSize="@dimen/_16ssp"
                     android:textColor="@color/white"/>
             </RadioGroup>
@@ -315,6 +373,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:textSize="@dimen/_16ssp"
+                android:textStyle="bold"
                 android:textColor="@color/white"
                 android:text="@string/state_no_9"/>
 
@@ -329,6 +388,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/answer_ya_no_9"
+                    android:textStyle="bold"
                     android:textSize="@dimen/_16ssp"
                     android:textColor="@color/white"/>
 
@@ -337,6 +397,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/answer_tidak_no_9"
+                    android:textStyle="bold"
                     android:textSize="@dimen/_16ssp"
                     android:textColor="@color/white"/>
             </RadioGroup>
@@ -347,6 +408,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:textColor="@color/white"
+                android:textStyle="bold"
                 android:textSize="@dimen/_16ssp"
                 android:text="@string/state_no_10"/>
 
@@ -362,6 +424,7 @@
                     android:layout_height="wrap_content"
                     android:text="@string/answer_ya_no_10"
                     android:textSize="@dimen/_16ssp"
+                    android:textStyle="bold"
                     android:textColor="@color/white"/>
 
                 <RadioButton
@@ -369,6 +432,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/answer_tidak_no_10"
+                    android:textStyle="bold"
                     android:textSize="@dimen/_16ssp"
                     android:textColor="@color/white"/>
             </RadioGroup>
@@ -679,7 +743,9 @@
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal">
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_12sdp">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/assessment_submit_button"
@@ -689,6 +755,7 @@
                 android:layout_margin="@dimen/_8sdp"
                 android:textSize="@dimen/_12ssp"
                 android:textColor="@color/white"
+                android:textStyle="bold"
                 android:text="@string/assessment_submit_button"/>
             
             <ProgressBar
