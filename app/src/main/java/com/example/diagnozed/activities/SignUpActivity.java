@@ -26,6 +26,11 @@ import com.example.diagnozed.R;
 import com.example.diagnozed.databinding.ActivitySignUpBinding;
 import com.example.diagnozed.utilities.Constants;
 import com.example.diagnozed.utilities.PreferenceManager;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.io.ByteArrayOutputStream;
@@ -41,6 +46,7 @@ public class SignUpActivity extends AppCompatActivity {
     private PreferenceManager preferenceManager;
     private String encodedImage;
     private String role;
+    private FirebaseAuth firebaseAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +58,54 @@ public class SignUpActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         preferenceManager = new PreferenceManager(getApplicationContext());
         setListeners();
+    }
+
+    private void auth(String email, String password, String docId) {
+        firebaseAuth = FirebaseAuth.getInstance();
+        firebaseAuth.createUserWithEmailAndPassword(email, password)
+                .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            firebaseAuth.getCurrentUser().sendEmailVerification()
+                                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<Void> task) {
+                                            if (task.isSuccessful()) {
+                                                Toast.makeText(getApplicationContext()
+                                                        ,"Periksa email anda untuk melakukan verifikasi akun"
+                                                        , Toast.LENGTH_LONG).show();
+                                                Intent intent = new Intent(getApplicationContext(), SignInActivity.class);
+                                                startActivity(intent);
+                                            } else {
+                                                Toast.makeText(getApplicationContext(), task.getException().getMessage(),
+                                                        Toast.LENGTH_LONG).show();
+                                                FirebaseFirestore database;
+                                                database = FirebaseFirestore.getInstance();
+                                                database.collection(Constants.KEY_COLLECTION_USERS)
+                                                        .document(docId)
+                                                        .delete();
+                                            }
+                                        }
+                                    })
+                                    .addOnFailureListener(new OnFailureListener() {
+                                        @Override
+                                        public void onFailure(@NonNull Exception e) {
+                                            Toast.makeText(getApplicationContext(), "Email tidak valid",
+                                                    Toast.LENGTH_LONG).show();
+                                            FirebaseFirestore database;
+                                            database = FirebaseFirestore.getInstance();
+                                            database.collection(Constants.KEY_COLLECTION_USERS)
+                                                    .document(docId)
+                                                    .delete();
+                                        }
+                                    });
+                        } else {
+                            Toast.makeText(getApplicationContext(), task.getException().getMessage(),
+                                    Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
     }
 
     private void setListeners() {
@@ -95,14 +149,8 @@ public class SignUpActivity extends AppCompatActivity {
                     .add(user)
                     .addOnSuccessListener(documentReference -> {
                         loading(false, isDoctor);
-                        preferenceManager.putBoolean(Constants.KEY_IS_SIGNED_IN, true);
-                        preferenceManager.putString(Constants.KEY_USER_ID, documentReference.getId());
-                        preferenceManager.putString(Constants.KEY_NAME, binding.inputName.getText().toString());
-                        preferenceManager.putString(Constants.KEY_IMAGE, encodedImage);
-                        preferenceManager.putString(Constants.KEY_ROLE, String.valueOf(Constants.KEY_VALUE_USER));
-                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                        startActivity(intent);
+                        auth(binding.inputEmail.getText().toString(),binding.inputPassword.getText().toString(),
+                                documentReference.getId());
                     })
                     .addOnFailureListener(exception -> {
                         loading(false, isDoctor);
@@ -120,15 +168,9 @@ public class SignUpActivity extends AppCompatActivity {
                     .add(user)
                     .addOnSuccessListener(documentReference -> {
                         loading(false, isDoctor);
-                        preferenceManager.putBoolean(Constants.KEY_IS_SIGNED_IN, true);
-                        preferenceManager.putString(Constants.KEY_EMAIL, binding.inputEmail.getText().toString());
-                        preferenceManager.putString(Constants.KEY_USER_ID, documentReference.getId());
-                        preferenceManager.putString(Constants.KEY_NAME, binding.inputName.getText().toString());
-                        preferenceManager.putString(Constants.KEY_IMAGE, encodedImage);
-                        preferenceManager.putString(Constants.KEY_ROLE, String.valueOf(Constants.KEY_VALUE_DOCTOR));
-                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                        startActivity(intent);
+                        auth(binding.inputEmail.getText().toString(),binding.inputPassword.getText().toString(),
+                                documentReference.getId());
+
                     })
                     .addOnFailureListener(exception -> {
                         loading(false, isDoctor);
