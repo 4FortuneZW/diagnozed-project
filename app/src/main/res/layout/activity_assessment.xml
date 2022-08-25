@@ -105,8 +105,7 @@
                     android:maxLines="1"
                     android:layout_marginEnd="@dimen/_16sdp"
                     android:padding="@dimen/_4sdp"
-                    android:background="@drawable/results_background"
-                    android:backgroundTint="@color/secondary_text"/>
+                    android:background="@color/secondary_text" />
 
                 <TextView
                     android:id="@+id/speech_delay_assessment_button"
@@ -119,7 +118,7 @@
                     android:textAlignment="center"
                     android:maxLines="1"
                     android:padding="@dimen/_4sdp"
-                    android:background="@drawable/results_background" />
+                    android:background="@color/primary"/>
 
             </LinearLayout>
 

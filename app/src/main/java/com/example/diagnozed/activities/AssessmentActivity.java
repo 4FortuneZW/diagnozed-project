@@ -33,7 +33,7 @@ public class AssessmentActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityAssessmentBinding.inflate(getLayoutInflater());
         preferenceManager = new PreferenceManager(getApplicationContext());
-        Integer usiaAnak = Integer.valueOf(binding.inputUsiaAnak.getText().toString());
+
         setContentView(binding.getRoot());
         setListeners();
     }
@@ -51,6 +51,8 @@ public class AssessmentActivity extends AppCompatActivity {
             if(binding.inputUsiaAnak.getText().toString().equals("")) {
                 showToast("Masukkan usia anak terlebih dahulu");
             } else {
+
+                usiaAnak = Integer.valueOf(binding.inputUsiaAnak.getText().toString());
                 switch (usiaAnak) {
                     case 1 :
                         binding.satuTahun.setVisibility(View.VISIBLE);
@@ -84,8 +86,16 @@ public class AssessmentActivity extends AppCompatActivity {
 
         binding.backButton.setOnClickListener(v -> onBackPressed());
 
+        binding.petunjukButton.setOnClickListener(v -> {
+            binding.petunjuk.setVisibility(View.VISIBLE);
+        });
+
+        binding.tutupPetunjukButton.setOnClickListener(v -> {
+            binding.petunjuk.setVisibility(View.GONE);
+        });
+
         binding.assessmentSubmitButton.setOnClickListener(v -> {
-            if (true) {
+            if (!binding.inputNamaAnak.getText().toString().equals("") && !binding.inputUsiaAnak.getText().toString().equals("")) {
                 loading(true);
 
                 HashMap<String, Object> assessmentResult = new HashMap<>();
