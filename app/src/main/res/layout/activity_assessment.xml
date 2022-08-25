@@ -876,7 +876,7 @@ yang memenuhi kondisi anak Anda!"
         </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/petunjuk"
+        android:id="@+id/petunjuk_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_12sdp"
@@ -893,7 +893,7 @@ yang memenuhi kondisi anak Anda!"
             android:textSize="@dimen/_16ssp"
             android:textStyle="bold"
             android:textColor="@color/white"
-            android:text="Lihat Petunjuk"
+            android:text="LIHAT PETUNJUK"
             android:textAlignment="center"/>
 
     </LinearLayout>
@@ -1052,23 +1052,26 @@ siang hari maka bulan bersinar di?"
     </LinearLayout>
 
         <FrameLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/_24sdp"
+            android:layout_marginEnd="@dimen/_24sdp"
             android:layout_marginTop="@dimen/_8sdp"
             android:layout_marginBottom="@dimen/_12sdp">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/assessment_submit_button"
-                android:layout_width="@dimen/_160sdp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/_8sdp"
-                android:textSize="@dimen/_12ssp"
+                android:textSize="@dimen/_16ssp"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 android:text="@string/assessment_submit_button"
-                app:cornerRadius="@dimen/_8sdp"/>
+                android:padding="@dimen/_8sdp"
+                app:cornerRadius="@dimen/_16sdp"/>
             
             <ProgressBar
                 android:id="@+id/submit_progress_bar"
