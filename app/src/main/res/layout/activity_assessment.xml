@@ -81,664 +81,975 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/_24sdp"
-            android:orientation="vertical"
-            android:background="@drawable/results_background"
             android:layout_marginStart="@dimen/_24sdp"
-            android:layout_marginEnd="@dimen/_24sdp">
+            android:layout_marginEnd="@dimen/_24sdp"
+            android:background="@drawable/results_background"
+            android:orientation="vertical"
+            android:padding="@dimen/_24sdp">
 
-            <TextView
-                android:id="@+id/state_no_1"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/state_no_1"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                android:textSize="@dimen/_16ssp"/>
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/_12sdp">
 
-            <RadioGroup
-                android:id="@+id/answers_no_1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/answer_ya_no_1"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/autism_assessment_button"
+                    android:layout_width="@dimen/_80sdp"
                     android:layout_height="wrap_content"
-                    android:text="@string/answer_ya_no_1"
+                    android:text="Autism"
                     android:textSize="@dimen/_16ssp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"/>
-
-                <RadioButton
-                    android:id="@+id/answer_tidak_no_1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/answer_tidak_no_1"
-                    android:textSize="@dimen/_16ssp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"/>
-            </RadioGroup>
-
-            <TextView
-                android:id="@+id/state_no_2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:textSize="@dimen/_16ssp"
-                android:textStyle="bold"
-                android:textColor="@color/white"
-                android:text="@string/state_no_2"/>
-
-            <RadioGroup
-                android:id="@+id/answers_no_2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/answer_ya_no_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Ya"
-                    android:textSize="@dimen/_16ssp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"/>
-
-                <RadioButton
-                    android:id="@+id/answer_tidak_no_2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Tidak"
                     android:textColor="@color/white"
                     android:textStyle="bold"
-                    android:textSize="@dimen/_16ssp"/>
-            </RadioGroup>
+                    android:textAlignment="center"
+                    android:maxLines="1"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:padding="@dimen/_4sdp"
+                    android:background="@drawable/results_background"
+                    android:backgroundTint="@color/primary_text"/>
 
-            <TextView
-                android:id="@+id/state_no_3"
+                <TextView
+                    android:id="@+id/speech_delay_assessment_button"
+                    android:layout_width="@dimen/_120sdp"
+                    android:layout_height="wrap_content"
+                    android:text="Speech delay"
+                    android:textSize="@dimen/_16ssp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    android:maxLines="1"
+                    android:padding="@dimen/_4sdp"
+                    android:background="@drawable/results_background" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/asesmen_autis"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/state_no_3"
-                android:textStyle="bold"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_16ssp" />
+                android:orientation="vertical"
+                android:visibility="gone">
 
-            <RadioGroup
-                android:id="@+id/answers_no_3"
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Perhatikan pernyataan-pernyataan
+kebiasaan-kebiasaan anak di bawah ini!
+Jika Anda pernah melihat anak Anda melakukan kebiasaan tersebut
+hanya beberapa kali, tetapi dia tidak sering melakukannya, maka
+jangan centang pernyataan tersebut.
+Jika dia sering melakukannya, maka centang pernyataan tersebut."
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="@dimen/_16sdp"/>
+
+                <CheckBox
+                    android:id="@+id/autis_no_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:button="@drawable/assesment_checkbox"
+                    android:buttonTint="@color/white"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/autis_no_1"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+
+
+                <CheckBox
+                    android:id="@+id/autis_no_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:button="@drawable/assesment_checkbox"
+                    android:buttonTint="@color/white"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/autis_no_2"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+
+                <CheckBox
+                    android:id="@+id/autis_no_3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:button="@drawable/assesment_checkbox"
+                    android:buttonTint="@color/white"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/autis_no_3"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/autis_no_4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:button="@drawable/assesment_checkbox"
+                    android:buttonTint="@color/white"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/autis_no_4"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/autis_no_5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:button="@drawable/assesment_checkbox"
+                    android:buttonTint="@color/white"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/autis_no_5"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/autis_no_6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:button="@drawable/assesment_checkbox"
+                    android:buttonTint="@color/white"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/autis_no_6"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/autis_no_7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:button="@drawable/assesment_checkbox"
+                    android:buttonTint="@color/white"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/autis_no_7"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/autis_no_8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:button="@drawable/assesment_checkbox"
+                    android:buttonTint="@color/white"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/autis_no_8"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/autis_no_9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:button="@drawable/assesment_checkbox"
+                    android:buttonTint="@color/white"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/autis_no_9"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/autis_no_10"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:button="@drawable/assesment_checkbox"
+                    android:buttonTint="@color/white"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/autis_no_10"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/autis_no_11"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:button="@drawable/assesment_checkbox"
+                    android:buttonTint="@color/white"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/autis_no_11"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/autis_no_12"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:button="@drawable/assesment_checkbox"
+                    android:buttonTint="@color/white"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/autis_no_12"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/autis_no_13"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:button="@drawable/assesment_checkbox"
+                    android:buttonTint="@color/white"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/autis_no_13"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/autis_no_14"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:button="@drawable/assesment_checkbox"
+                    android:buttonTint="@color/white"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/autis_no_14"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/autis_no_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:button="@drawable/assesment_checkbox"
+                    android:buttonTint="@color/white"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/autis_no_15"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/autis_no_16"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:button="@drawable/assesment_checkbox"
+                    android:buttonTint="@color/white"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/autis_no_16"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/autis_no_17"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:button="@drawable/assesment_checkbox"
+                    android:buttonTint="@color/white"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/autis_no_17"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/autis_no_18"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:button="@drawable/assesment_checkbox"
+                    android:buttonTint="@color/white"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/autis_no_18"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/autis_no_19"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:button="@drawable/assesment_checkbox"
+                    android:buttonTint="@color/white"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/autis_no_19"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/autis_no_20"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:button="@drawable/assesment_checkbox"
+                    android:buttonTint="@color/white"
+                    android:padding="@dimen/_8sdp"
+                    android:text="@string/autis_no_20"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/asesmen_speech_delay"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
-                <RadioButton
-                    android:id="@+id/answer_ya_no_3"
-                    android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/answer_ya_no_3"
+                    android:text="Beri tanda centang pada pernyataan- pernyataan di bawah
+yang memenuhi kondisi anak Anda!"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12ssp"
                     android:textStyle="bold"
-                    android:textSize="@dimen/_16ssp"
-                    android:textColor="@color/white"/>
+                    android:layout_marginBottom="@dimen/_16sdp"/>
 
-                <RadioButton
-                    android:id="@+id/answer_tidak_no_3"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/satu_tahun"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/answer_tidak_no_3"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/_16ssp"
-                    android:textColor="@color/white"/>
-            </RadioGroup>
+                    android:orientation="vertical"
+                    android:visibility="gone">
 
-            <TextView
-                android:id="@+id/state_no_4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/state_no_4"
-                android:textSize="@dimen/_16ssp"
-                android:textStyle="bold"
-                android:textColor="@color/white"/>
+                    <CheckBox
+                        android:id="@+id/speda1_no_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:button="@drawable/assesment_checkbox"
+                        android:buttonTint="@color/white"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/speda1_no_1"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
 
-            <RadioGroup
-                android:id="@+id/answers_no_4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                    <CheckBox
+                        android:id="@+id/speda1_no_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:button="@drawable/assesment_checkbox"
+                        android:buttonTint="@color/white"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/speda1_no_2"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
 
-                <RadioButton
-                    android:id="@+id/answer_ya_no_4"
-                    android:layout_width="wrap_content"
+                    <CheckBox
+                        android:id="@+id/speda1_no_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:button="@drawable/assesment_checkbox"
+                        android:buttonTint="@color/white"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/speda1_no_3"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dua_tahun"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/answer_ya_no_4"
-                    android:textSize="@dimen/_16ssp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"/>
+                    android:orientation="vertical"
+                    android:visibility="gone">
 
-                <RadioButton
-                    android:id="@+id/answer_tidak_no_4"
-                    android:layout_width="wrap_content"
+                    <CheckBox
+                        android:id="@+id/speda2_no_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:button="@drawable/assesment_checkbox"
+                        android:buttonTint="@color/white"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/speda2_no_1"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/speda2_no_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:button="@drawable/assesment_checkbox"
+                        android:buttonTint="@color/white"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/speda2_no_2"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/speda2_no_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:button="@drawable/assesment_checkbox"
+                        android:buttonTint="@color/white"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/speda2_no_3"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/speda2_no_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:button="@drawable/assesment_checkbox"
+                        android:buttonTint="@color/white"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/speda2_no_4"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/speda2_no_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:button="@drawable/assesment_checkbox"
+                        android:buttonTint="@color/white"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/speda2_no_5"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/tiga_tahun"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/answer_tidak_no_4"
-                    android:textSize="@dimen/_16ssp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"/>
-            </RadioGroup>
+                    android:orientation="vertical"
+                    android:visibility="gone">
 
-            <TextView
-                android:id="@+id/state_no_5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/state_no_5"
-                android:textSize="@dimen/_16ssp"
-                android:textStyle="bold"
-                android:textColor="@color/white"/>
+                    <CheckBox
+                        android:id="@+id/speda3_no_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:button="@drawable/assesment_checkbox"
+                        android:buttonTint="@color/white"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/speda3_no_1"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
 
-            <RadioGroup
-                android:id="@+id/answers_no_5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                    <CheckBox
+                        android:id="@+id/speda3_no_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:button="@drawable/assesment_checkbox"
+                        android:buttonTint="@color/white"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/speda3_no_2"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
 
-                <RadioButton
-                    android:id="@+id/answer_ya_no_5"
-                    android:layout_width="wrap_content"
+                    <CheckBox
+                        android:id="@+id/speda3_no_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:button="@drawable/assesment_checkbox"
+                        android:buttonTint="@color/white"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/speda3_no_3"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/speda3_no_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:button="@drawable/assesment_checkbox"
+                        android:buttonTint="@color/white"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/speda3_no_4"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/speda3_no_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:button="@drawable/assesment_checkbox"
+                        android:buttonTint="@color/white"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/speda3_no_5"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/empat_tahun"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/answer_ya_no_5"
-                    android:textSize="@dimen/_16ssp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"/>
+                    android:orientation="vertical"
+                    android:visibility="gone">
 
-                <RadioButton
-                    android:id="@+id/answer_tidak_no_5"
-                    android:layout_width="wrap_content"
+                    <CheckBox
+                        android:id="@+id/speda4_no_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:button="@drawable/assesment_checkbox"
+                        android:buttonTint="@color/white"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/speda4_no_1"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/speda4_no_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:button="@drawable/assesment_checkbox"
+                        android:buttonTint="@color/white"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/speda4_no_2"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/speda4_no_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:button="@drawable/assesment_checkbox"
+                        android:buttonTint="@color/white"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/speda4_no_3"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/speda4_no_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:button="@drawable/assesment_checkbox"
+                        android:buttonTint="@color/white"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/speda4_no_4"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/speda4_no_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:button="@drawable/assesment_checkbox"
+                        android:buttonTint="@color/white"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/speda4_no_5"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/speda4_no_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:button="@drawable/assesment_checkbox"
+                        android:buttonTint="@color/white"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/speda4_no_6"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/speda4_no_7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:button="@drawable/assesment_checkbox"
+                        android:buttonTint="@color/white"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/speda4_no_7"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/speda4_no_8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:button="@drawable/assesment_checkbox"
+                        android:buttonTint="@color/white"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/speda4_no_8"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lima_tahun"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/answer_tidak_nomor_5"
-                    android:textSize="@dimen/_16ssp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"/>
-            </RadioGroup>
+                    android:orientation="vertical"
+                    android:visibility="gone">
 
-            <TextView
-                android:id="@+id/state_no_6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/state_no_6"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                android:textSize="@dimen/_16ssp" />
+                    <CheckBox
+                        android:id="@+id/speda5_no_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:button="@drawable/assesment_checkbox"
+                        android:buttonTint="@color/white"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/speda5_no_1"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
 
-            <RadioGroup
-                android:id="@+id/answers_no_6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                    <CheckBox
+                        android:id="@+id/speda5_no_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:button="@drawable/assesment_checkbox"
+                        android:buttonTint="@color/white"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/speda5_no_2"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
 
-                <RadioButton
-                    android:id="@+id/answer_ya_no_6"
-                    android:layout_width="wrap_content"
+                    <CheckBox
+                        android:id="@+id/speda5_no_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:button="@drawable/assesment_checkbox"
+                        android:buttonTint="@color/white"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/speda5_no_3"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/speda5_no_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:button="@drawable/assesment_checkbox"
+                        android:buttonTint="@color/white"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/speda5_no_4"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/speda5_no_5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:button="@drawable/assesment_checkbox"
+                        android:buttonTint="@color/white"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/speda5_no_5"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+
+                    <CheckBox
+                        android:id="@+id/speda5_no_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:button="@drawable/assesment_checkbox"
+                        android:buttonTint="@color/white"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/speda5_no_6"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/enam_tahun"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/answer_ya_no_6"
-                    android:textSize="@dimen/_16ssp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"/>
+                    android:orientation="vertical"
+                    android:visibility="gone">
 
-                <RadioButton
-                    android:id="@+id/answer_tidak_no_6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/answer_tidak_no_6"
-                    android:textSize="@dimen/_16ssp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"/>
-            </RadioGroup>
+                    <CheckBox
+                        android:id="@+id/speda6_no_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:button="@drawable/assesment_checkbox"
+                        android:buttonTint="@color/white"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/speda6_no_1"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/state_no_7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/state_no_7"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                android:textSize="@dimen/_16ssp"/>
+                    <CheckBox
+                        android:id="@+id/speda6_no_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:button="@drawable/assesment_checkbox"
+                        android:buttonTint="@color/white"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/speda6_no_2"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
 
-            <RadioGroup
-                android:id="@+id/answers_no_7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                    <CheckBox
+                        android:id="@+id/speda6_no_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:button="@drawable/assesment_checkbox"
+                        android:buttonTint="@color/white"
+                        android:padding="@dimen/_8sdp"
+                        android:text="@string/speda6_no_3"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
 
-                <RadioButton
-                    android:id="@+id/answer_ya_no_7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/answer_ya_no_7"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/_16ssp"
-                    android:textColor="@color/white"/>
+                </LinearLayout>
 
-                <RadioButton
-                    android:id="@+id/answer_tidak_no_7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/answer_tidak_no_7"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/_16ssp"
-                    android:textColor="@color/white"/>
-            </RadioGroup>
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/state_no_8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:text="@string/state_no_8"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                android:textSize="@dimen/_16ssp"/>
-
-            <RadioGroup
-                android:id="@+id/answers_no_8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/answer_ya_no_8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/answer_ya_no_8"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/_16ssp"
-                    android:textColor="@color/white"/>
-
-                <RadioButton
-                    android:id="@+id/answer_tidak_no_8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/answer_tidak_no_8"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/_16ssp"
-                    android:textColor="@color/white"/>
-            </RadioGroup>
-
-            <TextView
-                android:id="@+id/state_no_9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:textSize="@dimen/_16ssp"
-                android:textStyle="bold"
-                android:textColor="@color/white"
-                android:text="@string/state_no_9"/>
-
-            <RadioGroup
-                android:id="@+id/answers_no_9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/answer_ya_no_9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/answer_ya_no_9"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/_16ssp"
-                    android:textColor="@color/white"/>
-
-                <RadioButton
-                    android:id="@+id/answer_tidak_no_9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/answer_tidak_no_9"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/_16ssp"
-                    android:textColor="@color/white"/>
-            </RadioGroup>
-
-            <TextView
-                android:id="@+id/state_no_10"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:textColor="@color/white"
-                android:textStyle="bold"
-                android:textSize="@dimen/_16ssp"
-                android:text="@string/state_no_10"/>
-
-            <RadioGroup
-                android:id="@+id/answers_no_10"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/answer_ya_no_10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/answer_ya_no_10"
-                    android:textSize="@dimen/_16ssp"
-                    android:textStyle="bold"
-                    android:textColor="@color/white"/>
-
-                <RadioButton
-                    android:id="@+id/answer_tidak_no_10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/answer_tidak_no_10"
-                    android:textStyle="bold"
-                    android:textSize="@dimen/_16ssp"
-                    android:textColor="@color/white"/>
-            </RadioGroup>
 
 
         </LinearLayout>
 
-<!--        <TextView-->
-<!--            android:id="@+id/state_no_1"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_gravity="center_horizontal"-->
-<!--            android:text="@string/state_no_1"-->
-<!--            android:textColor="@color/primary_text"-->
-<!--            android:textSize="@dimen/_16ssp"/>-->
+    <LinearLayout
+        android:id="@+id/petunjuk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginEnd="@dimen/_24sdp"
+        android:background="@drawable/results_background"
+        android:backgroundTint="@color/primary_text"
+        android:orientation="vertical"
+        android:padding="@dimen/_8sdp">
 
-<!--        <RadioGroup-->
-<!--            android:id="@+id/answers_no_1"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="horizontal">-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:text="Lihat Petunjuk"
+            android:textAlignment="center"/>
 
-<!--            <RadioButton-->
-<!--                android:id="@+id/answer_ya_no_1"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/answer_ya_no_1"-->
-<!--                android:textSize="@dimen/_16ssp"/>-->
+    </LinearLayout>
 
-<!--            <RadioButton-->
-<!--                android:id="@+id/answer_tidak_no_1"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/answer_tidak_no_1"-->
-<!--                android:textSize="@dimen/_16ssp"/>-->
-<!--        </RadioGroup>-->
+    <LinearLayout
+        android:id="@+id/petunjuk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp"
+        android:layout_marginStart="@dimen/_24sdp"
+        android:layout_marginEnd="@dimen/_24sdp"
+        android:background="@drawable/results_background"
+        android:backgroundTint="@color/primary_text"
+        android:orientation="vertical"
+        android:padding="@dimen/_24sdp">
 
-<!--        <TextView-->
-<!--            android:id="@+id/state_no_2"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_gravity="center_horizontal"-->
-<!--            android:textSize="@dimen/_16ssp"-->
-<!--            android:textColor="@color/primary_text"-->
-<!--            android:text="@string/state_no_2"/>-->
+        <ImageView
+            android:id="@+id/tutup_petunjuk_button"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/ic_baseline_clear_24"
+            android:layout_gravity="end"
+            android:tint="@color/white"
+            android:layout_marginBottom="@dimen/_8sdp"/>
 
-<!--        <RadioGroup-->
-<!--            android:id="@+id/answers_no_2"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="horizontal">-->
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:fadeScrollbars="false">
 
-<!--            <RadioButton-->
-<!--                android:id="@+id/answer_ya_no_2"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Ya"-->
-<!--                android:textSize="@dimen/_16ssp"/>-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
 
-<!--            <RadioButton-->
-<!--                android:id="@+id/answer_tidak_no_2"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="Tidak"-->
-<!--                android:textSize="@dimen/_16ssp"/>-->
-<!--        </RadioGroup>-->
+                <ImageView
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:src="@drawable/a" />
 
-<!--        <TextView-->
-<!--            android:id="@+id/state_no_3"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_gravity="center_horizontal"-->
-<!--            android:text="@string/state_no_3"-->
-<!--            android:textColor="@color/primary_text"-->
-<!--            android:textSize="@dimen/_16ssp" />-->
+                <ImageView
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:src="@drawable/a" />
 
-<!--        <RadioGroup-->
-<!--            android:id="@+id/answers_no_3"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="horizontal">-->
+                <ImageView
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:src="@drawable/a" />
 
-<!--            <RadioButton-->
-<!--                android:id="@+id/answer_ya_no_3"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/answer_ya_no_3"-->
-<!--                android:textSize="@dimen/_16ssp"/>-->
+                <ImageView
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:src="@drawable/a"/>
 
-<!--            <RadioButton-->
-<!--                android:id="@+id/answer_tidak_no_3"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/answer_tidak_no_3"-->
-<!--                android:textSize="@dimen/_16ssp"/>-->
-<!--        </RadioGroup>-->
+                <ImageView
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:src="@drawable/a"/>
 
-<!--        <TextView-->
-<!--            android:id="@+id/state_no_4"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_gravity="center_horizontal"-->
-<!--            android:text="@string/state_no_4"-->
-<!--            android:textSize="@dimen/_16ssp"-->
-<!--            android:textColor="@color/primary_text"/>-->
+                <ImageView
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp"
+                    android:src="@drawable/a"/>
 
-<!--        <RadioGroup-->
-<!--            android:id="@+id/answers_no_4"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="horizontal">-->
+            </LinearLayout>
 
-<!--            <RadioButton-->
-<!--                android:id="@+id/answer_ya_no_4"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/answer_ya_no_4"-->
-<!--                android:textSize="@dimen/_16ssp"/>-->
+        </HorizontalScrollView>
 
-<!--            <RadioButton-->
-<!--                android:id="@+id/answer_tidak_no_4"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/answer_tidak_no_4"-->
-<!--                android:textSize="@dimen/_16ssp"/>-->
-<!--        </RadioGroup>-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1. Tunjuk masing-masing gambar di atas dan minta anak
+menyebutkan nama gambar tersebut (gagal jika hanya meniru suara dari gambar tersebut)"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"/>
 
-<!--        <TextView-->
-<!--            android:id="@+id/state_no_5"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_gravity="center_horizontal"-->
-<!--            android:text="@string/state_no_5"-->
-<!--            android:textSize="@dimen/_16ssp"-->
-<!--            android:textColor="@color/primary_text"/>-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2. Sebutkan nama masing-masing gambar di atas dan minta anak
+untuk menunjuk gambar yang Anda sebutkan"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"/>
 
-<!--        <RadioGroup-->
-<!--            android:id="@+id/answers_no_5"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="horizontal">-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3. Tunjukkan gambar di atas kepada anak dan katakan
+mana yang terbang? yang meong? yang bicara? yang menggonggong? yang meringkik"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"/>
 
-<!--            <RadioButton-->
-<!--                android:id="@+id/answer_ya_no_5"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/answer_ya_no_5"-->
-<!--                android:textSize="@dimen/_16ssp"/>-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4. Minta anak
+untuk menunjukkan bagian-bagian tubuh Anda, yaitu
+hidung, mata, telinga, mulut, tangan, kaki, perut, dan rambut Anda"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"/>
 
-<!--            <RadioButton-->
-<!--                android:id="@+id/answer_tidak_no_5"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/answer_tidak_nomor_5"-->
-<!--                android:textSize="@dimen/_16ssp"/>-->
-<!--        </RadioGroup>-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5. Tanyakan kepada anak : Apa yang kamu lakukan ketika
+kedinginan? ketika lelah? ketika lapar?"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"/>
 
-<!--        <TextView-->
-<!--            android:id="@+id/state_no_6"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_gravity="center_horizontal"-->
-<!--            android:text="@string/state_no_6"-->
-<!--            android:textColor="@color/primary_text"-->
-<!--            android:textSize="@dimen/_16ssp" />-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="6. Tanyakan kepada anak : Apa kegunaan cangkir?
+kursi? pensil? (jawaban harus termasuk kata-kata gerakan, misalnya sendok untuk makan)"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"/>
 
-<!--        <RadioGroup-->
-<!--            android:id="@+id/answers_no_6"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="horizontal">-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="7. Ambil minimal lima barang sejenis (misalnya buku),
+kemudian minta anak untuk menaruh barang tersebut satu per satu sambil berhitung
+(satu, dua, tiga, dan seterusnya)"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"/>
 
-<!--            <RadioButton-->
-<!--                android:id="@+id/answer_ya_no_6"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/answer_ya_no_6"-->
-<!--                android:textSize="@dimen/_16ssp"/>-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="8. Ambil sembarang benda, lalu minta anak untuk menaruh
+benda tersebut di atas meja, di bawah meja, di depan Anda, dan di belakang Anda
+(jangan membantu anak dengan menggerakan kepala atau mata)"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"/>
 
-<!--            <RadioButton-->
-<!--                android:id="@+id/answer_tidak_no_6"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/answer_tidak_no_6"-->
-<!--                android:textSize="@dimen/_16ssp"/>-->
-<!--        </RadioGroup>-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="9. Tanyakan kepada anak : apa itu bola? danau? meja?
+rumah? pisang? korden? pagar? atap? (dikatakan berhasil jika disebutkan
+kegunaan/bentuk/terbuat dari apa/kategori)"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"/>
 
-<!--        <TextView-->
-<!--            android:id="@+id/state_no_7"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_gravity="center_horizontal"-->
-<!--            android:text="@string/state_no_7"-->
-<!--            android:textColor="@color/primary_text"-->
-<!--            android:textSize="@dimen/_16ssp"/>-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="10. Tanyakan kepada anak : jika kuda itu besar,
+tikus adalah? Jika api itu panas, es adalah? Jika matahari bersinar di
+siang hari maka bulan bersinar di?"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp"/>
 
-<!--        <RadioGroup-->
-<!--            android:id="@+id/answers_no_7"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="horizontal">-->
-
-<!--            <RadioButton-->
-<!--                android:id="@+id/answer_ya_no_7"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/answer_ya_no_7"-->
-<!--                android:textSize="@dimen/_16ssp"/>-->
-
-<!--            <RadioButton-->
-<!--                android:id="@+id/answer_tidak_no_7"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/answer_tidak_no_7"-->
-<!--                android:textSize="@dimen/_16ssp"/>-->
-<!--        </RadioGroup>-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/state_no_8"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_gravity="center_horizontal"-->
-<!--            android:text="@string/state_no_8"-->
-<!--            android:textColor="@color/primary_text"-->
-<!--            android:textSize="@dimen/_16ssp"/>-->
-
-<!--        <RadioGroup-->
-<!--            android:id="@+id/answers_no_8"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="horizontal">-->
-
-<!--            <RadioButton-->
-<!--                android:id="@+id/answer_ya_no_8"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/answer_ya_no_8"-->
-<!--                android:textSize="@dimen/_16ssp"/>-->
-
-<!--            <RadioButton-->
-<!--                android:id="@+id/answer_tidak_no_8"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/answer_tidak_no_8"-->
-<!--                android:textSize="@dimen/_16ssp"/>-->
-<!--        </RadioGroup>-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/state_no_9"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_gravity="center_horizontal"-->
-<!--            android:textSize="@dimen/_16ssp"-->
-<!--            android:textColor="@color/primary_text"-->
-<!--            android:text="@string/state_no_9"/>-->
-
-<!--        <RadioGroup-->
-<!--            android:id="@+id/answers_no_9"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="horizontal">-->
-
-<!--            <RadioButton-->
-<!--                android:id="@+id/answer_ya_no_9"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/answer_ya_no_9"-->
-<!--                android:textSize="@dimen/_16ssp"/>-->
-
-<!--            <RadioButton-->
-<!--                android:id="@+id/answer_tidak_no_9"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/answer_tidak_no_9"-->
-<!--                android:textSize="@dimen/_16ssp"/>-->
-<!--        </RadioGroup>-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/state_no_10"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_gravity="center_horizontal"-->
-<!--            android:textColor="@color/primary_text"-->
-<!--            android:textSize="@dimen/_16ssp"-->
-<!--            android:text="@string/state_no_10"/>-->
-
-<!--        <RadioGroup-->
-<!--            android:id="@+id/answers_no_10"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:orientation="horizontal">-->
-
-<!--            <RadioButton-->
-<!--                android:id="@+id/answer_ya_no_10"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/answer_ya_no_10"-->
-<!--                android:textSize="@dimen/_16ssp"/>-->
-
-<!--            <RadioButton-->
-<!--                android:id="@+id/answer_tidak_no_10"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:text="@string/answer_tidak_no_10"-->
-<!--                android:textSize="@dimen/_16ssp"/>-->
-<!--        </RadioGroup>-->
+    </LinearLayout>
 
         <FrameLayout
             android:layout_width="wrap_content"
@@ -750,13 +1061,14 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/assessment_submit_button"
                 android:layout_width="@dimen/_160sdp"
-                android:layout_height="@dimen/_40sdp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/_8sdp"
                 android:textSize="@dimen/_12ssp"
                 android:textColor="@color/white"
                 android:textStyle="bold"
-                android:text="@string/assessment_submit_button"/>
+                android:text="@string/assessment_submit_button"
+                app:cornerRadius="@dimen/_8sdp"/>
             
             <ProgressBar
                 android:id="@+id/submit_progress_bar"
@@ -769,5 +1081,30 @@
         </FrameLayout>
         
     </LinearLayout>
+
+    <!--            <RadioGroup-->
+    <!--                android:id="@+id/answers_no_1"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:orientation="horizontal">-->
+
+    <!--                <RadioButton-->
+    <!--                    android:id="@+id/answer_ya_no_1"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:text="@string/answer_ya_no_1"-->
+    <!--                    android:textSize="@dimen/_16ssp"-->
+    <!--                    android:textStyle="bold"-->
+    <!--                    android:textColor="@color/white"/>-->
+
+    <!--                <RadioButton-->
+    <!--                    android:id="@+id/answer_tidak_no_1"-->
+    <!--                    android:layout_width="wrap_content"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:text="@string/answer_tidak_no_1"-->
+    <!--                    android:textSize="@dimen/_16ssp"-->
+    <!--                    android:textStyle="bold"-->
+    <!--                    android:textColor="@color/white"/>-->
+    <!--            </RadioGroup>-->
 
 </ScrollView>
