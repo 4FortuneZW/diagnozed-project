@@ -50,41 +50,41 @@
     <string name="autis_no_19">Jika sesuatu yang baru terjadi, anak Anda menatap wajah Anda untuk melihat perasaan Anda tentang hal tersebut (misalnya, jika anak Anda mendengar bunyi aneh atau lucu, atau melihat mainan baru, dia menatap wajah Anda)</string>
     <string name="autis_no_20">Anak Anda menyukai aktivitas yang bergerak (misalnya, diayun-ayun atau dihentak-hentakkan pada lutut anda)</string>
 
-    <string name="speda1_no_1">Anak bisa mengucapkan kata papa atau mama dengan jelas</string>
+    <string name="speda1_no_3">Anak bisa mengucapkan kata papa atau mama dengan jelas</string>
     <string name="speda1_no_2">Anak mengoceh</string>
-    <string name="speda1_no_3">Anak bisa mengucapkan minimal dua suku kata</string>
+    <string name="speda1_no_1">Anak bisa mengucapkan minimal dua suku kata</string>
 
-    <string name="speda2_no_1">Anak bisa menyebutkan minimal enam bagian badan (ikuti petunjuk nomor 1 di bawah)</string>
-    <string name="speda2_no_2">Anak bisa menyebutkan minimal satu gambar (ikuti petunjuk nomor 2 di bawah)</string>
+    <string name="speda2_no_5">Anak bisa menyebutkan minimal enam bagian tubuh (ikuti petunjuk nomor 4 di bawah)</string>
+    <string name="speda2_no_4">Anak bisa menyebutkan minimal satu gambar (ikuti petunjuk nomor 1 di bawah)</string>
     <string name="speda2_no_3">Anak bisa mengucapkan kombinasi kata (mengucapkan lebih dari satu kata secara berurutan dalam satu waktu)</string>
-    <string name="speda2_no_4">Anak bisa menunjukkan minimal dua gambar (ikuti petunjuk nomor 2 di bawah)</string>
-    <string name="speda2_no_5">Anak bisa mengucapkan minimal enam kata (tidak harus berurutan dalam satu waktu)</string>
+    <string name="speda2_no_2">Anak bisa menunjukkan minimal dua gambar (ikuti petunjuk nomor 2 di bawah)</string>
+    <string name="speda2_no_1">Anak bisa mengucapkan minimal enam kata (tidak harus berurutan dalam satu waktu)</string>
 
-    <string name="speda3_no_1">Anak bisa mengerti minimal dua kata sifat (ikuti petunjuk nomor 1 di bawah)</string>
-    <string name="speda3_no_2">Anak mengetahui minimal dua kegiatan (ikuti petunjuk nomor 2 di bawah)</string>
-    <string name="speda3_no_3">Anak bisa menyebut minimal empat gambar (ikuti petunjuk nomor 3 di bawah)</string>
-    <string name="speda3_no_4">Anak mengerti ketika Anda memerintahnya untuk melakukan sesuatu</string>
-    <string name="speda3_no_5">Anak bisa menunjukkan minimal empat gambar (ikuti petunjuk nomor 4 di bawah)</string>
+    <string name="speda3_no_5">Anak bisa mengerti minimal dua kata sifat (ikuti petunjuk nomor 5 di bawah)</string>
+    <string name="speda3_no_4">Anak mengetahui minimal dua kegiatan (ikuti petunjuk nomor 3 di bawah)</string>
+    <string name="speda3_no_3">Anak bisa menyebut minimal empat gambar (ikuti petunjuk nomor 1 di bawah)</string>
+    <string name="speda3_no_2">Anak mengerti ketika Anda memerintahnya untuk melakukan sesuatu</string>
+    <string name="speda3_no_1">Anak bisa menunjukkan minimal empat gambar (ikuti petunjuk nomor 2 di bawah)</string>
 
-    <string name="speda4_no_1">Anak mengetahui minimal tiga kata sifat (ikuti petunjuk nomor 1 di bawah)</string>
-    <string name="speda4_no_2">Anak bisa menyebutkan minimal empat warna</string>
-    <string name="speda4_no_3">Anak mengerti minimal empat kata depan (ikuti petunjuk nomor 2 di bawah)</string>
-    <string name="speda4_no_4">Anak mengetahui empat kegiatan (ikuti petunjuk nomor 3 di bawah)</string>
-    <string name="speda4_no_5">Anak mengetahui kegunaan minimal tiga benda (ikuti petunjuk nomor 4 di bawah)</string>
-    <string name="speda4_no_6">Anak bisa menghitung sampai minimal satu barang (ikuti petunjuk nomor 5 di bawah)</string>
-    <string name="speda4_no_7">Anak mengetahui kegunaan minimal dua benda (ikuti petunjuk nomor 4 di bawah)</string>
-    <string name="speda4_no_8">Anak bisa menyebut minimal satu warna</string>
+    <string name="speda4_no_8">Anak mengetahui minimal tiga kata sifat (ikuti petunjuk nomor 5 di bawah)</string>
+    <string name="speda4_no_7">Anak bisa menyebutkan minimal empat warna (bebas)</string>
+    <string name="speda4_no_6">Anak mengerti minimal empat kata depan (ikuti petunjuk nomor 8 di bawah)</string>
+    <string name="speda4_no_5">Anak mengetahui empat kegiatan (ikuti petunjuk nomor 3 di bawah)</string>
+    <string name="speda4_no_4">Anak mengetahui kegunaan minimal tiga benda (ikuti petunjuk nomor 6 di bawah)</string>
+    <string name="speda4_no_3">Anak bisa menghitung sampai minimal satu barang (ikuti petunjuk nomor 7 di bawah)</string>
+    <string name="speda4_no_2">Anak mengetahui kegunaan minimal dua benda (ikuti petunjuk nomor 6 di bawah)</string>
+    <string name="speda4_no_1">Anak bisa menyebut minimal satu warna (bebas)</string>
 
-    <string name="speda5_no_1">Anak mengetahui minimal dua kata berlawanan (ikuti petunjuk 2 di bawah)</string>
-    <string name="speda5_no_2">Anak bisa menghitung sampai minimal lima barang (ikuti petunjuk nomor 2 di bawah)</string>
-    <string name="speda5_no_3">Anak mengetahui minimal tiga kata sifat (ikuti petunjuk nomor 2 di bawah)</string>
-    <string name="speda5_no_4">Anak bisa mengartikan minimal tiga kata (ikuti petunjuk nomor 2 di bawah)</string>
-    <string name="speda5_no_5">Anak bisa menyebut minimal empat warna (ikuti petunjuk nomor 2 di bawah)</string>
-    <string name="speda5_no_6">Anak mengerti minimal empat kata depan (ikuti petunjuk nomor 2 di bawah)</string>
+    <string name="speda5_no_6">Anak mengetahui minimal dua kata berlawanan (ikuti petunjuk nomor 10 di bawah)</string>
+    <string name="speda5_no_5">Anak bisa menghitung sampai minimal lima barang (ikuti petunjuk nomor 7 di bawah)</string>
+    <string name="speda5_no_4">Anak mengetahui minimal tiga kata sifat (ikuti petunjuk nomor 5 di bawah)</string>
+    <string name="speda5_no_3">Anak bisa mengartikan minimal tiga kata (ikuti petunjuk nomor 9 di bawah)</string>
+    <string name="speda5_no_2">Anak bisa menyebut minimal empat warna (bebas)</string>
+    <string name="speda5_no_1">Anak mengerti minimal empat kata depan (ikuti petunjuk nomor 8 di bawah)</string>
 
-    <string name="speda6_no_1">Anak bisa mengartikan tujuh kata (ikuti petunjuk nomor di bawah)</string>
-    <string name="speda6_no_2">Anak mengetahui minimal dua kata berlawanan (ikuti petunjuk nomor di bawah)</string>
-    <string name="speda6_no_3">Anak bisa menghitung lima lingkaran (ikuti petunjuk nomor di bawah</string>
+    <string name="speda6_no_3">Anak bisa mengartikan tujuh kata (ikuti petunjuk nomor 9 di bawah)</string>
+    <string name="speda6_no_2">Anak mengetahui minimal dua kata berlawanan (ikuti petunjuk nomor 10 di bawah)</string>
+    <string name="speda6_no_1">Anak bisa menghitung sampai minimal lima barang (ikuti petunjuk nomor 7 di bawah</string>
 
     <string name="assessment_submit_button">Submit Jawaban</string>
     <string name="assessment_result_title">Hasil Diagnosa Akhir</string>
