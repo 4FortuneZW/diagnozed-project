@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
@@ -18,18 +19,21 @@ import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
 
 public class AssessmentActivity extends AppCompatActivity {
 
     private ActivityAssessmentBinding binding;
     private PreferenceManager preferenceManager;
+    private Integer usiaAnak;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityAssessmentBinding.inflate(getLayoutInflater());
         preferenceManager = new PreferenceManager(getApplicationContext());
+        Integer usiaAnak = Integer.valueOf(binding.inputUsiaAnak.getText().toString());
         setContentView(binding.getRoot());
         setListeners();
     }
@@ -37,17 +41,45 @@ public class AssessmentActivity extends AppCompatActivity {
     private void setListeners() {
 
         binding.autismAssessmentButton.setOnClickListener(v -> {
-            binding.autismAssessmentButton.setBackgroundColor(getColor(R.color.primary_text));
+            binding.autismAssessmentButton.setBackgroundColor(getColor(R.color.secondary_text));
             binding.speechDelayAssessmentButton.setBackgroundColor(getColor(R.color.primary));
             binding.asesmenAutis.setVisibility(View.VISIBLE);
             binding.asesmenSpeechDelay.setVisibility(View.GONE);
         });
 
         binding.speechDelayAssessmentButton.setOnClickListener(v -> {
-            binding.speechDelayAssessmentButton.setBackgroundColor(getColor(R.color.primary_text));
-            binding.autismAssessmentButton.setBackgroundColor(getColor(R.color.primary));
-            binding.asesmenSpeechDelay.setVisibility(View.VISIBLE);
-            binding.asesmenAutis.setVisibility(View.GONE);
+            if(binding.inputUsiaAnak.getText().toString().equals("")) {
+                showToast("Masukkan usia anak terlebih dahulu");
+            } else {
+                switch (usiaAnak) {
+                    case 1 :
+                        binding.satuTahun.setVisibility(View.VISIBLE);
+                        break;
+                    case 2 :
+                        binding.duaTahun.setVisibility(View.VISIBLE);
+                        break;
+                    case 3 :
+                        binding.tigaTahun.setVisibility(View.VISIBLE);
+                        break;
+                    case 4 :
+                        binding.empatTahun.setVisibility(View.VISIBLE);
+                        break;
+                    case 5 :
+                        binding.limaTahun.setVisibility(View.VISIBLE);
+                        break;
+                    case 6 :
+                        binding.enamTahun.setVisibility(View.VISIBLE);
+                        break;
+                    case 7 :
+                        showToast("Tes ini hanya bisa dilakukan oleh anak maksimal 6 tahun");
+                        break;
+                }
+
+                binding.speechDelayAssessmentButton.setBackgroundColor(getColor(R.color.secondary_text));
+                binding.autismAssessmentButton.setBackgroundColor(getColor(R.color.primary));
+                binding.asesmenSpeechDelay.setVisibility(View.VISIBLE);
+                binding.asesmenAutis.setVisibility(View.GONE);
+            }
         });
 
         binding.backButton.setOnClickListener(v -> onBackPressed());
@@ -57,23 +89,27 @@ public class AssessmentActivity extends AppCompatActivity {
                 loading(true);
 
                 HashMap<String, Object> assessmentResult = new HashMap<>();
-                RadioButton radioButton;
+                CheckBox checkBox;
 
-//                int[] checkedRadioIds = {binding.answersNo1.getCheckedRadioButtonId(), binding.answersNo2.getCheckedRadioButtonId(),
-//                        binding.answersNo3.getCheckedRadioButtonId(), binding.answersNo4.getCheckedRadioButtonId(), binding.answersNo5.getCheckedRadioButtonId(),
-//                        binding.answersNo6.getCheckedRadioButtonId(), binding.answersNo7.getCheckedRadioButtonId(), binding.answersNo8.getCheckedRadioButtonId(),
-//                        binding.answersNo9.getCheckedRadioButtonId(), binding.answersNo10.getCheckedRadioButtonId()};
+                int autismCheckBoxesId[] = {R.id.autis_no_1,R.id.autis_no_2,R.id.autis_no_3,R.id.autis_no_4,
+                        R.id.autis_no_5,R.id.autis_no_6,R.id.autis_no_7,R.id.autis_no_8,
+                        R.id.autis_no_9,R.id.autis_no_10,R.id.autis_no_11,R.id.autis_no_12,
+                        R.id.autis_no_13,R.id.autis_no_14,R.id.autis_no_15,R.id.autis_no_16,
+                        R.id.autis_no_17,R.id.autis_no_18,R.id.autis_no_19,R.id.autis_no_20};
 
-                String[] autismStateIds = {getResources().getString(R.string.autis_no_1), getResources().getString(R.string.autis_no_2),
-                        getResources().getString(R.string.autis_no_3), getResources().getString(R.string.autis_no_4),
-                        getResources().getString(R.string.autis_no_5), getResources().getString(R.string.autis_no_6),
-                        getResources().getString(R.string.autis_no_7), getResources().getString(R.string.autis_no_8),
-                        getResources().getString(R.string.autis_no_9), getResources().getString(R.string.autis_no_10),
-                        getResources().getString(R.string.autis_no_11), getResources().getString(R.string.autis_no_12),
-                        getResources().getString(R.string.autis_no_13), getResources().getString(R.string.autis_no_14),
-                        getResources().getString(R.string.autis_no_15), getResources().getString(R.string.autis_no_16),
-                        getResources().getString(R.string.autis_no_17), getResources().getString(R.string.autis_no_18),
-                        getResources().getString(R.string.autis_no_19), getResources().getString(R.string.autis_no_20)};
+                int[] autismCheckedboxesId;
+                autismCheckedboxesId = new int[20];
+
+//                String[] autismStateIds = {getResources().getString(R.string.autis_no_1), getResources().getString(R.string.autis_no_2),
+//                        getResources().getString(R.string.autis_no_3), getResources().getString(R.string.autis_no_4),
+//                        getResources().getString(R.string.autis_no_5), getResources().getString(R.string.autis_no_6),
+//                        getResources().getString(R.string.autis_no_7), getResources().getString(R.string.autis_no_8),
+//                        getResources().getString(R.string.autis_no_9), getResources().getString(R.string.autis_no_10),
+//                        getResources().getString(R.string.autis_no_11), getResources().getString(R.string.autis_no_12),
+//                        getResources().getString(R.string.autis_no_13), getResources().getString(R.string.autis_no_14),
+//                        getResources().getString(R.string.autis_no_15), getResources().getString(R.string.autis_no_16),
+//                        getResources().getString(R.string.autis_no_17), getResources().getString(R.string.autis_no_18),
+//                        getResources().getString(R.string.autis_no_19), getResources().getString(R.string.autis_no_20)};
 
                 String namaAnakRaw = binding.inputNamaAnak.getText().toString().trim();
                 String namaAnak = namaAnakRaw.toLowerCase().replaceAll("\\s", "");
@@ -82,37 +118,209 @@ public class AssessmentActivity extends AppCompatActivity {
                 assessmentResult.put(Constants.KEY_NAMA_ANAK, namaAnak);
                 assessmentResult.put(Constants.KEY_USIA_ANAK, binding.inputUsiaAnak.getText().toString().trim());
 
+                int autismScore = 0;
+                int checkedBoxesIter = 0;
+                int stateIter = 0;
+                for (int checkBoxId : autismCheckBoxesId) {
+                    checkBox = findViewById(checkBoxId);
 
-                int autismResult = 0;
-                int speechDelayResult = 0;
-//                int stateIter = 0;
-//                for (int checkedRadioId : checkedRadioIds) {
-//                    radioButton = findViewById(checkedRadioId);
-//                    assessmentResult.put(stateIds[stateIter],
-//                            radioButton.getText().toString().trim());
-//                    if (stateIter < 5 && radioButton.getText().toString().trim().equals("Ya")){
-//                        autismResult++;
-//                    } else if (radioButton.getText().toString().trim().equals("Ya")) {
-//                        speechDelayResult++;
-//                    }
-//                    stateIter++;
-//                }
+                    if (checkBox.isChecked()) {
+                        autismCheckedboxesId[checkedBoxesIter] = checkBoxId;
+                        checkedBoxesIter++;
+                    }
 
-                preferenceManager.putString(Constants.KEY_AUTISM_RESULT, String.valueOf(autismResult));
-                preferenceManager.putString(Constants.KEY_SPEECH_DELAY_RESULT, String.valueOf(speechDelayResult));
+                    if ((stateIter == 1 || stateIter == 4 || stateIter == 11) && checkBox.isChecked()) {
+                        autismScore++;
+                    }
+
+                    if (stateIter != 1 && stateIter != 4 && stateIter != 11 && !checkBox.isChecked()) {
+                        autismScore++;
+                    }
+
+                    stateIter++;
+                }
+
+                String autismResult;
+                if (autismScore >= 8) {
+                    autismResult = "Risiko tinggi";
+                } else if (autismScore >= 3) {
+                    autismResult = "Risiko sedang";
+                } else {
+                    autismResult = "Risiko rendah";
+                }
+
+                preferenceManager.putString(Constants.KEY_AUTISM_RESULT, autismResult);
                 assessmentResult.put(Constants.KEY_AUTISM_RESULT, autismResult);
+
+                int spedaCheckBoxesId[] = {R.id.speda1_no_1,R.id.speda1_no_2,R.id.speda1_no_3,R.id.speda2_no_1,
+                        R.id.speda2_no_2,R.id.speda2_no_3,R.id.speda2_no_4,R.id.speda2_no_5,
+                        R.id.speda3_no_1,R.id.speda3_no_2,R.id.speda3_no_3,R.id.speda3_no_4,
+                        R.id.speda3_no_5,R.id.speda4_no_1,R.id.speda4_no_2,R.id.speda4_no_3,
+                        R.id.speda4_no_4,R.id.speda4_no_5,R.id.speda4_no_6,R.id.speda4_no_7,
+                        R.id.speda4_no_8,R.id.speda5_no_1,R.id.speda5_no_2,R.id.speda5_no_3,
+                        R.id.speda5_no_4,R.id.speda5_no_5,R.id.speda5_no_6,R.id.speda6_no_1,
+                        R.id.speda6_no_2,R.id.speda6_no_3
+                };
+
+                int[] spedaCheckedboxesId;
+                spedaCheckedboxesId = new int[9];
+
+                stateIter = 0;
+                checkedBoxesIter = 0;
+                for (int checkBoxId : spedaCheckBoxesId) {
+                    checkBox = findViewById(checkBoxId);
+
+                    if (checkBox.isChecked()) {
+                        spedaCheckedboxesId[checkedBoxesIter] = checkBoxId;
+                        checkedBoxesIter++;
+                    }
+
+                    stateIter++;
+                }
+
+                int cautionScore = 0;
+                int delayScore = 0;
+
+                switch (usiaAnak) {
+                    case 1 :
+
+                        if(!binding.speda1No1.isChecked()) {
+                            delayScore++;
+                        }
+                        if(!binding.speda1No2.isChecked()) {
+                            delayScore++;
+                        }
+                        if(!binding.speda1No3.isChecked()) {
+                            cautionScore++;
+                        }
+
+                        break;
+
+                    case 2 :
+
+                        if(!binding.speda2No1.isChecked()) {
+                            delayScore++;
+                        }
+                        if(!binding.speda2No2.isChecked()) {
+                            delayScore++;
+                        }
+                        if(!binding.speda2No3.isChecked()) {
+                            cautionScore++;
+                        }
+                        if(!binding.speda2No4.isChecked()) {
+                            cautionScore++;
+                        }
+                        if(!binding.speda2No5.isChecked()) {
+                            cautionScore++;
+                        }
+
+                        break;
+
+                    case 3 :
+
+                        if(!binding.speda3No1.isChecked()) {
+                            delayScore++;
+                        }
+                        if(!binding.speda3No2.isChecked()) {
+                            delayScore++;
+                        }
+                        if(!binding.speda3No3.isChecked()) {
+                            delayScore++;
+                        }
+                        if(!binding.speda3No4.isChecked()) {
+                            cautionScore++;
+                        }
+                        if(!binding.speda3No5.isChecked()) {
+                            cautionScore++;
+                        }
+
+                        break;
+
+                    case 4 :
+
+                        if(!binding.speda4No1.isChecked()) {
+                            delayScore++;
+                        }
+                        if(!binding.speda4No2.isChecked()) {
+                            delayScore++;
+                        }
+                        if(!binding.speda4No3.isChecked()) {
+                            delayScore++;
+                        }
+                        if(!binding.speda4No4.isChecked()) {
+                            cautionScore++;
+                        }
+                        if(!binding.speda4No5.isChecked()) {
+                            cautionScore++;
+                        }
+                        if(!binding.speda4No6.isChecked()) {
+                            cautionScore++;
+                        }
+                        if(!binding.speda4No7.isChecked()) {
+                            cautionScore++;
+                        }
+                        if(!binding.speda4No8.isChecked()) {
+                            cautionScore++;
+                        }
+
+                        break;
+
+                    case 5 :
+
+                        if(!binding.speda5No1.isChecked()) {
+                            delayScore++;
+                        }
+                        if(!binding.speda5No2.isChecked()) {
+                            delayScore++;
+                        }
+                        if(!binding.speda5No3.isChecked()) {
+                            cautionScore++;
+                        }
+                        if(!binding.speda5No4.isChecked()) {
+                            cautionScore++;
+                        }
+                        if(!binding.speda5No5.isChecked()) {
+                            cautionScore++;
+                        }
+                        if(!binding.speda5No6.isChecked()) {
+                            cautionScore++;
+                        }
+
+                        break;
+
+                    case 6 :
+
+                        if(!binding.speda6No1.isChecked()) {
+                            delayScore++;
+                        }
+                        if(!binding.speda6No2.isChecked()) {
+                            delayScore++;
+                        }
+                        if(!binding.speda6No3.isChecked()) {
+                            delayScore++;
+                        }
+
+                        break;
+
+                    case 7 :
+                        showToast("Tes ini hanya bisa dilakukan oleh anak maksimal 6 tahun");
+                        break;
+                }
+
+                String speechDelayResult;
+
+                if (delayScore >= 1 || cautionScore >= 2) {
+                    speechDelayResult = "Suspect";
+                } else {
+                    speechDelayResult = "Normal";
+                }
+
+                preferenceManager.putString(Constants.KEY_SPEECH_DELAY_RESULT, speechDelayResult);
                 assessmentResult.put(Constants.KEY_SPEECH_DELAY_RESULT, speechDelayResult);
+                assessmentResult.put(Constants.KEY_AUTISM_CHECKEDBOXES, autismCheckedboxesId);
+                assessmentResult.put(Constants.KEY_SPEDA_CHECKEDBOXES, spedaCheckedboxesId);
 
                 FirebaseFirestore database = FirebaseFirestore.getInstance();
-
-//                assessmentResult.put("timestamp", FieldValue.serverTimestamp());
-//                database.collection(Constants.KEY_COLLECTION_ASSESSMENTS)
-//                        .add(assessmentResult)
-//                        .addOnSuccessListener(documentReference -> preferenceManager.putString(Constants.KEY_ASSESSMENT_ID, documentReference.getId()));
-//
-//                database.collection(Constants.KEY_COLLECTION_ASSESSMENTS)
-//                        .document("DB2MtP0stAFHqRwOsQVw")
-//                        .update(assessmentResult);
 
                 database.collection(Constants.KEY_COLLECTION_ASSESSMENTS)
                         .whereEqualTo(Constants.KEY_EMAIL, preferenceManager.getString(Constants.KEY_EMAIL))

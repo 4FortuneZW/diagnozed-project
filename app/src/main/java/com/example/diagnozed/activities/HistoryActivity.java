@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,6 +18,8 @@ import com.example.diagnozed.utilities.PreferenceManager;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.List;
+
 public class HistoryActivity extends AppCompatActivity {
 
     private ActivityHistoryBinding binding;
@@ -27,6 +30,8 @@ public class HistoryActivity extends AppCompatActivity {
             ,R.id.fourthHistoryName,R.id.fifthHistoryName,R.id.sixthHistoryName,R.id.seventhHistoryName,R.id.eighthHistoryName};
     private int[] historyDates = {R.id.firstHistoryDate,R.id.secondHistoryDate,R.id.thirdHistoryDate,R.id.fourthHistoryDate
             ,R.id.fifthHistoryDate,R.id.sixthHistoryDate,R.id.seventhHistoryDate,R.id.eighthHistoryDate};
+    private List<Integer> autismCheckedboxesId;
+    private List<Integer> spedaCheckedboxesId;
     private String[] historyIds;
     private TextView nameView, dateView;
     private FirebaseFirestore database;
@@ -47,44 +52,74 @@ public class HistoryActivity extends AppCompatActivity {
 
     private void showResult(String id) {
 
-        String[] statements =
-                {getResources().getString(R.string.state_no_1), getResources().getString(R.string.state_no_2),
-                        getResources().getString(R.string.state_no_3), getResources().getString(R.string.state_no_4),
-                        getResources().getString(R.string.state_no_5), getResources().getString(R.string.state_no_6),
-                        getResources().getString(R.string.state_no_7), getResources().getString(R.string.state_no_8),
-                        getResources().getString(R.string.state_no_9), getResources().getString(R.string.state_no_10)};
-
         database.collection(Constants.KEY_COLLECTION_ASSESSMENTS)
                 .document(id)
                 .get()
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful() && task.getResult() != null) {
                         DocumentSnapshot documentSnapshot = task.getResult();
-                        binding.namaAnak.setText("Nama anak : " + documentSnapshot.getString(Constants.KEY_NAMA_ANAK));
-                        binding.usiaAnak.setText("Usia anak : " + documentSnapshot.getString(Constants.KEY_USIA_ANAK));
-                        binding.autismResultInfo.setText(String.format("Hasil diagnosa autis : %d/5"
-                                , documentSnapshot.getLong(Constants.KEY_AUTISM_RESULT))
-                        );
-                        binding.speechDelayResultInfo.setText(String.format("Hasil diagnosa speech delay : %d/5"
-                                , documentSnapshot.getLong(Constants.KEY_SPEECH_DELAY_RESULT))
-                        );
-                        binding.q1Info.setText(statements[0] + " : " + documentSnapshot.getString(statements[0]));
-                        binding.q2Info.setText(statements[1] + " : " + documentSnapshot.getString(statements[1]));
-                        binding.q3Info.setText(statements[2] + " : " + documentSnapshot.getString(statements[2]));
-                        binding.q4Info.setText(statements[3] + " : " + documentSnapshot.getString(statements[3]));
-                        binding.q5Info.setText(statements[4] + " : " + documentSnapshot.getString(statements[4]));
-                        binding.q6Info.setText(statements[5] + " : " + documentSnapshot.getString(statements[5]));
-                        binding.q7Info.setText(statements[6] + " : " + documentSnapshot.getString(statements[6]));
-                        binding.q8Info.setText(statements[7] + " : " + documentSnapshot.getString(statements[7]));
-                        binding.q9Info.setText(statements[8] + " : " + documentSnapshot.getString(statements[8]));
-                        binding.q10Info.setText(statements[9] + " : " + documentSnapshot.getString(statements[9]));
 
-                        binding.results.setVisibility(View.VISIBLE);
+                        binding.autismResultInfo.setText("Hasil asesmen autis : " +
+                                documentSnapshot.getString(Constants.KEY_AUTISM_RESULT));
+                        binding.speechDelayResultInfo.setText("Hasil asesmen speech delay : " +
+                                documentSnapshot.getString(Constants.KEY_SPEECH_DELAY_RESULT));
+
+                        autismCheckedboxesId = (List<Integer>) documentSnapshot.get(Constants.KEY_AUTISM_CHECKEDBOXES);
+                        spedaCheckedboxesId = (List<Integer>) documentSnapshot.get(Constants.KEY_SPEDA_CHECKEDBOXES);
+                        for (Integer checkboxId : autismCheckedboxesId) {
+                            CheckBox checkBox;
+                            checkBox = findViewById(checkboxId);
+                            checkBox.setChecked(true);
+                        }
+
+                        for (Integer checkboxId : spedaCheckedboxesId) {
+                            CheckBox checkBox;
+                            checkBox = findViewById(checkboxId);
+                            checkBox.setChecked(true);
+                        }
+
+                        switch (documentSnapshot.getString(Constants.KEY_USIA_ANAK)) {
+                            case "1" :
+                                binding.satuTahun.setVisibility(View.VISIBLE);
+                                break;
+                            case "2" :
+                                binding.duaTahun.setVisibility(View.VISIBLE);
+                                break;
+                            case "3" :
+                                binding.tigaTahun.setVisibility(View.VISIBLE);
+                                break;
+                            case "4" :
+                                binding.empatTahun.setVisibility(View.VISIBLE);
+                                break;
+                            case "5" :
+                                binding.limaTahun.setVisibility(View.VISIBLE);
+                                break;
+                            case "6" :
+                                binding.enamTahun.setVisibility(View.VISIBLE);
+                                break;
+                        }
+
+                        binding.result.setVisibility(View.VISIBLE);
                     }
                 });
     }
 
     private void setListeners() {
+
+        binding.autismAssessmentButton.setOnClickListener(v -> {
+            binding.autismAssessmentButton.setBackgroundColor(getColor(R.color.secondary_text));
+            binding.speechDelayAssessmentButton.setBackgroundColor(getColor(R.color.primary));
+            binding.asesmenAutis.setVisibility(View.VISIBLE);
+            binding.asesmenSpeechDelay.setVisibility(View.GONE);
+        });
+
+        binding.speechDelayAssessmentButton.setOnClickListener(v -> {
+                binding.speechDelayAssessmentButton.setBackgroundColor(getColor(R.color.secondary_text));
+                binding.autismAssessmentButton.setBackgroundColor(getColor(R.color.primary));
+                binding.asesmenSpeechDelay.setVisibility(View.VISIBLE);
+                binding.asesmenAutis.setVisibility(View.GONE);
+        });
+
         binding.buttonAsesmen.setOnClickListener(v -> {
             Intent intent = new Intent(getApplicationContext(), AssessmentActivity.class);
             startActivity(intent);

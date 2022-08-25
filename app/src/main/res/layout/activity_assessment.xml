@@ -97,7 +97,7 @@
                     android:id="@+id/autism_assessment_button"
                     android:layout_width="@dimen/_80sdp"
                     android:layout_height="wrap_content"
-                    android:text="Autism"
+                    android:text="Autis"
                     android:textSize="@dimen/_16ssp"
                     android:textColor="@color/white"
                     android:textStyle="bold"
@@ -106,7 +106,7 @@
                     android:layout_marginEnd="@dimen/_16sdp"
                     android:padding="@dimen/_4sdp"
                     android:background="@drawable/results_background"
-                    android:backgroundTint="@color/primary_text"/>
+                    android:backgroundTint="@color/secondary_text"/>
 
                 <TextView
                     android:id="@+id/speech_delay_assessment_button"
@@ -127,8 +127,7 @@
                 android:id="@+id/asesmen_autis"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:visibility="gone">
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -413,7 +412,8 @@ Jika dia sering melakukannya, maka centang pernyataan tersebut."
                 android:id="@+id/asesmen_speech_delay"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:visibility="gone">
 
                 <TextView
                     android:layout_width="match_parent"
@@ -883,7 +883,7 @@ yang memenuhi kondisi anak Anda!"
         android:layout_marginStart="@dimen/_24sdp"
         android:layout_marginEnd="@dimen/_24sdp"
         android:background="@drawable/results_background"
-        android:backgroundTint="@color/primary_text"
+        android:backgroundTint="@color/secondary_text"
         android:orientation="vertical"
         android:padding="@dimen/_8sdp">
 
@@ -906,9 +906,10 @@ yang memenuhi kondisi anak Anda!"
         android:layout_marginStart="@dimen/_24sdp"
         android:layout_marginEnd="@dimen/_24sdp"
         android:background="@drawable/results_background"
-        android:backgroundTint="@color/primary_text"
+        android:backgroundTint="@color/secondary_text"
         android:orientation="vertical"
-        android:padding="@dimen/_24sdp">
+        android:padding="@dimen/_24sdp"
+        android:visibility="gone">
 
         <ImageView
             android:id="@+id/tutup_petunjuk_button"
@@ -931,34 +932,29 @@ yang memenuhi kondisi anak Anda!"
                 android:background="@color/white">
 
                 <ImageView
-                    android:layout_width="@dimen/_80sdp"
-                    android:layout_height="@dimen/_80sdp"
-                    android:src="@drawable/a" />
+                    android:layout_width="@dimen/_92sdp"
+                    android:layout_height="@dimen/_92sdp"
+                    android:src="@drawable/cat" />
 
                 <ImageView
-                    android:layout_width="@dimen/_80sdp"
-                    android:layout_height="@dimen/_80sdp"
-                    android:src="@drawable/a" />
+                    android:layout_width="@dimen/_92sdp"
+                    android:layout_height="@dimen/_92sdp"
+                    android:src="@drawable/horse" />
 
                 <ImageView
-                    android:layout_width="@dimen/_80sdp"
-                    android:layout_height="@dimen/_80sdp"
-                    android:src="@drawable/a" />
+                    android:layout_width="@dimen/_92sdp"
+                    android:layout_height="@dimen/_92sdp"
+                    android:src="@drawable/dove" />
 
                 <ImageView
-                    android:layout_width="@dimen/_80sdp"
-                    android:layout_height="@dimen/_80sdp"
-                    android:src="@drawable/a"/>
+                    android:layout_width="@dimen/_92sdp"
+                    android:layout_height="@dimen/_92sdp"
+                    android:src="@drawable/puppy"/>
 
                 <ImageView
-                    android:layout_width="@dimen/_80sdp"
-                    android:layout_height="@dimen/_80sdp"
-                    android:src="@drawable/a"/>
-
-                <ImageView
-                    android:layout_width="@dimen/_80sdp"
-                    android:layout_height="@dimen/_80sdp"
-                    android:src="@drawable/a"/>
+                    android:layout_width="@dimen/_92sdp"
+                    android:layout_height="@dimen/_92sdp"
+                    android:src="@drawable/orang"/>
 
             </LinearLayout>
 
@@ -1065,7 +1061,6 @@ siang hari maka bulan bersinar di?"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_margin="@dimen/_8sdp"
                 android:textSize="@dimen/_16ssp"
                 android:textColor="@color/white"
                 android:textStyle="bold"

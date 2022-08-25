@@ -51,9 +51,9 @@ public class AssessmentResultActivity extends AppCompatActivity {
 
         binding.assementId.setText("Id : " + id);
         binding.assessmentResultAutism.setText("Autism : "
-                + preferenceManager.getString(Constants.KEY_AUTISM_RESULT) + "/5");
+                + preferenceManager.getString(Constants.KEY_AUTISM_RESULT));
         binding.assessmentResultSpeechDelay.setText("Speech Delay : "
-                + preferenceManager.getString(Constants.KEY_SPEECH_DELAY_RESULT) + "/5");
+                + preferenceManager.getString(Constants.KEY_SPEECH_DELAY_RESULT));
 
         binding.resultLayout.setVisibility(View.VISIBLE);
 

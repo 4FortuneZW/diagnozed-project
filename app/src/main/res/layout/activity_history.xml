@@ -443,126 +443,796 @@
                     android:layout_height="wrap_content">
 
                     <LinearLayout
-                        android:id="@+id/results"
+                        android:id="@+id/result"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:gravity="center_horizontal"
-                        android:padding="@dimen/_20sdp"
                         android:background="@drawable/results_background"
+                        android:orientation="vertical"
+                        android:padding="@dimen/_24sdp"
                         android:visibility="gone">
 
-                        <TextView
-                            android:id="@+id/nama_anak"
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="@dimen/_16ssp"
-                            android:textColor="@color/white"
-                            android:layout_marginTop="@dimen/_8sdp" />
+                            android:gravity="center"
+                            android:layout_marginBottom="@dimen/_12sdp">
 
-                        <TextView
-                            android:id="@+id/usia_anak"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="@dimen/_16ssp"
-                            android:textColor="@color/white"
-                            android:layout_marginTop="@dimen/_8sdp" />
+                            <TextView
+                                android:id="@+id/autism_assessment_button"
+                                android:layout_width="@dimen/_80sdp"
+                                android:layout_height="wrap_content"
+                                android:text="Autis"
+                                android:textSize="@dimen/_16ssp"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:textAlignment="center"
+                                android:maxLines="1"
+                                android:layout_marginEnd="@dimen/_16sdp"
+                                android:padding="@dimen/_4sdp"
+                                android:background="@drawable/results_background"
+                                android:backgroundTint="@color/secondary_text"/>
 
-                        <TextView
-                            android:id="@+id/autism_result_info"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="@dimen/_16ssp"
-                            android:textColor="@color/white"
-                            android:layout_marginTop="@dimen/_8sdp" />
+                            <TextView
+                                android:id="@+id/speech_delay_assessment_button"
+                                android:layout_width="@dimen/_120sdp"
+                                android:layout_height="wrap_content"
+                                android:text="Speech delay"
+                                android:textSize="@dimen/_16ssp"
+                                android:textColor="@color/white"
+                                android:textStyle="bold"
+                                android:textAlignment="center"
+                                android:maxLines="1"
+                                android:padding="@dimen/_4sdp"
+                                android:background="@drawable/results_background" />
 
-                        <TextView
-                            android:id="@+id/speech_delay_result_info"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="@dimen/_16ssp"
-                            android:textColor="@color/white"
-                            android:layout_marginTop="@dimen/_8sdp" />
+                        </LinearLayout>
 
-                        <TextView
-                            android:id="@+id/q1_info"
+                        <LinearLayout
+                            android:id="@+id/asesmen_autis"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="@dimen/_16ssp"
-                            android:layout_marginTop="@dimen/_8sdp"
-                            android:textColor="@color/white" />
+                            android:orientation="vertical"
+                            android:visibility="gone">
 
-                        <TextView
-                            android:id="@+id/q5_info"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/_8sdp"
-                            android:textColor="@color/white"
-                            android:textSize="@dimen/_16ssp" />
+                            <TextView
+                                android:id="@+id/autism_result_info"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/_8sdp"
+                                android:text="Hasil asesmen autis : "
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12ssp"
+                                android:textStyle="bold"/>
 
-                        <TextView
-                            android:id="@+id/q2_info"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="@dimen/_16ssp"
-                            android:textColor="@color/white"
-                            android:layout_marginTop="@dimen/_8sdp" />
+                            <CheckBox
+                                android:id="@+id/autis_no_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:button="@drawable/assesment_checkbox"
+                                android:buttonTint="@color/white"
+                                android:padding="@dimen/_8sdp"
+                                android:text="@string/autis_no_1"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12ssp"
+                                android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/q3_info"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="@dimen/_16ssp"
-                            android:textColor="@color/white"
-                            android:layout_marginTop="@dimen/_8sdp" />
 
-                        <TextView
-                            android:id="@+id/q4_info"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="@dimen/_16ssp"
-                            android:textColor="@color/white"
-                            android:layout_marginTop="@dimen/_8sdp" />
 
-                        <TextView
-                            android:id="@+id/q6_info"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="@dimen/_16ssp"
-                            android:textColor="@color/white"
-                            android:layout_marginTop="@dimen/_8sdp" />
+                            <CheckBox
+                                android:id="@+id/autis_no_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:button="@drawable/assesment_checkbox"
+                                android:buttonTint="@color/white"
+                                android:padding="@dimen/_8sdp"
+                                android:text="@string/autis_no_2"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12ssp"
+                                android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/q7_info"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="@dimen/_16ssp"
-                            android:textColor="@color/white"
-                            android:layout_marginTop="@dimen/_8sdp" />
 
-                        <TextView
-                            android:id="@+id/q8_info"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="@dimen/_16ssp"
-                            android:textColor="@color/white"
-                            android:layout_marginTop="@dimen/_8sdp" />
+                            <CheckBox
+                                android:id="@+id/autis_no_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:button="@drawable/assesment_checkbox"
+                                android:buttonTint="@color/white"
+                                android:padding="@dimen/_8sdp"
+                                android:text="@string/autis_no_3"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12ssp"
+                                android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/q9_info"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="@dimen/_16ssp"
-                            android:textColor="@color/white"
-                            android:layout_marginTop="@dimen/_8sdp" />
+                            <CheckBox
+                                android:id="@+id/autis_no_4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:button="@drawable/assesment_checkbox"
+                                android:buttonTint="@color/white"
+                                android:padding="@dimen/_8sdp"
+                                android:text="@string/autis_no_4"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12ssp"
+                                android:textStyle="bold" />
 
-                        <TextView
-                            android:id="@+id/q10_info"
+                            <CheckBox
+                                android:id="@+id/autis_no_5"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:button="@drawable/assesment_checkbox"
+                                android:buttonTint="@color/white"
+                                android:padding="@dimen/_8sdp"
+                                android:text="@string/autis_no_5"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12ssp"
+                                android:textStyle="bold" />
+
+                            <CheckBox
+                                android:id="@+id/autis_no_6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:button="@drawable/assesment_checkbox"
+                                android:buttonTint="@color/white"
+                                android:padding="@dimen/_8sdp"
+                                android:text="@string/autis_no_6"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12ssp"
+                                android:textStyle="bold" />
+
+                            <CheckBox
+                                android:id="@+id/autis_no_7"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:button="@drawable/assesment_checkbox"
+                                android:buttonTint="@color/white"
+                                android:padding="@dimen/_8sdp"
+                                android:text="@string/autis_no_7"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12ssp"
+                                android:textStyle="bold" />
+
+                            <CheckBox
+                                android:id="@+id/autis_no_8"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:button="@drawable/assesment_checkbox"
+                                android:buttonTint="@color/white"
+                                android:padding="@dimen/_8sdp"
+                                android:text="@string/autis_no_8"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12ssp"
+                                android:textStyle="bold" />
+
+                            <CheckBox
+                                android:id="@+id/autis_no_9"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:button="@drawable/assesment_checkbox"
+                                android:buttonTint="@color/white"
+                                android:padding="@dimen/_8sdp"
+                                android:text="@string/autis_no_9"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12ssp"
+                                android:textStyle="bold" />
+
+                            <CheckBox
+                                android:id="@+id/autis_no_10"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:button="@drawable/assesment_checkbox"
+                                android:buttonTint="@color/white"
+                                android:padding="@dimen/_8sdp"
+                                android:text="@string/autis_no_10"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12ssp"
+                                android:textStyle="bold" />
+
+                            <CheckBox
+                                android:id="@+id/autis_no_11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:button="@drawable/assesment_checkbox"
+                                android:buttonTint="@color/white"
+                                android:padding="@dimen/_8sdp"
+                                android:text="@string/autis_no_11"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12ssp"
+                                android:textStyle="bold" />
+
+                            <CheckBox
+                                android:id="@+id/autis_no_12"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:button="@drawable/assesment_checkbox"
+                                android:buttonTint="@color/white"
+                                android:padding="@dimen/_8sdp"
+                                android:text="@string/autis_no_12"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12ssp"
+                                android:textStyle="bold" />
+
+                            <CheckBox
+                                android:id="@+id/autis_no_13"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:button="@drawable/assesment_checkbox"
+                                android:buttonTint="@color/white"
+                                android:padding="@dimen/_8sdp"
+                                android:text="@string/autis_no_13"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12ssp"
+                                android:textStyle="bold" />
+
+                            <CheckBox
+                                android:id="@+id/autis_no_14"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:button="@drawable/assesment_checkbox"
+                                android:buttonTint="@color/white"
+                                android:padding="@dimen/_8sdp"
+                                android:text="@string/autis_no_14"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12ssp"
+                                android:textStyle="bold" />
+
+                            <CheckBox
+                                android:id="@+id/autis_no_15"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:button="@drawable/assesment_checkbox"
+                                android:buttonTint="@color/white"
+                                android:padding="@dimen/_8sdp"
+                                android:text="@string/autis_no_15"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12ssp"
+                                android:textStyle="bold" />
+
+                            <CheckBox
+                                android:id="@+id/autis_no_16"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:button="@drawable/assesment_checkbox"
+                                android:buttonTint="@color/white"
+                                android:padding="@dimen/_8sdp"
+                                android:text="@string/autis_no_16"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12ssp"
+                                android:textStyle="bold" />
+
+                            <CheckBox
+                                android:id="@+id/autis_no_17"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:button="@drawable/assesment_checkbox"
+                                android:buttonTint="@color/white"
+                                android:padding="@dimen/_8sdp"
+                                android:text="@string/autis_no_17"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12ssp"
+                                android:textStyle="bold" />
+
+                            <CheckBox
+                                android:id="@+id/autis_no_18"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:button="@drawable/assesment_checkbox"
+                                android:buttonTint="@color/white"
+                                android:padding="@dimen/_8sdp"
+                                android:text="@string/autis_no_18"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12ssp"
+                                android:textStyle="bold" />
+
+                            <CheckBox
+                                android:id="@+id/autis_no_19"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:button="@drawable/assesment_checkbox"
+                                android:buttonTint="@color/white"
+                                android:padding="@dimen/_8sdp"
+                                android:text="@string/autis_no_19"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12ssp"
+                                android:textStyle="bold" />
+
+                            <CheckBox
+                                android:id="@+id/autis_no_20"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:button="@drawable/assesment_checkbox"
+                                android:buttonTint="@color/white"
+                                android:padding="@dimen/_8sdp"
+                                android:text="@string/autis_no_20"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12ssp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/asesmen_speech_delay"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:textSize="@dimen/_16ssp"
-                            android:textColor="@color/white"
-                            android:layout_marginTop="@dimen/_8sdp" />
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:id="@+id/speech_delay_result_info"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/_8sdp"
+                                android:text="Hasil asesmen speech delay :"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12ssp"
+                                android:textStyle="bold"/>
+
+                            <LinearLayout
+                                android:id="@+id/satu_tahun"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <CheckBox
+                                    android:id="@+id/speda1_no_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:button="@drawable/assesment_checkbox"
+                                    android:buttonTint="@color/white"
+                                    android:padding="@dimen/_8sdp"
+                                    android:text="@string/speda1_no_1"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    android:textStyle="bold" />
+
+                                <CheckBox
+                                    android:id="@+id/speda1_no_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:button="@drawable/assesment_checkbox"
+                                    android:buttonTint="@color/white"
+                                    android:padding="@dimen/_8sdp"
+                                    android:text="@string/speda1_no_2"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    android:textStyle="bold" />
+
+                                <CheckBox
+                                    android:id="@+id/speda1_no_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:button="@drawable/assesment_checkbox"
+                                    android:buttonTint="@color/white"
+                                    android:padding="@dimen/_8sdp"
+                                    android:text="@string/speda1_no_3"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/dua_tahun"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <CheckBox
+                                    android:id="@+id/speda2_no_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:button="@drawable/assesment_checkbox"
+                                    android:buttonTint="@color/white"
+                                    android:padding="@dimen/_8sdp"
+                                    android:text="@string/speda2_no_1"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    android:textStyle="bold" />
+
+                                <CheckBox
+                                    android:id="@+id/speda2_no_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:button="@drawable/assesment_checkbox"
+                                    android:buttonTint="@color/white"
+                                    android:padding="@dimen/_8sdp"
+                                    android:text="@string/speda2_no_2"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    android:textStyle="bold" />
+
+                                <CheckBox
+                                    android:id="@+id/speda2_no_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:button="@drawable/assesment_checkbox"
+                                    android:buttonTint="@color/white"
+                                    android:padding="@dimen/_8sdp"
+                                    android:text="@string/speda2_no_3"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    android:textStyle="bold" />
+
+                                <CheckBox
+                                    android:id="@+id/speda2_no_4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:button="@drawable/assesment_checkbox"
+                                    android:buttonTint="@color/white"
+                                    android:padding="@dimen/_8sdp"
+                                    android:text="@string/speda2_no_4"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    android:textStyle="bold" />
+
+                                <CheckBox
+                                    android:id="@+id/speda2_no_5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:button="@drawable/assesment_checkbox"
+                                    android:buttonTint="@color/white"
+                                    android:padding="@dimen/_8sdp"
+                                    android:text="@string/speda2_no_5"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/tiga_tahun"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <CheckBox
+                                    android:id="@+id/speda3_no_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:button="@drawable/assesment_checkbox"
+                                    android:buttonTint="@color/white"
+                                    android:padding="@dimen/_8sdp"
+                                    android:text="@string/speda3_no_1"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    android:textStyle="bold" />
+
+                                <CheckBox
+                                    android:id="@+id/speda3_no_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:button="@drawable/assesment_checkbox"
+                                    android:buttonTint="@color/white"
+                                    android:padding="@dimen/_8sdp"
+                                    android:text="@string/speda3_no_2"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    android:textStyle="bold" />
+
+                                <CheckBox
+                                    android:id="@+id/speda3_no_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:button="@drawable/assesment_checkbox"
+                                    android:buttonTint="@color/white"
+                                    android:padding="@dimen/_8sdp"
+                                    android:text="@string/speda3_no_3"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    android:textStyle="bold" />
+
+                                <CheckBox
+                                    android:id="@+id/speda3_no_4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:button="@drawable/assesment_checkbox"
+                                    android:buttonTint="@color/white"
+                                    android:padding="@dimen/_8sdp"
+                                    android:text="@string/speda3_no_4"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    android:textStyle="bold" />
+
+                                <CheckBox
+                                    android:id="@+id/speda3_no_5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:button="@drawable/assesment_checkbox"
+                                    android:buttonTint="@color/white"
+                                    android:padding="@dimen/_8sdp"
+                                    android:text="@string/speda3_no_5"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/empat_tahun"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <CheckBox
+                                    android:id="@+id/speda4_no_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:button="@drawable/assesment_checkbox"
+                                    android:buttonTint="@color/white"
+                                    android:padding="@dimen/_8sdp"
+                                    android:text="@string/speda4_no_1"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    android:textStyle="bold" />
+
+                                <CheckBox
+                                    android:id="@+id/speda4_no_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:button="@drawable/assesment_checkbox"
+                                    android:buttonTint="@color/white"
+                                    android:padding="@dimen/_8sdp"
+                                    android:text="@string/speda4_no_2"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    android:textStyle="bold" />
+
+                                <CheckBox
+                                    android:id="@+id/speda4_no_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:button="@drawable/assesment_checkbox"
+                                    android:buttonTint="@color/white"
+                                    android:padding="@dimen/_8sdp"
+                                    android:text="@string/speda4_no_3"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    android:textStyle="bold" />
+
+                                <CheckBox
+                                    android:id="@+id/speda4_no_4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:button="@drawable/assesment_checkbox"
+                                    android:buttonTint="@color/white"
+                                    android:padding="@dimen/_8sdp"
+                                    android:text="@string/speda4_no_4"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    android:textStyle="bold" />
+
+                                <CheckBox
+                                    android:id="@+id/speda4_no_5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:button="@drawable/assesment_checkbox"
+                                    android:buttonTint="@color/white"
+                                    android:padding="@dimen/_8sdp"
+                                    android:text="@string/speda4_no_5"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    android:textStyle="bold" />
+
+                                <CheckBox
+                                    android:id="@+id/speda4_no_6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:button="@drawable/assesment_checkbox"
+                                    android:buttonTint="@color/white"
+                                    android:padding="@dimen/_8sdp"
+                                    android:text="@string/speda4_no_6"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    android:textStyle="bold" />
+
+                                <CheckBox
+                                    android:id="@+id/speda4_no_7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:button="@drawable/assesment_checkbox"
+                                    android:buttonTint="@color/white"
+                                    android:padding="@dimen/_8sdp"
+                                    android:text="@string/speda4_no_7"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    android:textStyle="bold" />
+
+                                <CheckBox
+                                    android:id="@+id/speda4_no_8"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:button="@drawable/assesment_checkbox"
+                                    android:buttonTint="@color/white"
+                                    android:padding="@dimen/_8sdp"
+                                    android:text="@string/speda4_no_8"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lima_tahun"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <CheckBox
+                                    android:id="@+id/speda5_no_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:button="@drawable/assesment_checkbox"
+                                    android:buttonTint="@color/white"
+                                    android:padding="@dimen/_8sdp"
+                                    android:text="@string/speda5_no_1"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    android:textStyle="bold" />
+
+                                <CheckBox
+                                    android:id="@+id/speda5_no_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:button="@drawable/assesment_checkbox"
+                                    android:buttonTint="@color/white"
+                                    android:padding="@dimen/_8sdp"
+                                    android:text="@string/speda5_no_2"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    android:textStyle="bold" />
+
+                                <CheckBox
+                                    android:id="@+id/speda5_no_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:button="@drawable/assesment_checkbox"
+                                    android:buttonTint="@color/white"
+                                    android:padding="@dimen/_8sdp"
+                                    android:text="@string/speda5_no_3"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    android:textStyle="bold" />
+
+                                <CheckBox
+                                    android:id="@+id/speda5_no_4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:button="@drawable/assesment_checkbox"
+                                    android:buttonTint="@color/white"
+                                    android:padding="@dimen/_8sdp"
+                                    android:text="@string/speda5_no_4"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    android:textStyle="bold" />
+
+                                <CheckBox
+                                    android:id="@+id/speda5_no_5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:button="@drawable/assesment_checkbox"
+                                    android:buttonTint="@color/white"
+                                    android:padding="@dimen/_8sdp"
+                                    android:text="@string/speda5_no_5"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    android:textStyle="bold" />
+
+                                <CheckBox
+                                    android:id="@+id/speda5_no_6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:button="@drawable/assesment_checkbox"
+                                    android:buttonTint="@color/white"
+                                    android:padding="@dimen/_8sdp"
+                                    android:text="@string/speda5_no_6"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/enam_tahun"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:visibility="gone">
+
+                                <CheckBox
+                                    android:id="@+id/speda6_no_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:button="@drawable/assesment_checkbox"
+                                    android:buttonTint="@color/white"
+                                    android:padding="@dimen/_8sdp"
+                                    android:text="@string/speda6_no_1"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    android:textStyle="bold" />
+
+                                <CheckBox
+                                    android:id="@+id/speda6_no_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:button="@drawable/assesment_checkbox"
+                                    android:buttonTint="@color/white"
+                                    android:padding="@dimen/_8sdp"
+                                    android:text="@string/speda6_no_2"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    android:textStyle="bold" />
+
+                                <CheckBox
+                                    android:id="@+id/speda6_no_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:button="@drawable/assesment_checkbox"
+                                    android:buttonTint="@color/white"
+                                    android:padding="@dimen/_8sdp"
+                                    android:text="@string/speda6_no_3"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/_12ssp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
 
                     </LinearLayout>
 
