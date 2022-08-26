@@ -1,5 +1,7 @@
 package com.example.diagnozed.activities;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -18,9 +20,15 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import java.util.ListIterator;
 import java.util.Locale;
+import java.util.stream.Collectors;
 
 public class AssessmentActivity extends AppCompatActivity {
 
@@ -96,7 +104,10 @@ public class AssessmentActivity extends AppCompatActivity {
 
         binding.assessmentSubmitButton.setOnClickListener(v -> {
             if (!binding.inputNamaAnak.getText().toString().equals("") && !binding.inputUsiaAnak.getText().toString().equals("")) {
+
                 loading(true);
+
+                usiaAnak = Integer.valueOf(binding.inputUsiaAnak.getText().toString());
 
                 HashMap<String, Object> assessmentResult = new HashMap<>();
                 CheckBox checkBox;
@@ -107,8 +118,8 @@ public class AssessmentActivity extends AppCompatActivity {
                         R.id.autis_no_13,R.id.autis_no_14,R.id.autis_no_15,R.id.autis_no_16,
                         R.id.autis_no_17,R.id.autis_no_18,R.id.autis_no_19,R.id.autis_no_20};
 
-                int[] autismCheckedboxesId;
-                autismCheckedboxesId = new int[20];
+                List<Integer> autismCheckedboxesId;
+                autismCheckedboxesId = new ArrayList<>();
 
 //                String[] autismStateIds = {getResources().getString(R.string.autis_no_1), getResources().getString(R.string.autis_no_2),
 //                        getResources().getString(R.string.autis_no_3), getResources().getString(R.string.autis_no_4),
@@ -135,7 +146,7 @@ public class AssessmentActivity extends AppCompatActivity {
                     checkBox = findViewById(checkBoxId);
 
                     if (checkBox.isChecked()) {
-                        autismCheckedboxesId[checkedBoxesIter] = checkBoxId;
+                        autismCheckedboxesId.add(checkBoxId);
                         checkedBoxesIter++;
                     }
 
@@ -172,17 +183,15 @@ public class AssessmentActivity extends AppCompatActivity {
                         R.id.speda6_no_2,R.id.speda6_no_3
                 };
 
-                int[] spedaCheckedboxesId;
-                spedaCheckedboxesId = new int[9];
+                List<Integer> spedaCheckedboxesId;
+                spedaCheckedboxesId = new ArrayList<>();
 
                 stateIter = 0;
-                checkedBoxesIter = 0;
                 for (int checkBoxId : spedaCheckBoxesId) {
                     checkBox = findViewById(checkBoxId);
 
                     if (checkBox.isChecked()) {
-                        spedaCheckedboxesId[checkedBoxesIter] = checkBoxId;
-                        checkedBoxesIter++;
+                        spedaCheckedboxesId.add(checkBoxId);
                     }
 
                     stateIter++;

@@ -49,7 +49,6 @@ public class AssessmentResultActivity extends AppCompatActivity {
 //                    }
 //                });
 
-        binding.assementId.setText("Id : " + id);
         binding.assessmentResultAutism.setText("Autism : "
                 + preferenceManager.getString(Constants.KEY_AUTISM_RESULT));
         binding.assessmentResultSpeechDelay.setText("Speech Delay : "

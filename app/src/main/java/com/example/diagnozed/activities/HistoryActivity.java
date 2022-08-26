@@ -66,17 +66,34 @@ public class HistoryActivity extends AppCompatActivity {
 
                         autismCheckedboxesId = (List<Integer>) documentSnapshot.get(Constants.KEY_AUTISM_CHECKEDBOXES);
                         spedaCheckedboxesId = (List<Integer>) documentSnapshot.get(Constants.KEY_SPEDA_CHECKEDBOXES);
-                        for (Integer checkboxId : autismCheckedboxesId) {
+
+                        for (int i = 0; i < autismCheckedboxesId.size(); i++) {
                             CheckBox checkBox;
-                            checkBox = findViewById(checkboxId);
+                            checkBox = findViewById(autismCheckedboxesId.get(i).intValue());
                             checkBox.setChecked(true);
+                            checkBox.setClickable(false);
                         }
 
-                        for (Integer checkboxId : spedaCheckedboxesId) {
+                        for (int i = 0; i < spedaCheckedboxesId.size(); i++) {
                             CheckBox checkBox;
-                            checkBox = findViewById(checkboxId);
+                            checkBox = findViewById(spedaCheckedboxesId.get(i).intValue());
                             checkBox.setChecked(true);
+                            checkBox.setClickable(false);
                         }
+
+//                        for (Long checkboxId : autismCheckedboxesId) {
+//                            CheckBox checkBox;
+//                            checkBox = findViewById((Integer) checkboxId);
+//                            checkBox.setChecked(true);
+//                            checkBox.setClickable(false);
+//                        }
+//
+//                        for (Long checkboxId : spedaCheckedboxesId) {
+//                            CheckBox checkBox;
+//                            checkBox = findViewById((Integer) checkboxId);
+//                            checkBox.setChecked(true);
+//                            checkBox.setClickable(false);
+//                        }
 
                         switch (documentSnapshot.getString(Constants.KEY_USIA_ANAK)) {
                             case "1" :
