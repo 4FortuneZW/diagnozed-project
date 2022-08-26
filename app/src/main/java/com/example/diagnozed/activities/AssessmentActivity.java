@@ -358,7 +358,7 @@ public class AssessmentActivity extends AppCompatActivity {
                             }
                         });
 
-//                loading(false);
+                loading(false);
 //                Intent intent = new Intent(getApplicationContext(), AssessmentResultActivity.class);
 //                startActivity(intent);
 //                showToast("WOY BANGUN WOY");

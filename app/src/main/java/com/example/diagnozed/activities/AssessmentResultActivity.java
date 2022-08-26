@@ -32,6 +32,29 @@ public class AssessmentResultActivity extends AppCompatActivity {
 
     private void setListeners() {
 
+        binding.homeButton.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), MainActivity.class)));
+
+        switch (preferenceManager.getString(Constants.KEY_AUTISM_RESULT)) {
+            case "Risiko rendah" :
+                binding.rendah.setVisibility(View.VISIBLE);
+                break;
+            case "Risiko sedang" :
+                binding.sedang.setVisibility(View.VISIBLE);
+                break;
+            case "Risiko tinggi" :
+                binding.tinggi.setVisibility(View.VISIBLE);
+                break;
+        }
+
+        switch (preferenceManager.getString(Constants.KEY_SPEECH_DELAY_RESULT)) {
+            case "Suspect" :
+                binding.suspek.setVisibility(View.VISIBLE);
+                break;
+            case "Normal" :
+                binding.normal.setVisibility(View.VISIBLE);
+                break;
+        }
+
         binding.backButton.setOnClickListener(v -> onBackPressed());
 //        FirebaseFirestore database = FirebaseFirestore.getInstance();
         String id = String.valueOf(getIntent().getStringExtra("id"));
@@ -48,6 +71,20 @@ public class AssessmentResultActivity extends AppCompatActivity {
 //                                + documentSnapshot.get(Constants.KEY_SPEECH_DELAY_RESULT) + "/5");
 //                    }
 //                });
+
+        binding.autismAssessmentButton.setOnClickListener(v -> {
+            binding.autismAssessmentButton.setBackgroundColor(getColor(R.color.secondary_text));
+            binding.speechDelayAssessmentButton.setBackgroundColor(getColor(R.color.primary));
+            binding.keteranganAutis.setVisibility(View.VISIBLE);
+            binding.keteranganSpeda.setVisibility(View.GONE);
+        });
+
+        binding.speechDelayAssessmentButton.setOnClickListener(v -> {
+            binding.autismAssessmentButton.setBackgroundColor(getColor(R.color.primary));
+            binding.speechDelayAssessmentButton.setBackgroundColor(getColor(R.color.secondary_text));
+            binding.keteranganAutis.setVisibility(View.GONE);
+            binding.keteranganSpeda.setVisibility(View.VISIBLE);
+        });
 
         binding.assessmentResultAutism.setText("Autism : "
                 + preferenceManager.getString(Constants.KEY_AUTISM_RESULT));
