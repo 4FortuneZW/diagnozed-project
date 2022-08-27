@@ -97,4 +97,9 @@
     <string name="profil">Profil</string>
     <string name="riwayat">Riwayat</string>
     <string name="tentang">Tentang</string>
+    <string name="risiko_rendah">Jika umur anak di bawah 24 bulan, lakukan asesmen kembali setelah usia anak mencapai 24 bulan.</string>
+    <string name="risiko_sedang">Terdapat kemungkinan anak Anda mengidap autis. Anda dapat melakukan asesmen tahap kedua dengan dokter kami</string>
+    <string name="risiko_tinggi">Anak Anda mengidap autis. Anda dapat berkonsultasi dengan dokter kami</string>
+    <string name="normal">Anak anda tidak mengidap keterlambatan bicara.</string>
+    <string name="suspect">Anak anda diduga mengidap keterlambatan bicara. Anda dapat berkonsultasi dengan dokter kami</string>
 </resources>

@@ -116,17 +116,17 @@ public class SearchResultActivity extends AppCompatActivity {
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful() && task.getResult() != null) {
                         DocumentSnapshot documentSnapshot = task.getResult().getDocuments().get(0);
-                        List<Integer> autismCheckedboxesId = (List<Integer>) documentSnapshot.get(Constants.KEY_AUTISM_CHECKEDBOXES);
-                        List<Integer> spedaCheckedboxesId = (List<Integer>) documentSnapshot.get(Constants.KEY_SPEDA_CHECKEDBOXES);
-                        for (Integer checkboxId : autismCheckedboxesId) {
+                        List<Long> autismCheckedboxesId = (List<Long>) documentSnapshot.get(Constants.KEY_AUTISM_CHECKEDBOXES);
+                        List<Long> spedaCheckedboxesId = (List<Long>) documentSnapshot.get(Constants.KEY_SPEDA_CHECKEDBOXES);
+                        for (Long checkboxId : autismCheckedboxesId) {
                             CheckBox checkBox;
-                            checkBox = findViewById(checkboxId);
+                            checkBox = findViewById((int) (long) checkboxId);
                             checkBox.setChecked(true);
                         }
 
-                        for (Integer checkboxId : spedaCheckedboxesId) {
+                        for (Long checkboxId : spedaCheckedboxesId) {
                             CheckBox checkBox;
-                            checkBox = findViewById(checkboxId);
+                            checkBox = findViewById((int) (long) checkboxId);
                             checkBox.setChecked(true);
                         }
 
@@ -154,7 +154,7 @@ public class SearchResultActivity extends AppCompatActivity {
                         binding.result.setVisibility(View.VISIBLE);
                         binding.autismResultInfo.setText("Hasil asesmen autis : " +
                                 documentSnapshot.getString(Constants.KEY_AUTISM_RESULT));
-                        binding.speechDelayResultInfo.setText("Hasil asesmen speech delay : " +
+                        binding.speechDelayResultInfo.setText("Hasil asesmen\nspeech delay : " +
                                 documentSnapshot.getString(Constants.KEY_SPEECH_DELAY_RESULT));
 
 

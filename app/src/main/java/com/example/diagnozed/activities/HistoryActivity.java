@@ -30,8 +30,8 @@ public class HistoryActivity extends AppCompatActivity {
             ,R.id.fourthHistoryName,R.id.fifthHistoryName,R.id.sixthHistoryName,R.id.seventhHistoryName,R.id.eighthHistoryName};
     private int[] historyDates = {R.id.firstHistoryDate,R.id.secondHistoryDate,R.id.thirdHistoryDate,R.id.fourthHistoryDate
             ,R.id.fifthHistoryDate,R.id.sixthHistoryDate,R.id.seventhHistoryDate,R.id.eighthHistoryDate};
-    private List<Integer> autismCheckedboxesId;
-    private List<Integer> spedaCheckedboxesId;
+    private List<Long> autismCheckedboxesId;
+    private List<Long> spedaCheckedboxesId;
     private String[] historyIds;
     private TextView nameView, dateView;
     private FirebaseFirestore database;
@@ -59,24 +59,26 @@ public class HistoryActivity extends AppCompatActivity {
                     if (task.isSuccessful() && task.getResult() != null) {
                         DocumentSnapshot documentSnapshot = task.getResult();
 
+                        binding.result.setVisibility(View.GONE);
+
                         binding.autismResultInfo.setText("Hasil asesmen autis : " +
                                 documentSnapshot.getString(Constants.KEY_AUTISM_RESULT));
-                        binding.speechDelayResultInfo.setText("Hasil asesmen speech delay : " +
+                        binding.speechDelayResultInfo.setText("Hasil asesmen\nspeech delay : " +
                                 documentSnapshot.getString(Constants.KEY_SPEECH_DELAY_RESULT));
 
-                        autismCheckedboxesId = (List<Integer>) documentSnapshot.get(Constants.KEY_AUTISM_CHECKEDBOXES);
-                        spedaCheckedboxesId = (List<Integer>) documentSnapshot.get(Constants.KEY_SPEDA_CHECKEDBOXES);
+                        autismCheckedboxesId = (List<Long>) documentSnapshot.get(Constants.KEY_AUTISM_CHECKEDBOXES);
+                        spedaCheckedboxesId = (List<Long>) documentSnapshot.get(Constants.KEY_SPEDA_CHECKEDBOXES);
 
                         for (int i = 0; i < autismCheckedboxesId.size(); i++) {
                             CheckBox checkBox;
-                            checkBox = findViewById(autismCheckedboxesId.get(i).intValue());
+                            checkBox = findViewById((int) (long) autismCheckedboxesId.get(i));
                             checkBox.setChecked(true);
                             checkBox.setClickable(false);
                         }
 
                         for (int i = 0; i < spedaCheckedboxesId.size(); i++) {
                             CheckBox checkBox;
-                            checkBox = findViewById(spedaCheckedboxesId.get(i).intValue());
+                            checkBox = findViewById((int) (long) spedaCheckedboxesId.get(i));
                             checkBox.setChecked(true);
                             checkBox.setClickable(false);
                         }

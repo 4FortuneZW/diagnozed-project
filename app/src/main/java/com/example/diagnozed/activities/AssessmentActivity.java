@@ -119,7 +119,7 @@ public class AssessmentActivity extends AppCompatActivity {
                         R.id.autis_no_17,R.id.autis_no_18,R.id.autis_no_19,R.id.autis_no_20};
 
                 List<Integer> autismCheckedboxesId;
-                autismCheckedboxesId = new ArrayList<>();
+                autismCheckedboxesId = new ArrayList<Integer>();
 
 //                String[] autismStateIds = {getResources().getString(R.string.autis_no_1), getResources().getString(R.string.autis_no_2),
 //                        getResources().getString(R.string.autis_no_3), getResources().getString(R.string.autis_no_4),
@@ -146,7 +146,7 @@ public class AssessmentActivity extends AppCompatActivity {
                     checkBox = findViewById(checkBoxId);
 
                     if (checkBox.isChecked()) {
-                        autismCheckedboxesId.add(checkBoxId);
+                        autismCheckedboxesId.add(autismCheckBoxesId[stateIter]);
                         checkedBoxesIter++;
                     }
 
@@ -164,10 +164,13 @@ public class AssessmentActivity extends AppCompatActivity {
                 String autismResult;
                 if (autismScore >= 8) {
                     autismResult = "Risiko tinggi";
+                    assessmentResult.put("keterangan", getResources().getString(R.string.risiko_tinggi));
                 } else if (autismScore >= 3) {
                     autismResult = "Risiko sedang";
+                    assessmentResult.put("keterangan", getResources().getString(R.string.risiko_sedang));
                 } else {
                     autismResult = "Risiko rendah";
+                    assessmentResult.put("keterangan", getResources().getString(R.string.risiko_rendah));
                 }
 
                 preferenceManager.putString(Constants.KEY_AUTISM_RESULT, autismResult);
@@ -191,7 +194,7 @@ public class AssessmentActivity extends AppCompatActivity {
                     checkBox = findViewById(checkBoxId);
 
                     if (checkBox.isChecked()) {
-                        spedaCheckedboxesId.add(checkBoxId);
+                        spedaCheckedboxesId.add(spedaCheckBoxesId[stateIter]);
                     }
 
                     stateIter++;
@@ -330,8 +333,10 @@ public class AssessmentActivity extends AppCompatActivity {
 
                 if (delayScore >= 1 || cautionScore >= 2) {
                     speechDelayResult = "Suspect";
+                    assessmentResult.put("keterangan", getResources().getString(R.string.suspect));
                 } else {
                     speechDelayResult = "Normal";
+                    assessmentResult.put("keterangan", getResources().getString(R.string.normal));
                 }
 
                 preferenceManager.putString(Constants.KEY_SPEECH_DELAY_RESULT, speechDelayResult);

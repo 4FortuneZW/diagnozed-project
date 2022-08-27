@@ -16,6 +16,8 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirestoreRegistrar;
 
+import java.util.HashMap;
+
 public class AssessmentResultActivity extends AppCompatActivity {
 
     private ActivityAssessmentResultBinding binding;
