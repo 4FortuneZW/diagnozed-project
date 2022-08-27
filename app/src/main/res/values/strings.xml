@@ -28,34 +28,64 @@
     <string name="klik_untuk_memulai_asesmen">Klik untuk\nmemulai asesmen</string>
     <string name="penerjemahan_isyarat_tangan">Penerjemahan isyarat tangan</string>
     <string name="konsultasi_di_sini">Konsultasi\ndi sini</string>
-    <string name="state_no_1">Anak suka menyendiri</string>
-    <string name="answer_ya_no_1">Ya</string>
-    <string name="answer_tidak_no_1">Tidak</string>
-    <string name="state_no_3">Anak bersifat pasif dengan lingkungan</string>
-    <string name="state_no_2">Anak cepat merespon lawan bicara</string>
-    <string name="answer_ya_no_3">Ya</string>
-    <string name="answer_tidak_no_3">Tidak</string>
-    <string name="state_no_4">Anak takut mengemukakan pendapat</string>
-    <string name="answer_ya_no_4">Ya</string>
-    <string name="answer_tidak_no_4">Tidak</string>
-    <string name="state_no_5">Anak menghindari kontak mata dengan lawan bicara</string>
-    <string name="answer_ya_no_5">Ya</string>
-    <string name="answer_tidak_nomor_5">Tidak</string>
-    <string name="state_no_6">Anak jarang mencoba meniru perkataan orang lain</string>
-    <string name="answer_ya_no_6">Ya</string>
-    <string name="answer_tidak_no_6">Tidak</string>
-    <string name="state_no_7">Anak belum bisa merangkai dua atau tiga kata</string>
-    <string name="answer_ya_no_7">Ya</string>
-    <string name="answer_tidak_no_7">Tidak</string>
-    <string name="state_no_8">Anak cenderung menunjukkan gestur tubuh daripada berbicara saat meminta sesuatu</string>
-    <string name="answer_ya_no_8">Ya</string>
-    <string name="answer_tidak_no_8">Tidak</string>
-    <string name="state_no_9">Anak kesulitan menyebutkan benda-benda di rumah</string>
-    <string name="answer_ya_no_9">Ya</string>
-    <string name="answer_tidak_no_9">Tidak</string>
-    <string name="state_no_10">Anak tidak dapat mengikuti petunjuk sederhana</string>
-    <string name="answer_ya_no_10">Ya</string>
-    <string name="answer_tidak_no_10">Tidak</string>
+
+    <string name="autis_no_1">Jika Anda menunjuk sesuatu di ruangan, anak Anda melihat sesuatu tersebut (misalnya,jika anda menunjuk hewan atau mainan, anak Anda melihat ke arah hewan atau mainan yang Anda tunjuk)</string>
+    <string name="autis_no_2">Anda berpikir bahwa anak Anda tuli</string>
+    <string name="autis_no_3">Anak Anda pernah bermain pura-pura (misalnya, berpura-pura minum dari gelas kosong, berpura-pura berbicara menggunakan telepon, atau menyuapi boneka atau boneka binatang)</string>
+    <string name="autis_no_4">Anak Anda suka memanjat benda-benda (misalnya, furnitur, alat-alat bermain, atau tangga)</string>
+    <string name="autis_no_5">Anak Anda menggerakkan jari-jari tangannya dengan cara yang tidak biasa di dekat matanya (misalnya, anak Anda menggoyangkan jari dekat pada matanya)</string>
+    <string name="autis_no_6">Anak Anda pernah menunjuk dengan satu jari untuk meminta sesuatu atau untuk meminta tolong (misalnya, menunjuk makanan atau mainan yang jauh dari jangkauannya)</string>
+    <string name="autis_no_7">Anak Anda pernah menunjuk dengan satu jari untuk menunjukkan sesuatu yang menarik kepada Anda (misalnya, menunjuk pada pesawat di langit atau truk besar dijalan)</string>
+    <string name="autis_no_8">Anak Anda tertarik pada anak lain (misalnya, anak anda memperhatikan anak lain, tersenyum pada mereka, atau pergi ke arah mereka)</string>
+    <string name="autis_no_9">Anak Anda pernah memperlihatkan suatu benda dengan membawa atau mengangkatnya kepada Anda, tidak untuk minta tolong, hanya untuk berbagi (misalnya, memperlihatkan kepada Anda bunga, binatang atau truk mainan)</string>
+    <string name="autis_no_10">Anak Anda memberikan respon jika namanya dipanggil (misalnya, anak anda melihat, bicara atau bergumam, atau menghentikan apa yang sedang dilakukannya saat Anda memanggil namanya)</string>
+    <string name="autis_no_11">Saat Anda tersenyum pada anak Anda, anak Anda tersenyum balik</string>
+    <string name="autis_no_12">Anak Anda pernah marah saat mendengar suara bising sehari-hari (misalnya, anak Anda berteriak atau menangis saat mendengar suara bising seperti vacuum cleaner atau musik keras)</string>
+    <string name="autis_no_13">Anak Anda bisa berjalan</string>
+    <string name="autis_no_14">Anak Anda menatap mata anda saat Anda berbicara dengannya, bermain bersamanya, atau saat memakaikan pakaiannya</string>
+    <string name="autis_no_15">Anak Anda mencoba meniru apa yang Anda lakukan (misalnya, melambaikan tangan, tepuk tangan atau meniru saat Anda membuat suara lucu)</string>
+    <string name="autis_no_16">Jika Anda memutar kepala untuk melihat sesuatu, Anak Anda melihat sekeliling untuk melihat apa yang Anda lihat</string>
+    <string name="autis_no_17">Anak Anda mencoba untuk membuat Anda melihat kepadanya (misalnya, anak Anda melihat Anda untuk dipuji atau berkata “lihat” atau “lihat aku”)</string>
+    <string name="autis_no_18">Anak Anda mengerti saat Anda memintanya melakukan sesuatu (misalnya, jika Anda tidak menunjuk, anak Anda mengerti kalimat “letakkan buku itu di atas kursi” atau “ambilkan saya selimut”)</string>
+    <string name="autis_no_19">Jika sesuatu yang baru terjadi, anak Anda menatap wajah Anda untuk melihat perasaan Anda tentang hal tersebut (misalnya, jika anak Anda mendengar bunyi aneh atau lucu, atau melihat mainan baru, dia menatap wajah Anda)</string>
+    <string name="autis_no_20">Anak Anda menyukai aktivitas yang bergerak (misalnya, diayun-ayun atau dihentak-hentakkan pada lutut anda)</string>
+
+    <string name="speda1_no_3">Anak bisa mengucapkan kata papa atau mama dengan jelas</string>
+    <string name="speda1_no_2">Anak mengoceh</string>
+    <string name="speda1_no_1">Anak bisa mengucapkan minimal dua suku kata</string>
+
+    <string name="speda2_no_5">Anak bisa menyebutkan minimal enam bagian tubuh (ikuti petunjuk nomor 4 di bawah)</string>
+    <string name="speda2_no_4">Anak bisa menyebutkan minimal satu gambar (ikuti petunjuk nomor 1 di bawah)</string>
+    <string name="speda2_no_3">Anak bisa mengucapkan kombinasi kata (mengucapkan lebih dari satu kata secara berurutan dalam satu waktu)</string>
+    <string name="speda2_no_2">Anak bisa menunjukkan minimal dua gambar (ikuti petunjuk nomor 2 di bawah)</string>
+    <string name="speda2_no_1">Anak bisa mengucapkan minimal enam kata (tidak harus berurutan dalam satu waktu)</string>
+
+    <string name="speda3_no_5">Anak bisa mengerti minimal dua kata sifat (ikuti petunjuk nomor 5 di bawah)</string>
+    <string name="speda3_no_4">Anak mengetahui minimal dua kegiatan (ikuti petunjuk nomor 3 di bawah)</string>
+    <string name="speda3_no_3">Anak bisa menyebut minimal empat gambar (ikuti petunjuk nomor 1 di bawah)</string>
+    <string name="speda3_no_2">Anak mengerti ketika Anda memerintahnya untuk melakukan sesuatu</string>
+    <string name="speda3_no_1">Anak bisa menunjukkan minimal empat gambar (ikuti petunjuk nomor 2 di bawah)</string>
+
+    <string name="speda4_no_8">Anak mengetahui minimal tiga kata sifat (ikuti petunjuk nomor 5 di bawah)</string>
+    <string name="speda4_no_7">Anak bisa menyebutkan minimal empat warna (bebas)</string>
+    <string name="speda4_no_6">Anak mengerti minimal empat kata depan (ikuti petunjuk nomor 8 di bawah)</string>
+    <string name="speda4_no_5">Anak mengetahui empat kegiatan (ikuti petunjuk nomor 3 di bawah)</string>
+    <string name="speda4_no_4">Anak mengetahui kegunaan minimal tiga benda (ikuti petunjuk nomor 6 di bawah)</string>
+    <string name="speda4_no_3">Anak bisa menghitung sampai minimal satu barang (ikuti petunjuk nomor 7 di bawah)</string>
+    <string name="speda4_no_2">Anak mengetahui kegunaan minimal dua benda (ikuti petunjuk nomor 6 di bawah)</string>
+    <string name="speda4_no_1">Anak bisa menyebut minimal satu warna (bebas)</string>
+
+    <string name="speda5_no_6">Anak mengetahui minimal dua kata berlawanan (ikuti petunjuk nomor 10 di bawah)</string>
+    <string name="speda5_no_5">Anak bisa menghitung sampai minimal lima barang (ikuti petunjuk nomor 7 di bawah)</string>
+    <string name="speda5_no_4">Anak mengetahui minimal tiga kata sifat (ikuti petunjuk nomor 5 di bawah)</string>
+    <string name="speda5_no_3">Anak bisa mengartikan minimal tiga kata (ikuti petunjuk nomor 9 di bawah)</string>
+    <string name="speda5_no_2">Anak bisa menyebut minimal empat warna (bebas)</string>
+    <string name="speda5_no_1">Anak mengerti minimal empat kata depan (ikuti petunjuk nomor 8 di bawah)</string>
+
+    <string name="speda6_no_3">Anak bisa mengartikan tujuh kata (ikuti petunjuk nomor 9 di bawah)</string>
+    <string name="speda6_no_2">Anak mengetahui minimal dua kata berlawanan (ikuti petunjuk nomor 10 di bawah)</string>
+    <string name="speda6_no_1">Anak bisa menghitung sampai minimal lima barang (ikuti petunjuk nomor 7 di bawah</string>
+
     <string name="assessment_submit_button">Submit Jawaban</string>
     <string name="assessment_result_title">Hasil Diagnosa Akhir</string>
     <string name="assessment_title">Asesmen</string>
@@ -67,4 +97,9 @@
     <string name="profil">Profil</string>
     <string name="riwayat">Riwayat</string>
     <string name="tentang">Tentang</string>
+    <string name="risiko_rendah">Jika umur anak di bawah 24 bulan, lakukan asesmen kembali setelah usia anak mencapai 24 bulan.</string>
+    <string name="risiko_sedang">Terdapat kemungkinan anak Anda mengidap autis. Anda dapat melakukan asesmen tahap kedua dengan dokter kami</string>
+    <string name="risiko_tinggi">Anak Anda mengidap autis. Anda dapat berkonsultasi dengan dokter kami</string>
+    <string name="normal">Anak anda tidak mengidap keterlambatan bicara.</string>
+    <string name="suspect">Anak anda diduga mengidap keterlambatan bicara. Anda dapat berkonsultasi dengan dokter kami</string>
 </resources>
