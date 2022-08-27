@@ -65,6 +65,8 @@ public class HistoryActivity extends AppCompatActivity {
                                 documentSnapshot.getString(Constants.KEY_AUTISM_RESULT));
                         binding.speechDelayResultInfo.setText("Hasil asesmen\nspeech delay : " +
                                 documentSnapshot.getString(Constants.KEY_SPEECH_DELAY_RESULT));
+                        binding.keteranganAutis.setText(documentSnapshot.getString("keteranganAutis"));
+                        binding.keteranganSpeda.setText(documentSnapshot.getString("keteranganSpeda"));
 
                         autismCheckedboxesId = (List<Long>) documentSnapshot.get(Constants.KEY_AUTISM_CHECKEDBOXES);
                         spedaCheckedboxesId = (List<Long>) documentSnapshot.get(Constants.KEY_SPEDA_CHECKEDBOXES);

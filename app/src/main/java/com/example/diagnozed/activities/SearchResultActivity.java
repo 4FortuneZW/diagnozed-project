@@ -114,7 +114,7 @@ public class SearchResultActivity extends AppCompatActivity {
                 .whereEqualTo(Constants.KEY_USIA_ANAK, binding.inputUsiaAnak.getText().toString().trim())
                 .get()
                 .addOnCompleteListener(task -> {
-                    if (task.isSuccessful() && task.getResult() != null) {
+                    if (task.isSuccessful() && task.getResult() != null && task.getResult().getDocuments().size() > 0) {
                         DocumentSnapshot documentSnapshot = task.getResult().getDocuments().get(0);
                         List<Long> autismCheckedboxesId = (List<Long>) documentSnapshot.get(Constants.KEY_AUTISM_CHECKEDBOXES);
                         List<Long> spedaCheckedboxesId = (List<Long>) documentSnapshot.get(Constants.KEY_SPEDA_CHECKEDBOXES);
@@ -158,6 +158,8 @@ public class SearchResultActivity extends AppCompatActivity {
                                 documentSnapshot.getString(Constants.KEY_SPEECH_DELAY_RESULT));
 
 
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Data yang Anda masukkan salah", Toast.LENGTH_SHORT).show();
                     }
                 })
                 .addOnFailureListener(exception -> Toast.makeText(getApplicationContext(), "Data yang Anda masukkan salah", Toast.LENGTH_SHORT).show());

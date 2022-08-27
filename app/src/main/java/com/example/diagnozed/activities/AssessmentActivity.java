@@ -164,13 +164,13 @@ public class AssessmentActivity extends AppCompatActivity {
                 String autismResult;
                 if (autismScore >= 8) {
                     autismResult = "Risiko tinggi";
-                    assessmentResult.put("keterangan", getResources().getString(R.string.risiko_tinggi));
+                    assessmentResult.put("keteranganAutis", getResources().getString(R.string.risiko_tinggi));
                 } else if (autismScore >= 3) {
                     autismResult = "Risiko sedang";
-                    assessmentResult.put("keterangan", getResources().getString(R.string.risiko_sedang));
+                    assessmentResult.put("keteranganAutis", getResources().getString(R.string.risiko_sedang));
                 } else {
                     autismResult = "Risiko rendah";
-                    assessmentResult.put("keterangan", getResources().getString(R.string.risiko_rendah));
+                    assessmentResult.put("keteranganAutis", getResources().getString(R.string.risiko_rendah));
                 }
 
                 preferenceManager.putString(Constants.KEY_AUTISM_RESULT, autismResult);
@@ -333,10 +333,10 @@ public class AssessmentActivity extends AppCompatActivity {
 
                 if (delayScore >= 1 || cautionScore >= 2) {
                     speechDelayResult = "Suspect";
-                    assessmentResult.put("keterangan", getResources().getString(R.string.suspect));
+                    assessmentResult.put("keteranganSpeda", getResources().getString(R.string.suspect));
                 } else {
                     speechDelayResult = "Normal";
-                    assessmentResult.put("keterangan", getResources().getString(R.string.normal));
+                    assessmentResult.put("keteranganSpeda", getResources().getString(R.string.normal));
                 }
 
                 preferenceManager.putString(Constants.KEY_SPEECH_DELAY_RESULT, speechDelayResult);

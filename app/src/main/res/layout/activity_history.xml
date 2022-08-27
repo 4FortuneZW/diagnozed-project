@@ -497,10 +497,22 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:padding="@dimen/_8sdp"
-                                android:text="Hasil asesmen autis : "
+                                android:text="Hasil asesmen autis :\nRisiko sedang"
                                 android:textColor="@color/white"
                                 android:textSize="@dimen/_20ssp"
                                 android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/keterangan_autis"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/_14sdp"
+                                android:text="Jika anak anda berusia. Lakukan asesmen ulang"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_14ssp"
+                                android:textStyle="bold"
+                                android:background="@drawable/results_background"
+                                android:backgroundTint="@color/dark_yellow"/>
 
                             <CheckBox
                                 android:id="@+id/autis_no_1"
@@ -823,6 +835,18 @@
                                 android:textColor="@color/white"
                                 android:textSize="@dimen/_20ssp"
                                 android:textStyle="bold"/>
+
+                            <TextView
+                                android:id="@+id/keterangan_speda"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/_14sdp"
+                                android:text="Jika anak anda berusia. Lakukan asesmen ulang"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_14ssp"
+                                android:textStyle="bold"
+                                android:background="@drawable/results_background"
+                                android:backgroundTint="@color/dark_yellow"/>
 
                             <LinearLayout
                                 android:id="@+id/satu_tahun"
