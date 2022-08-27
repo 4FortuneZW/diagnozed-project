@@ -35,6 +35,7 @@ public class AssessmentActivity extends AppCompatActivity {
     private ActivityAssessmentBinding binding;
     private PreferenceManager preferenceManager;
     private Integer usiaAnak;
+    private boolean isValidAnswer = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,14 +54,16 @@ public class AssessmentActivity extends AppCompatActivity {
             binding.speechDelayAssessmentButton.setBackgroundColor(getColor(R.color.primary));
             binding.asesmenAutis.setVisibility(View.VISIBLE);
             binding.asesmenSpeechDelay.setVisibility(View.GONE);
+            binding.petunjukButton.setVisibility(View.GONE);
         });
 
         binding.speechDelayAssessmentButton.setOnClickListener(v -> {
             if(binding.inputUsiaAnak.getText().toString().equals("")) {
                 showToast("Masukkan usia anak terlebih dahulu");
+            } else if (Integer.valueOf(binding.inputUsiaAnak.getText().toString().trim()) > 6) {
+                showToast("Asesmen speech delay hanya bisa dilakukan oleh anak maksimal 6 tahun");
             } else {
-
-                usiaAnak = Integer.valueOf(binding.inputUsiaAnak.getText().toString());
+                usiaAnak = Integer.valueOf(binding.inputUsiaAnak.getText().toString().trim());
                 switch (usiaAnak) {
                     case 1 :
                         binding.satuTahun.setVisibility(View.VISIBLE);
@@ -80,11 +83,13 @@ public class AssessmentActivity extends AppCompatActivity {
                     case 6 :
                         binding.enamTahun.setVisibility(View.VISIBLE);
                         break;
-                    case 7 :
+                    default :
                         showToast("Tes ini hanya bisa dilakukan oleh anak maksimal 6 tahun");
                         break;
                 }
 
+                isValidAnswer = true;
+                binding.petunjukButton.setVisibility(View.VISIBLE);
                 binding.speechDelayAssessmentButton.setBackgroundColor(getColor(R.color.secondary_text));
                 binding.autismAssessmentButton.setBackgroundColor(getColor(R.color.primary));
                 binding.asesmenSpeechDelay.setVisibility(View.VISIBLE);
@@ -103,7 +108,7 @@ public class AssessmentActivity extends AppCompatActivity {
         });
 
         binding.assessmentSubmitButton.setOnClickListener(v -> {
-            if (!binding.inputNamaAnak.getText().toString().equals("") && !binding.inputUsiaAnak.getText().toString().equals("")) {
+            if (!binding.inputNamaAnak.getText().toString().equals("") && !binding.inputUsiaAnak.getText().toString().equals("") && isValidAnswer) {
 
                 loading(true);
 
@@ -367,6 +372,8 @@ public class AssessmentActivity extends AppCompatActivity {
 //                Intent intent = new Intent(getApplicationContext(), AssessmentResultActivity.class);
 //                startActivity(intent);
 //                showToast("WOY BANGUN WOY");
+            } else {
+                showToast("Pastikan nama dan usia anak terisi. Pastikan juga Anda telah mengerjakan asesmen speech delay (untuk anak usia 6 tahun ke bawah).");
             }
         });
 

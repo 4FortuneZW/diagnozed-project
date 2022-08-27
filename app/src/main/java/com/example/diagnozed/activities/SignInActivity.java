@@ -30,11 +30,11 @@ public class SignInActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivitySignInBinding.inflate(getLayoutInflater());
         preferenceManager = new PreferenceManager(getApplicationContext());
-//        if (preferenceManager.getBoolean(Constants.KEY_IS_SIGNED_IN)) {
-//            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-//            startActivity(intent);
-//            finish();
-//        };
+        if (preferenceManager.getBoolean(Constants.KEY_IS_SIGNED_IN)) {
+            Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+            startActivity(intent);
+            finish();
+        };
         setContentView(binding.getRoot());
         setListeners();
     }
@@ -70,7 +70,7 @@ public class SignInActivity extends AppCompatActivity {
                         auth(binding.inputEmail.getText().toString(),binding.inputPassword.getText().toString());
                     } else {
                         loading(false);
-                        showToast("Unable to sign in");
+                        showToast("Password atau email salah");
                     }
                 });
     }
@@ -88,7 +88,8 @@ public class SignInActivity extends AppCompatActivity {
                                 intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                                 startActivity(intent);
                             } else {
-                                showToast("Tolong verifikasi akun anda");
+                                showToast("Tolong verifikasi akun anda. Pastikan Anda juga sudah memeriksa email di folder spam");
+                                loading(false);
                             }
                         } else {
                             showToast(task.getException().getMessage());
@@ -108,7 +109,7 @@ public class SignInActivity extends AppCompatActivity {
     }
 
     private void showToast(String message) {
-        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_LONG).show();
     }
 
     private Boolean isValidSignInDetails() {

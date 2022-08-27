@@ -57,6 +57,8 @@ public class SignUpActivity extends AppCompatActivity {
 
         setContentView(binding.getRoot());
         preferenceManager = new PreferenceManager(getApplicationContext());
+
+
         setListeners();
     }
 
@@ -73,7 +75,7 @@ public class SignUpActivity extends AppCompatActivity {
                                         public void onComplete(@NonNull Task<Void> task) {
                                             if (task.isSuccessful()) {
                                                 Toast.makeText(getApplicationContext()
-                                                        ,"Periksa email anda untuk melakukan verifikasi akun"
+                                                        ,"Periksa email Anda untuk melakukan verifikasi akun (pastikan Anda juga memeriksa email di folder spam)"
                                                         , Toast.LENGTH_LONG).show();
                                                 Intent intent = new Intent(getApplicationContext(), SignInActivity.class);
                                                 startActivity(intent);

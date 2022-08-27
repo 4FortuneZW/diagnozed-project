@@ -76,15 +76,6 @@
             android:textSize="@dimen/_24ssp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/assessment_result_speech_delay"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/primary_text"
-            android:textSize="@dimen/_16ssp"
-            android:text="Speech delay : "
-            android:textStyle="bold"
-            android:layout_marginTop="@dimen/_24sdp"/>
 
         <TextView
             android:id="@+id/assessment_result_autism"
@@ -96,7 +87,15 @@
             android:textStyle="bold"
             android:layout_marginTop="@dimen/_24sdp"/>
 
-
+        <TextView
+            android:id="@+id/assessment_result_speech_delay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primary_text"
+            android:textSize="@dimen/_16ssp"
+            android:text="Speech delay : "
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_24sdp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -124,7 +123,6 @@
                     android:textStyle="bold"
                     android:textAlignment="center"
                     android:maxLines="1"
-                    android:layout_marginEnd="@dimen/_16sdp"
                     android:padding="@dimen/_4sdp"
                     android:background="@color/secondary_text" />
 
