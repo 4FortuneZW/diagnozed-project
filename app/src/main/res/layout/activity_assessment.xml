@@ -103,7 +103,6 @@
                     android:textStyle="bold"
                     android:textAlignment="center"
                     android:maxLines="1"
-                    android:layout_marginEnd="@dimen/_16sdp"
                     android:padding="@dimen/_4sdp"
                     android:background="@color/secondary_text" />
 
@@ -934,7 +933,8 @@ yang memenuhi kondisi anak Anda!"
         android:background="@drawable/results_background"
         android:backgroundTint="@color/secondary_text"
         android:orientation="vertical"
-        android:padding="@dimen/_8sdp">
+        android:padding="@dimen/_8sdp"
+        android:visibility="gone">
 
         <TextView
             android:layout_width="match_parent"

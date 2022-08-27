@@ -167,7 +167,6 @@
                     android:textStyle="bold"
                     android:textAlignment="center"
                     android:maxLines="1"
-                    android:layout_marginEnd="@dimen/_16sdp"
                     android:padding="@dimen/_4sdp"
                     android:background="@color/secondary_text"/>
 
