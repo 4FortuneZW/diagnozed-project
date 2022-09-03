@@ -1,25 +1,25 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\naufa\AndroidStudioProjects\DiagnozedTemp\hand-sign-open-cv-approach\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from C:\Users\naufa\AndroidStudioProjects\DiagnozedTemp\hand-sign-open-cv-approach\src\main\AndroidManifest.xml:2:1-41:12
-INJECTED from C:\Users\naufa\AndroidStudioProjects\DiagnozedTemp\hand-sign-open-cv-approach\src\main\AndroidManifest.xml:2:1-41:12
+ADDED from C:\Users\naufa\AndroidStudioProjects\Pandas\hand-sign-open-cv-approach\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from C:\Users\naufa\AndroidStudioProjects\Pandas\hand-sign-open-cv-approach\src\main\AndroidManifest.xml:2:1-41:12
+INJECTED from C:\Users\naufa\AndroidStudioProjects\Pandas\hand-sign-open-cv-approach\src\main\AndroidManifest.xml:2:1-41:12
 	package
-		ADDED from C:\Users\naufa\AndroidStudioProjects\DiagnozedTemp\hand-sign-open-cv-approach\src\main\AndroidManifest.xml:3:5-35
-		INJECTED from C:\Users\naufa\AndroidStudioProjects\DiagnozedTemp\hand-sign-open-cv-approach\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\naufa\AndroidStudioProjects\DiagnozedTemp\hand-sign-open-cv-approach\src\main\AndroidManifest.xml
+		ADDED from C:\Users\naufa\AndroidStudioProjects\Pandas\hand-sign-open-cv-approach\src\main\AndroidManifest.xml:3:5-35
+		INJECTED from C:\Users\naufa\AndroidStudioProjects\Pandas\hand-sign-open-cv-approach\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\naufa\AndroidStudioProjects\Pandas\hand-sign-open-cv-approach\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\naufa\AndroidStudioProjects\DiagnozedTemp\hand-sign-open-cv-approach\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\naufa\AndroidStudioProjects\Pandas\hand-sign-open-cv-approach\src\main\AndroidManifest.xml:2:11-69
 uses-sdk
-INJECTED from C:\Users\naufa\AndroidStudioProjects\DiagnozedTemp\hand-sign-open-cv-approach\src\main\AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from C:\Users\naufa\AndroidStudioProjects\DiagnozedTemp\hand-sign-open-cv-approach\src\main\AndroidManifest.xml
-INJECTED from C:\Users\naufa\AndroidStudioProjects\DiagnozedTemp\hand-sign-open-cv-approach\src\main\AndroidManifest.xml
-INJECTED from C:\Users\naufa\AndroidStudioProjects\DiagnozedTemp\hand-sign-open-cv-approach\src\main\AndroidManifest.xml
-INJECTED from C:\Users\naufa\AndroidStudioProjects\DiagnozedTemp\hand-sign-open-cv-approach\src\main\AndroidManifest.xml
+INJECTED from C:\Users\naufa\AndroidStudioProjects\Pandas\hand-sign-open-cv-approach\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from C:\Users\naufa\AndroidStudioProjects\Pandas\hand-sign-open-cv-approach\src\main\AndroidManifest.xml
+INJECTED from C:\Users\naufa\AndroidStudioProjects\Pandas\hand-sign-open-cv-approach\src\main\AndroidManifest.xml
+INJECTED from C:\Users\naufa\AndroidStudioProjects\Pandas\hand-sign-open-cv-approach\src\main\AndroidManifest.xml
+INJECTED from C:\Users\naufa\AndroidStudioProjects\Pandas\hand-sign-open-cv-approach\src\main\AndroidManifest.xml
 	android:targetSdkVersion
-		INJECTED from C:\Users\naufa\AndroidStudioProjects\DiagnozedTemp\hand-sign-open-cv-approach\src\main\AndroidManifest.xml
-		ADDED from C:\Users\naufa\AndroidStudioProjects\DiagnozedTemp\hand-sign-open-cv-approach\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\naufa\AndroidStudioProjects\DiagnozedTemp\hand-sign-open-cv-approach\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\naufa\AndroidStudioProjects\Pandas\hand-sign-open-cv-approach\src\main\AndroidManifest.xml
+		ADDED from C:\Users\naufa\AndroidStudioProjects\Pandas\hand-sign-open-cv-approach\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\naufa\AndroidStudioProjects\Pandas\hand-sign-open-cv-approach\src\main\AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from C:\Users\naufa\AndroidStudioProjects\DiagnozedTemp\hand-sign-open-cv-approach\src\main\AndroidManifest.xml
-		ADDED from C:\Users\naufa\AndroidStudioProjects\DiagnozedTemp\hand-sign-open-cv-approach\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\naufa\AndroidStudioProjects\DiagnozedTemp\hand-sign-open-cv-approach\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\naufa\AndroidStudioProjects\Pandas\hand-sign-open-cv-approach\src\main\AndroidManifest.xml
+		ADDED from C:\Users\naufa\AndroidStudioProjects\Pandas\hand-sign-open-cv-approach\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\naufa\AndroidStudioProjects\Pandas\hand-sign-open-cv-approach\src\main\AndroidManifest.xml

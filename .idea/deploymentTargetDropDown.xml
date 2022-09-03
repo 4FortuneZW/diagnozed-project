@@ -7,12 +7,12 @@
         <deviceKey>
           <Key>
             <type value="VIRTUAL_DEVICE_PATH" />
-            <value value="C:\Users\naufa\.android\avd\EMU1.avd" />
+            <value value="C:\Users\naufa\.android\avd\EMU4.avd" />
           </Key>
         </deviceKey>
       </Target>
     </targetSelectedWithDropDown>
-    <timeTargetWasSelectedWithDropDown value="2022-08-26T07:43:46.609828100Z" />
+    <timeTargetWasSelectedWithDropDown value="2022-09-02T13:01:41.339100700Z" />
     <runningDeviceTargetsSelectedWithDialog>
       <Target>
         <type value="RUNNING_DEVICE_TARGET" />

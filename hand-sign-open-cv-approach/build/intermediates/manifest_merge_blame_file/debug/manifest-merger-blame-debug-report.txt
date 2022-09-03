@@ -34,8 +34,8 @@
 34    <!-- </application> -->
 35    <uses-sdk
 36        android:minSdkVersion="21"
-36-->C:\Users\naufa\AndroidStudioProjects\DiagnozedTemp\hand-sign-open-cv-approach\src\main\AndroidManifest.xml
+36-->C:\Users\naufa\AndroidStudioProjects\Pandas\hand-sign-open-cv-approach\src\main\AndroidManifest.xml
 37        android:targetSdkVersion="32" />
-37-->C:\Users\naufa\AndroidStudioProjects\DiagnozedTemp\hand-sign-open-cv-approach\src\main\AndroidManifest.xml
+37-->C:\Users\naufa\AndroidStudioProjects\Pandas\hand-sign-open-cv-approach\src\main\AndroidManifest.xml
 38
 39</manifest>

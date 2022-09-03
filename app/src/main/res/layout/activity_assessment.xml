@@ -424,6 +424,15 @@ Jika dia sering melakukannya, maka centang pernyataan tersebut."
                     android:textSize="@dimen/_12ssp"
                     android:textStyle="bold" />
 
+                <TextView
+                    android:id="@+id/copyright"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="© 2009 Robins, Fein, and Barton"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_12ssp"
+                    android:textColor="@color/white"/>
+
             </LinearLayout>
 
             <LinearLayout

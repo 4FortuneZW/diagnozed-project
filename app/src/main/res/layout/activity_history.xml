@@ -816,6 +816,15 @@
                                 android:textSize="@dimen/_12ssp"
                                 android:textStyle="bold" />
 
+                            <TextView
+                                android:id="@+id/copyright"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="© 2009 Robins, Fein, and Barton"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/_12ssp"
+                                android:textColor="@color/white"/>
+
                         </LinearLayout>
 
                         <LinearLayout
@@ -1273,6 +1282,7 @@
                                     android:button="@null"
                                     android:drawableLeft="@drawable/assesment_checkbox"
                                     android:drawablePadding="@dimen/_4sdp"
+                                    android:padding="@dimen/_8sdp"
                                     android:text="@string/speda5_no_5"
                                     android:textColor="@color/white"
                                     android:textSize="@dimen/_12ssp"
