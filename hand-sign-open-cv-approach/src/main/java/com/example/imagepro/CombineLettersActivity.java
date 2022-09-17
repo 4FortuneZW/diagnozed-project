@@ -19,6 +19,7 @@ import org.opencv.android.BaseLoaderCallback;
 import org.opencv.android.CameraBridgeViewBase;
 import org.opencv.android.LoaderCallbackInterface;
 import org.opencv.android.OpenCVLoader;
+import org.opencv.core.Core;
 import org.opencv.core.CvType;
 import org.opencv.core.Mat;
 
@@ -166,6 +167,11 @@ public class CombineLettersActivity extends Activity implements CameraBridgeView
         mRgba=inputFrame.rgba();
         mGray=inputFrame.gray();
         // Before watching this video please watch previous video of loading tensorflow lite model
+
+        if(cameraId==1) {
+            Core.flip(mRgba,mRgba,-1);
+            Core.flip(mGray,mGray, -1);
+        }
 
         // now call that function
         Mat out=new Mat();

@@ -7,7 +7,7 @@
     android:animateLayoutChanges="true"
     android:background="@color/primary"
     tools:context=".activities.ChatActivity">
-    
+
     <View
         android:id="@+id/view_background"
         android:layout_width="match_parent"
@@ -15,7 +15,9 @@
         android:layout_marginBottom="@dimen/_16sdp"
         android:background="@drawable/background_content_top"
         app:layout_constraintBottom_toTopOf="@id/layout_send"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp" />
 
     <View
         android:id="@+id/header_background"
@@ -23,19 +25,22 @@
         android:layout_height="0dp"
         android:background="@color/primary"
         app:layout_constraintBottom_toTopOf="@id/view_supporter"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="0dp" />
+
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/back_button"
         android:layout_width="@dimen/_32sdp"
         android:layout_height="@dimen/_32sdp"
-        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="@dimen/_12sdp"
         android:padding="@dimen/_4sdp"
         android:src="@drawable/ic_back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/white"/>
+        app:tint="@color/white" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/info_button"
@@ -100,6 +105,102 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="@id/view_background"
         app:layout_constraintTop_toBottomOf="@id/view_supporter"/>
+
+    <LinearLayout
+        android:id="@+id/pesan_cepat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/view_background"
+        app:layout_constraintBottom_toBottomOf="@id/view_background"
+        android:background="@drawable/results_background"
+        android:backgroundTint="@color/white"
+        android:elevation="@dimen/_4sdp"
+        android:layout_marginStart="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_16sdp"
+        android:padding="@dimen/_8sdp"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/judul_pesan_cepat"
+                android:elevation="@dimen/_4sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_16ssp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text"
+                android:text="Pesan cepat"
+                android:padding="@dimen/_8sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <ImageView
+                android:id="@+id/tutup_pesan_cepat"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/judul_pesan_cepat"
+                app:layout_constraintBottom_toBottomOf="@id/judul_pesan_cepat"
+                android:src="@drawable/ic_baseline_clear_24"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        <TextView
+            android:id="@+id/pesan_cepat_risiko_tinggi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_text"
+            android:text="Autisme risiko tinggi"
+            android:padding="@dimen/_8sdp"
+            android:background="@drawable/results_background"
+            android:layout_marginBottom="@dimen/_8sdp"/>
+
+        <TextView
+            android:id="@+id/pesan_cepat_risiko_sedang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_text"
+            android:text="Autisme risiko sedang"
+            android:padding="@dimen/_8sdp"
+            android:background="@drawable/results_background"
+            android:layout_marginBottom="@dimen/_8sdp"/>
+
+        <TextView
+            android:id="@+id/pesan_cepat_risiko_rendah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_text"
+            android:text="Autisme risiko rendah"
+            android:padding="@dimen/_8sdp"
+            android:background="@drawable/results_background"
+            android:layout_marginBottom="@dimen/_8sdp"/>
+
+        <TextView
+            android:id="@+id/pesan_cepat_suspect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12ssp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_text"
+            android:text="Suspect keterlambatan bicara"
+            android:padding="@dimen/_8sdp"
+            android:background="@drawable/results_background"
+            android:layout_marginBottom="@dimen/_8sdp"/>
+
+
+
+    </LinearLayout>
     
     <ProgressBar
         android:id="@+id/progress_bar"
@@ -138,13 +239,14 @@
         android:layout_marginEnd="@dimen/_8sdp"
         android:layout_marginBottom="@dimen/_12sdp"
         android:background="@drawable/background_chat_input"
+        android:backgroundTint="@color/input_background"
         android:hint="Masukkan pesan"
         android:imeOptions="actionDone"
         android:importantForAutofill="no"
         android:inputType="text"
         android:paddingStart="@dimen/_16sdp"
         android:paddingEnd="@dimen/_16sdp"
-        android:textColor="@color/white"
+        android:textColor="@color/black"
         android:textColorHint="@color/secondary_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/layout_send"
