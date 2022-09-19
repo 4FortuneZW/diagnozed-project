@@ -168,7 +168,7 @@ public class CombineLettersActivity extends Activity implements CameraBridgeView
         mGray=inputFrame.gray();
         // Before watching this video please watch previous video of loading tensorflow lite model
 
-        if(cameraId==1) {
+        if(cameraId % 2 == 1) {
             Core.flip(mRgba,mRgba,-1);
             Core.flip(mGray,mGray, -1);
         }

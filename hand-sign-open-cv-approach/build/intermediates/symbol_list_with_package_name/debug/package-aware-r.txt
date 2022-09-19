@@ -1,5 +1,6 @@
 com.example.imagepro
 color black
+color ic_launcher_background
 color primary
 color purple_200
 color purple_500
@@ -27,7 +28,6 @@ id top_linear_layout
 layout activity_camera
 layout activity_combine_letters
 layout activity_main
-mipmap ic_launcher
-mipmap ic_launcher_round
+mipmap ic_launcher_foreground
 string app_name
 style Theme_ImagePro
